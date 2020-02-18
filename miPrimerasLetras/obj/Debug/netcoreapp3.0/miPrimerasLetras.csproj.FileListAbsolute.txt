@@ -1,0 +1,11 @@
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.exe
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.deps.json
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.runtimeconfig.json
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.runtimeconfig.dev.json
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.dll
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\bin\Debug\netcoreapp3.0\miPrimerasLetras.pdb
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\obj\Debug\netcoreapp3.0\miPrimerasLetras.csprojAssemblyReference.cache
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\obj\Debug\netcoreapp3.0\miPrimerasLetras.AssemblyInfoInputs.cache
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\obj\Debug\netcoreapp3.0\miPrimerasLetras.AssemblyInfo.cs
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\obj\Debug\netcoreapp3.0\miPrimerasLetras.dll
+D:\misPrimerasLetras\MiPrimerasLetras\miPrimerasLetras\obj\Debug\netcoreapp3.0\miPrimerasLetras.pdb
