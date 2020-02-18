@@ -2,5 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/miPrimerasLetras/v16/Server/sqlite3
-/.vs/miPrimerasLetras/DesignTimeBuild
+/MisPrimerasLetras/MisPrimerasLetras/obj/Debug
+/MisPrimerasLetras/.vs/MisPrimerasLetras/v16
