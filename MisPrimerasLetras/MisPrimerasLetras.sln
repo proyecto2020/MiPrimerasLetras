@@ -5,6 +5,26 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MisPirmerasLetras", "MisPirmerasLetras\MisPirmerasLetras.csproj", "{8426FC4D-4F38-47C3-80E6-BB1D768C7624}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vista", "Vista", "{A41CA494-5D31-4F16-B90F-F33E632F26D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controlador", "Controlador", "{B1284160-28AC-473C-B7ED-49CA04B1D708}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelo", "Modelo", "{F9661652-339E-46E0-869A-DDB613FF6086}"
+	ProjectSection(SolutionItems) = preProject
+		Alumnos.cs = Alumnos.cs
+		Area.cs = Area.cs
+		DiaHora.cs = DiaHora.cs
+		Grado.cs = Grado.cs
+		Grupos.cs = Grupos.cs
+		Horario.cs = Horario.cs
+		Materia.cs = Materia.cs
+		Notas.cs = Notas.cs
+		Pagos.cs = Pagos.cs
+		Perfiles.cs = Perfiles.cs
+		salones.cs = salones.cs
+		Usuario.cs = Usuario.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8426FC4D-4F38-47C3-80E6-BB1D768C7624} = {A41CA494-5D31-4F16-B90F-F33E632F26D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD671A8-1E0E-4D90-8993-101A610DD2C8}
