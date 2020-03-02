@@ -32,7 +32,7 @@ namespace MisPirmerasLetras
         {
             if(mnVertical.Width == 244)
             {
-                mnVertical.Width = 70; //pixeles!
+                mnVertical.Width = 70; //pixeles! test
             }
             else
             {
