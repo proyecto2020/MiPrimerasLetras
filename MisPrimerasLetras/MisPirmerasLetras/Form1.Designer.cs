@@ -49,8 +49,7 @@
             this.txtUser.Size = new System.Drawing.Size(250, 34);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Usuario";
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
+
             // 
             // txtPassword
             // 
@@ -64,9 +63,7 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Contraseña";
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
-            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
-            // 
+
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -94,7 +91,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+    
             // 
             // pictureBox2
             // 
@@ -106,7 +103,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+          
             // 
             // checkBox1
             // 
@@ -117,7 +114,7 @@
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "ver contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+  
             // 
             // Form1
             // 
