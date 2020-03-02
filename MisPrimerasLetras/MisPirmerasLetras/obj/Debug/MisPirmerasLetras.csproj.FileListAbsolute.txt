@@ -1,0 +1,11 @@
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe.config
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csprojAssemblyReference.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Form1.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Properties.Resources.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.GenerateResource.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CoreCompileInputs.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
