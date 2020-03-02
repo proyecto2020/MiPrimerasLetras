@@ -18,8 +18,6 @@ namespace miPrimerasLetras
 
         }
 
-<<<<<<< Updated upstream:miPrimerasLetras/Form1.cs
-=======
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -105,6 +103,5 @@ namespace miPrimerasLetras
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
->>>>>>> Stashed changes:MisPrimerasLetras/MisPirmerasLetras/Form1.cs
     }
 }
