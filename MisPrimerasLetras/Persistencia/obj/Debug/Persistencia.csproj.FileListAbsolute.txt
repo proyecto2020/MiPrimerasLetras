@@ -1,0 +1,5 @@
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.pdb
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb

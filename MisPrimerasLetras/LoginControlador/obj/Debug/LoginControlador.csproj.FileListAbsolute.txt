@@ -1,0 +1,8 @@
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\LoginControlador.dll
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\LoginControlador.pdb
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Persistencia.dll
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Persistencia.pdb
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csprojAssemblyReference.cache
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csproj.CopyComplete
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.dll
+D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.pdb
