@@ -60,5 +60,24 @@ namespace MisPirmerasLetras
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012,0);
         }
+
+        private void OpenFormRight(object frmHijo)
+        {
+            if (this.panelContendor.Controls.Count > 0)
+            {
+                this.panelContendor.Controls.RemoveAt(0);
+
+                Form fh = frmHijo as Form;
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.Fill;
+                this.panelContendor.Controls.Add(fh);
+                this.panelContendor.Tag = fh;
+                fh.Show();
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFormRight(new frmAdminUsers());
+        }
     }
 }
