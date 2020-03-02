@@ -63,9 +63,9 @@ namespace MisPirmerasLetras
 
         private void OpenFormRight(object frmHijo)
         {
-            if (this.panelContendor.Controls.Count > 0)
-            {
-                this.panelContendor.Controls.RemoveAt(0);
+            Panel p = this.panelContendor as Panel;
+           
+               // this.panelContendor.Controls.RemoveAt(0);
 
                 Form fh = frmHijo as Form;
                 fh.TopLevel = false;
@@ -73,7 +73,7 @@ namespace MisPirmerasLetras
                 this.panelContendor.Controls.Add(fh);
                 this.panelContendor.Tag = fh;
                 fh.Show();
-            }
+           
         }
         private void button1_Click(object sender, EventArgs e)
         {
