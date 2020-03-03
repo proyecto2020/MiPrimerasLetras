@@ -60,7 +60,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button3.Location = new System.Drawing.Point(1119, 578);
+            this.button3.Location = new System.Drawing.Point(1070, 633);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 76);
             this.button3.TabIndex = 3;
@@ -87,11 +87,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(561, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(502, 68);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 476);
+            this.dataGridView1.Size = new System.Drawing.Size(751, 545);
             this.dataGridView1.TabIndex = 14;
             // 
             // panel1
@@ -109,13 +109,14 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(1, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 744);
+            this.panel1.Size = new System.Drawing.Size(482, 744);
             this.panel1.TabIndex = 15;
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.Location = new System.Drawing.Point(364, 444);
+            this.button1.Location = new System.Drawing.Point(273, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 66);
             this.button1.TabIndex = 1;
@@ -124,8 +125,9 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button2.Location = new System.Drawing.Point(48, 444);
+            this.button2.Location = new System.Drawing.Point(66, 433);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 66);
             this.button2.TabIndex = 2;
@@ -136,7 +138,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label6.Location = new System.Drawing.Point(62, 264);
+            this.label6.Location = new System.Drawing.Point(62, 317);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 20);
             this.label6.TabIndex = 4;
@@ -147,7 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label7.Location = new System.Drawing.Point(62, 175);
+            this.label7.Location = new System.Drawing.Point(60, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 20);
             this.label7.TabIndex = 5;
@@ -157,7 +159,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 121);
+            this.label8.Location = new System.Drawing.Point(60, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 20);
             this.label8.TabIndex = 6;
@@ -165,14 +167,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 116);
+            this.textBox1.Location = new System.Drawing.Point(242, 138);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(162, 22);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 172);
+            this.textBox2.Location = new System.Drawing.Point(242, 222);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(162, 22);
             this.textBox2.TabIndex = 10;
@@ -180,7 +182,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(242, 260);
+            this.comboBox2.Location = new System.Drawing.Point(242, 313);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(162, 24);
             this.comboBox2.TabIndex = 13;
