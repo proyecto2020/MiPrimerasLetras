@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace LoginControlador
 {
     public class LoginControlador
@@ -14,10 +15,10 @@ namespace LoginControlador
         {
             this.cliente = new SQLCliente();
         }
-        public bool ConsultarLogin(string usuario, string clave)
+        public IActionResult ConsultarLogin(string usuario, string clave)
         {
-            this.cliente.ObtenerLista();
-            return false;
+            var resultado = this.cliente.ObtenerLista(usuario, clave);
+            return resultado;
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,23 +16,25 @@ namespace Persistencia
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
         private SqlConnection conexion = new SqlConnection(connectionString);
 
+        //private readonly Respuesta<Object> respuesta;
+        //public SQLCliente(IConfiguration config) { 
+        //    this._config = config; 
+        //    responseMethod = new ResultResponse<object>(); objectList = new ResultResponse<object>(); }
 
-        public List<string> ObtenerLista()
+        public List<Object> ObtenerLista(string usuario, string contrasena)
         {
-            string queryString = "select * from dbo lista";
+            DynamicParameters parameter = new DynamicParameters();
+            List<Object> resultados = null;
+            string queryString = $"EXEC"+ "PR_consultar_usuario_login" +" "+
+                usuario + " " + contrasena;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@tPatSName", "Your-Parm-Value");
+                SqlCommand command = new SqlCommand(queryString, connection);                
                 connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
+                parameter.Add(usuario, contrasena);                
                 try
                 {
-                    while (reader.Read())
-                    {
-                        Console.WriteLine(String.Format("{0}, {1}",
-                        reader["tPatCulIntPatIDPk"], reader["tPatSFirstname"]));
-                    }
+                    //resultados = new ObservableCollection<Object>(SqlConnection.Read());
                 }
                 finally
                 {
