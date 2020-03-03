@@ -34,14 +34,14 @@
             this.tbxName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +112,21 @@
             this.panel1.Size = new System.Drawing.Size(482, 744);
             this.panel1.TabIndex = 15;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(242, 313);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(162, 24);
+            this.comboBox2.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(242, 138);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 22);
+            this.textBox1.TabIndex = 9;
+            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -122,6 +137,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -133,6 +149,13 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(242, 222);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(162, 22);
+            this.textBox2.TabIndex = 10;
             // 
             // label6
             // 
@@ -164,28 +187,6 @@
             this.label8.Size = new System.Drawing.Size(118, 20);
             this.label8.TabIndex = 6;
             this.label8.Text = "Primer Apellido";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(242, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 22);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(242, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 22);
-            this.textBox2.TabIndex = 10;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(242, 313);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 24);
-            this.comboBox2.TabIndex = 13;
             // 
             // frmAdminUsers
             // 
