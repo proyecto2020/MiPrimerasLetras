@@ -49,7 +49,6 @@
             this.txtUser.Size = new System.Drawing.Size(250, 34);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Usuario";
-
             // 
             // txtPassword
             // 
@@ -63,7 +62,7 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Contraseña";
             this.txtPassword.UseSystemPasswordChar = true;
-
+            // 
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -91,7 +90,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-    
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -103,18 +102,17 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
-          
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(301, 267);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(156, 26);
+            this.checkBox1.Size = new System.Drawing.Size(125, 21);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "ver contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
-  
             // 
             // Form1
             // 
@@ -134,6 +132,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

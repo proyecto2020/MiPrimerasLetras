@@ -29,50 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
-            this.mnVertical = new System.Windows.Forms.Panel();
-            this.btnUsers = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
-            this.panelContendor = new System.Windows.Forms.Panel();
-            this.mnVertical.SuspendLayout();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.mnVertical = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
+            this.mnVertical.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mnVertical
-            // 
-            this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mnVertical.Controls.Add(this.btnUsers);
-            this.mnVertical.Controls.Add(this.picLogo);
-            this.mnVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mnVertical.Location = new System.Drawing.Point(0, 0);
-            this.mnVertical.Name = "mnVertical";
-            this.mnVertical.Size = new System.Drawing.Size(326, 807);
-            this.mnVertical.TabIndex = 0;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(3, 154);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(323, 54);
-            this.btnUsers.TabIndex = 0;
-            this.btnUsers.Text = "Usuarios";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.button1_Click);
             // 
             // picLogo
             // 
@@ -132,45 +102,63 @@
             this.btnSlide.TabStop = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
-            // panelContendor
+            // btnUsers
             // 
-            this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContendor.Location = new System.Drawing.Point(326, 60);
-            this.panelContendor.Name = "panelContendor";
-            this.panelContendor.Size = new System.Drawing.Size(1213, 747);
-            this.panelContendor.TabIndex = 2;
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(3, 154);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(323, 54);
+            this.btnUsers.TabIndex = 0;
+            this.btnUsers.Text = "Usuarios";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mnVertical
+            // 
+            this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.btnUsers);
+            this.mnVertical.Controls.Add(this.picLogo);
+            this.mnVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mnVertical.Location = new System.Drawing.Point(0, 0);
+            this.mnVertical.Name = "mnVertical";
+            this.mnVertical.Size = new System.Drawing.Size(326, 807);
+            this.mnVertical.TabIndex = 0;
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1539, 807);
-            this.Controls.Add(this.panelContendor);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.mnVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
-            this.mnVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
+            this.mnVertical.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel mnVertical;
         private System.Windows.Forms.Panel barraTitulo;
-        private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Panel mnVertical;
     }
 }
