@@ -5,7 +5,7 @@ public class Grado
     /// <summary>
     /// Grado.
     /// </summary>
-    public string Grado { get; set; }
+    public string Grados { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>

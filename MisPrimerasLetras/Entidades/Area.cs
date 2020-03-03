@@ -5,7 +5,7 @@ public class Area
     /// <summary>
     /// Area.
     /// </summary>
-    public string Area { get; set; }
+    public string AreaM { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>

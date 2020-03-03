@@ -5,7 +5,7 @@ public class Grupo
     /// <summary>
     /// Grupo.
     /// </summary>
-    public string Grupo { get; set; }
+    public string Grupos { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>

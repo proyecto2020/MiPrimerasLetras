@@ -1,12 +1,8 @@
 ﻿using Dapper;
+using Entidades;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistencia
 {
@@ -16,34 +12,33 @@ namespace Persistencia
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
         private SqlConnection conexion = new SqlConnection(connectionString);
 
-        //private readonly Respuesta<Object> respuesta;
-        //public SQLCliente(IConfiguration config) { 
-        //    this._config = config; 
-        //    responseMethod = new ResultResponse<object>(); objectList = new ResultResponse<object>(); }
+        private Respuesta<object> respuesta;
+       
+        public SQLCliente()
+        {
+            respuesta = new Respuesta<object>();
+        }
 
-        public List<Object> ObtenerLista(string usuario, string contrasena)
+        public string ObtenerLista(string usuario, string contrasena)
         {
             DynamicParameters parameter = new DynamicParameters();
-            List<Object> resultados = null;
+            string resultados = null;
             string queryString = $"EXEC"+ "PR_consultar_usuario_login" +" "+
                 usuario + " " + contrasena;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);                
                 connection.Open();
-                parameter.Add(usuario, contrasena);                
-                try
+                parameter.Add(usuario, contrasena);
+                using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
-                    //resultados = new ObservableCollection<Object>(SqlConnection.Read());
-                }
-                finally
-                {
-                    // Always call Close when done reading.
-                    reader.Close();
-                }
+                    if (resultados == null)
+                    {
+                        Console.WriteLine("se murio");
+                    }
+                }       
             }
-
-            return new List<string>();
+            return resultados;
         }
 
     }

@@ -1,4 +1,6 @@
-﻿using Persistencia;
+﻿using Entidades;
+using Microsoft.Extensions.Configuration;
+using Persistencia;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +12,14 @@ namespace LoginControlador
 {
     public class LoginControlador
     {
-        private SQLCliente cliente;
+        public SQLCliente cliente;
         public LoginControlador()
         {
             this.cliente = new SQLCliente();
         }
-        public IActionResult ConsultarLogin(string usuario, string clave)
-        {
-            var resultado = this.cliente.ObtenerLista(usuario, clave);
+        public string ConsultarLogin(string usuario, string clave)
+        { 
+            var resultado = this.cliente.ObtenerLista( usuario, clave);   
             return resultado;
         }
     }

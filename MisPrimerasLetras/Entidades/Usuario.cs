@@ -33,7 +33,7 @@ public class Usuario
     /// <summary>
     /// Usuario.
     /// </summary>
-    public string Usuario { get; set; }
+    public string UsuarioC { get; set; }
 
 
 }

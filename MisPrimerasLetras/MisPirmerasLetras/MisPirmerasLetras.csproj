@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoginControlador\LoginControlador.csproj">
+      <Project>{C9AC1E2D-DEB5-434E-9A10-741375E1F0F1}</Project>
+      <Name>LoginControlador</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
