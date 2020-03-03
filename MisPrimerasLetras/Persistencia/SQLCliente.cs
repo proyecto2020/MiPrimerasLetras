@@ -34,7 +34,7 @@ namespace Persistencia
                 parameter.Add(usuario, contrasena);                
                 try
                 {
-                    resultados = new ObservableCollection<Object>(SqlConnection.Read());
+                    //resultados = new ObservableCollection<Object>(SqlConnection.Read());
                 }
                 finally
                 {

@@ -9,10 +9,4 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\Mis
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csprojAssemblyReference.cache
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Form1.resources
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Properties.Resources.resources
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.GenerateResource.cache
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmAdminUsers.resources
