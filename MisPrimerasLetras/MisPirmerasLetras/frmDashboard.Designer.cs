@@ -127,6 +127,7 @@
             // 
             // panelContendor
             // 
+            this.panelContendor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContendor.BackgroundImage")));
             this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContendor.Location = new System.Drawing.Point(326, 60);
             this.panelContendor.Name = "panelContendor";
