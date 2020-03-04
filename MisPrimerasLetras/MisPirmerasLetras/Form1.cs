@@ -33,9 +33,9 @@ namespace MisPirmerasLetras
             string usuario = txtUser.Text;
            
 
-            if (usuario == "Usuario" && txtPassword.Text == "Contraseña")
+            if (usuario == "Usuario" || txtPassword.Text == "Contraseña")
             {
-                MessageBox.Show("Ingrese Usuario y contraseña validos", "Error en inicio de sesión");
+                msError("Ingrese usuario y contraseña validos , Error en inicio de sesión");
             }
             else
             {
@@ -49,12 +49,17 @@ namespace MisPirmerasLetras
                 }
                 else
                 {
-
-                    MessageBox.Show("Verificar datos", "Error en el inicio de sesion");
+                    msError("Verificar datos, Error en el inicio de sesion");
+                
                 }
             }
 
             
+        }
+        private void msError(String msg)
+        {
+            lblMessage.Text = "   " + msg;
+            lblMessage.Visible = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -116,6 +121,7 @@ namespace MisPirmerasLetras
             if (txtPassword.Text == "Contraseña")
             {
                 txtPassword.Text = "";
+                lblMessage.Visible = false;
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
@@ -125,6 +131,7 @@ namespace MisPirmerasLetras
             if (txtUser.Text == "Usuario")
             {
                 txtUser.Text = "";
+                lblMessage.Visible = false;
                 txtUser.ForeColor = Color.Black;
             }
         }
