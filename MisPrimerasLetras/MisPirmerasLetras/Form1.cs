@@ -30,7 +30,9 @@ namespace MisPirmerasLetras
 
         private void button1_Click(object sender, EventArgs e)
         {
-           this.controlador.ConsultarLogin("usuario","clave");
+            string usuario = txtUser.Text;
+            int contrasena = int.Parse(txtPassword.Text);
+           this.controlador.ConsultarLogin(usuario, contrasena);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -56,6 +58,16 @@ namespace MisPirmerasLetras
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

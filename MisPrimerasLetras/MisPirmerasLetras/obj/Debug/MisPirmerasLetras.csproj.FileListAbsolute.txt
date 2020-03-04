@@ -32,3 +32,25 @@ D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\MisPir
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CopyComplete
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe.config
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Dapper.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.dll.config
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.dll.config
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Entidades.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Dapper.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csprojAssemblyReference.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Form1.resources
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmAdminUsers.resources
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Properties.Resources.resources
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.GenerateResource.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CopyComplete
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb

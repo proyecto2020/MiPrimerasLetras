@@ -1,5 +1,8 @@
-C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
