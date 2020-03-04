@@ -84,21 +84,11 @@ namespace MisPirmerasLetras
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-            if(txtUser.Text == "Usuario")
-            {
-                txtUser.Text = "";
-                txtUser.ForeColor = Color.LightGray;
-            }
+           
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Contraseña")
-            {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.LightGray;
-                txtPassword.UseSystemPasswordChar = true;
-            }
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
@@ -106,7 +96,7 @@ namespace MisPirmerasLetras
             if (txtUser.Text == "")
             {
                 txtUser.Text = "Usuario";
-                txtUser.ForeColor = Color.DimGray;
+                txtUser.ForeColor = Color.Black;
             }
         }
 
@@ -115,8 +105,27 @@ namespace MisPirmerasLetras
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = "Contraseña";
-                txtPassword.ForeColor = Color.DimGray;
+              
                 txtPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Usuario")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.Black;
             }
         }
     }
