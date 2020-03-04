@@ -34,14 +34,16 @@
             this.tbxName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bntAddUsuario = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,11 +100,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.tbxName);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmbRol);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.bntAddUsuario);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
@@ -113,13 +117,13 @@
             this.panel1.Size = new System.Drawing.Size(482, 744);
             this.panel1.TabIndex = 15;
             // 
-            // comboBox2
+            // cmbRol
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(242, 313);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 24);
-            this.comboBox2.TabIndex = 13;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(242, 418);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(162, 24);
+            this.cmbRol.TabIndex = 13;
             // 
             // textBox1
             // 
@@ -128,19 +132,19 @@
             this.textBox1.Size = new System.Drawing.Size(162, 22);
             this.textBox1.TabIndex = 9;
             // 
-            // button1
+            // bntAddUsuario
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.Location = new System.Drawing.Point(273, 433);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 66);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bntAddUsuario.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.bntAddUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntAddUsuario.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.bntAddUsuario.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.bntAddUsuario.Location = new System.Drawing.Point(285, 630);
+            this.bntAddUsuario.Name = "bntAddUsuario";
+            this.bntAddUsuario.Size = new System.Drawing.Size(148, 66);
+            this.bntAddUsuario.TabIndex = 1;
+            this.bntAddUsuario.Text = "Agregar";
+            this.bntAddUsuario.UseVisualStyleBackColor = false;
+            this.bntAddUsuario.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -148,7 +152,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.button2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button2.Location = new System.Drawing.Point(66, 433);
+            this.button2.Location = new System.Drawing.Point(64, 630);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 66);
             this.button2.TabIndex = 2;
@@ -166,7 +170,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.label6.Location = new System.Drawing.Point(62, 317);
+            this.label6.Location = new System.Drawing.Point(77, 418);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 20);
             this.label6.TabIndex = 4;
@@ -193,6 +197,23 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Primer Apellido";
             // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(242, 308);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(162, 22);
+            this.txtCorreo.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label1.Location = new System.Drawing.Point(60, 310);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Correo";
+            // 
             // frmAdminUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,6 +227,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdminUsers";
             this.Text = "frmAdminUsers";
+            this.Load += new System.EventHandler(this.frmAdminUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -222,13 +244,15 @@
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bntAddUsuario;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label label1;
     }
 }

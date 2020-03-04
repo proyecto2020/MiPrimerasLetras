@@ -35,5 +35,8 @@ public class Usuario
     /// </summary>
     public string UsuarioC { get; set; }
 
+    public int IdPerfil { get; set; }
+    public string Perfil { get; set; }
+
 
 }
