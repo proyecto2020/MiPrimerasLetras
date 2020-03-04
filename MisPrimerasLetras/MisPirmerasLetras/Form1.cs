@@ -27,12 +27,34 @@ namespace MisPirmerasLetras
         {
 
         }
-
+        frmDashboard FrmDashboard = new frmDashboard();
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtUser.Text;
-            int contrasena = int.Parse(txtPassword.Text);
-           this.controlador.ConsultarLogin(usuario, contrasena);
+           
+
+            if (usuario == "Usuario" && txtPassword.Text == "Contraseña")
+            {
+                MessageBox.Show("Ingrese Usuario y contraseña validos", "Error en inicio de sesión");
+            }
+            else
+            {
+                int contrasena = int.Parse(txtPassword.Text);
+                string ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
+
+                if (ingreso == "no murio")
+                {
+                    this.Hide();
+                    FrmDashboard.Show();
+                }
+                else
+                {
+
+                    MessageBox.Show("Verificar datos", "Error en el inicio de sesion");
+                }
+            }
+
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -62,12 +84,40 @@ namespace MisPirmerasLetras
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-
+            if(txtUser.Text == "Usuario")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.LightGray;
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.LightGray;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
 
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Usuario";
+                txtUser.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "Contraseña";
+                txtPassword.ForeColor = Color.DimGray;
+                txtPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }

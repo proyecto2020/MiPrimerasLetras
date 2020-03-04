@@ -44,3 +44,27 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrim
 C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll.config
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
