@@ -23,13 +23,14 @@ namespace Persistencia
         {
             DynamicParameters parameter = new DynamicParameters();
             string resultados = null;
-            string queryString = $"EXEC"+ "PR_consultar_usuario_login"+" "+
-                usuario + " " + contrasena+" ";
+            string queryString = $"EXEC"+ "PR_consultar_usuario_login" +" "+
+                usuario + " " + contrasena +" ";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);                
                 connection.Open();
-                parameter.Add("@usuario",  "@contrasena");
+                parameter.Add("@usuario",usuario);
+                parameter.Add("@contrasena", contrasena);
                 using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
                     if (resultados == null)
