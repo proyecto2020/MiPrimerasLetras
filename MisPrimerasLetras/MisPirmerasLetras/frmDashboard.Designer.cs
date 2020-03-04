@@ -35,9 +35,9 @@
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
-            this.panelContendor = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.panelContendor = new System.Windows.Forms.Panel();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,14 +125,16 @@
             this.mnVertical.Size = new System.Drawing.Size(326, 807);
             this.mnVertical.TabIndex = 0;
             // 
-            // panelContendor
+            // label1
             // 
-            this.panelContendor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContendor.BackgroundImage")));
-            this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContendor.Location = new System.Drawing.Point(326, 60);
-            this.panelContendor.Name = "panelContendor";
-            this.panelContendor.Size = new System.Drawing.Size(1213, 747);
-            this.panelContendor.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(299, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "MIS PRIMERAS LETRAS";
             // 
             // picLogo
             // 
@@ -144,16 +146,15 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
-            // label1
+            // panelContendor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(12, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MIS PRIMERAS LETRAS";
+            this.panelContendor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContendor.BackgroundImage")));
+            this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContendor.Location = new System.Drawing.Point(326, 60);
+            this.panelContendor.Name = "panelContendor";
+            this.panelContendor.Size = new System.Drawing.Size(1213, 747);
+            this.panelContendor.TabIndex = 2;
+            this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint);
             // 
             // frmDashboard
             // 

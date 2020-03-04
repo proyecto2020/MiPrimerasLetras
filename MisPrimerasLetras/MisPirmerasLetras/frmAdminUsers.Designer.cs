@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbltitle = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,15 +57,16 @@
             this.lbltitle.Text = "USUARIOS";
             this.lbltitle.Click += new System.EventHandler(this.lbltitle_Click);
             // 
-            // button3
+            // btnBuscar
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button3.Location = new System.Drawing.Point(1070, 633);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 76);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btnBuscar.Location = new System.Drawing.Point(1099, 635);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(144, 76);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -96,7 +97,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.tbxName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBox2);
@@ -107,7 +108,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(1, 68);
+            this.panel1.Location = new System.Drawing.Point(14, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(482, 744);
             this.panel1.TabIndex = 15;
@@ -129,26 +130,30 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Location = new System.Drawing.Point(273, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 66);
             this.button1.TabIndex = 1;
             this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.Location = new System.Drawing.Point(66, 433);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 66);
+            this.button2.Size = new System.Drawing.Size(148, 66);
             this.button2.TabIndex = 2;
             this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -192,10 +197,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1275, 810);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lbltitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdminUsers";
@@ -211,7 +217,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbltitle;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.DataGridView dataGridView1;

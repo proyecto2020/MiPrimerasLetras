@@ -42,7 +42,7 @@ namespace MisPirmerasLetras
                 int contrasena = int.Parse(txtPassword.Text);
                 string ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
 
-                if (ingreso == "no murio")
+                if (ingreso == "no murio") // temporal
                 {
                     this.Hide();
                     FrmDashboard.Show();

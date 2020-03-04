@@ -79,5 +79,10 @@ namespace MisPirmerasLetras
         {
             OpenFormRight(new frmAdminUsers());
         }
+
+        private void panelContendor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

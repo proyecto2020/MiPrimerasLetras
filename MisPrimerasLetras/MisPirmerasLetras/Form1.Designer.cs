@@ -64,7 +64,6 @@
             this.txtPassword.Size = new System.Drawing.Size(249, 34);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Contraseña";
-            this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -74,7 +73,7 @@
             this.btnIngresar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Location = new System.Drawing.Point(301, 318);
