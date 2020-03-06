@@ -24,12 +24,13 @@ namespace Persistencia
             respuesta = new Respuesta<object>();
         }
 
-        public string ObtenerLista(string usuario, int contrasena)
+        public string ObtenerLista(string usuario, string contrasena)
         {
+            
             DynamicParameters parameter = new DynamicParameters();
             string resultados = null;
-            string queryString = $"EXEC"+ "PR_consultar_usuario_login" +" "+
-                usuario + " " + contrasena +" ";
+            string queryString = $"EXEC "+ "PR_consultar_usuario_login "+
+                usuario + "," + contrasena +" ";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);                

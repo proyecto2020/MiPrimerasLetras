@@ -18,7 +18,7 @@ namespace LoginControlador
         {
             this.cliente = new SQLCliente();
         }
-        public string ConsultarLogin(string usuario, int clave)
+        public string ConsultarLogin(string usuario, string clave)
         { 
             var resultado = this.cliente.ObtenerLista( usuario, clave);   
             return resultado;

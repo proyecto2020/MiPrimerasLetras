@@ -39,7 +39,7 @@ namespace MisPirmerasLetras
             }
             else
             {
-                int contrasena = int.Parse(txtPassword.Text);
+                string contrasena = txtPassword.Text;
                 string ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
 
                 if (ingreso == "no murio") // temporal
