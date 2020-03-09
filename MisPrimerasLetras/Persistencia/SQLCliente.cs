@@ -15,6 +15,7 @@ namespace Persistencia
         SqlCommand cmdRegistrar;
         SqlDataAdapter adaptador;
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
+        // private SqlConnection conexion = new SqlConnection("Data Source=PROGRAMMJPD;Initial Catalog=MisPrimerasLetrasDB;Integrated Security=True"); config para mi local
         private SqlConnection conexion = new SqlConnection(connectionString);
 
         private Respuesta<object> respuesta;
@@ -51,10 +52,10 @@ namespace Persistencia
  
         public int mtdRegistrarUsario(Usuario obUser)
         {
-            //URG! ADD PASSWORD AL OBJETO USER, VERFICAR LAS COMILLAS
-            string consulta = "insert into Usuario(Nombre,PrimerApellido,SegundoApellido,Correo,IdPerfil)"+
-                 "values(" + obUser.Nombre + ",'" + obUser.PirmerApellido + "','" + obUser.SegundoApellido +
-                 "','" + obUser.Correo + "'," +obUser.IdPerfil +")";
+        
+            string consulta = "insert into usuario(nombre, primer_apellido, segundo_apellido, correo, estado, fecha_creacion, fk_perfiles)" +
+                 "values('" + obUser.Nombre + "','" + obUser.PirmerApellido + "','" + obUser.SegundoApellido +
+                 "','" + obUser.Correo + "',"+ 1 +",'"+ DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "',"+ obUser.IdPerfil +")";
 
 
             int registros = this.mtdIDU(consulta);
@@ -67,7 +68,7 @@ namespace Persistencia
         List<Perfiles> Perfiles = new List<Perfiles>();
         public List<Perfiles> mtdListarPerfiles()
         {
-            string consulta = "select * from Perfil";
+            string consulta = "select * from perfiles";
             DataTable tblRol = new DataTable();
             tblRol = this.mtdSelect(consulta);
 
@@ -88,7 +89,7 @@ namespace Persistencia
         /// <returns></returns>
         public int mtdIDU(string consulta)
         {
-            //conexion.Open();
+            conexion.Open();
             cmdRegistrar = new SqlCommand();
             cmdRegistrar.Connection = conexion;
             cmdRegistrar.CommandText = consulta;
@@ -99,7 +100,7 @@ namespace Persistencia
 
         public DataTable mtdSelect(string consulta)
         {
-            //conexion.Open();
+          //  conexion.Open();
             adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable tblDatos = new DataTable();
             adaptador.Fill(tblDatos);

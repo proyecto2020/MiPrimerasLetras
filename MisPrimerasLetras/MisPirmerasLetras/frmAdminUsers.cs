@@ -14,6 +14,7 @@ namespace MisPirmerasLetras
     public partial class frmAdminUsers : Form
     {
         private LoginControlador.LoginControlador controlador;
+      
         public frmAdminUsers()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace MisPirmerasLetras
         
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            Form1 frmLogin = new Form1();
             string Nombre = tbxName.Text;
             string PrimerAp = textBox1.Text;
             string SegundAp = textBox2.Text;
@@ -46,7 +47,16 @@ namespace MisPirmerasLetras
 
 
 
-            this.controlador.ValidacionRegistroUsuario(Nombre, PrimerAp, SegundAp, Correo, Perfil);
+         int registro =    this.controlador.ValidacionRegistroUsuario(Nombre, PrimerAp, SegundAp, Correo, Perfil);
+
+            if(registro == 1)
+            {
+                MessageBox.Show("Persona Registrado");
+            }
+            else
+            {
+                MessageBox.Show("Datos Nulos");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
