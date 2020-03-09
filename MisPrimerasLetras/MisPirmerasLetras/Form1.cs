@@ -1,4 +1,5 @@
 ﻿//using LoginControlador;
+using Entidades;
 using LoginControlador;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace MisPirmerasLetras
     {
         private LoginControlador.LoginControlador controlador;
 
+        frmDashboard FrmDashboard = new frmDashboard();
+        frmAdminUsers frmAdminUsers = new frmAdminUsers();
 
         public Form1()
         {
@@ -27,7 +30,6 @@ namespace MisPirmerasLetras
         {
 
         }
-        frmDashboard FrmDashboard = new frmDashboard();
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtUser.Text;
@@ -40,12 +42,12 @@ namespace MisPirmerasLetras
             else
             {
                 string contrasena = txtPassword.Text;
-                string ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
+                Respuesta<object> ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
 
-                if (ingreso == "no murio") // temporal
+                if (ingreso.ResultData.Count > 0)
                 {
                     this.Hide();
-                    FrmDashboard.Show();
+                    this.FrmDashboard.Show();
                 }
                 else
                 {

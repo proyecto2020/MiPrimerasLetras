@@ -18,38 +18,17 @@ namespace LoginControlador
         {
             this.cliente = new SQLCliente();
         }
-        public string ConsultarLogin(string usuario, string clave)
+        public Respuesta<object> ConsultarLogin(string usuario, string clave)
         { 
             var resultado = this.cliente.ObtenerLista( usuario, clave);   
             return resultado;
         }
 
-        //TODO ESTO PASARLO A UN COTROLADOR USUARIO? *
-        Usuario objUsuario = new Usuario();
-        public int ValidacionRegistroUsuario(string Nombre, string PrimerAp, string SegApellido, string Correo, int Perfil)
+
+        public Respuesta<object> ValidacionRegistroUsuario(Usuario usuario)
         {
-            int  bandera = 0; 
-
-            if(Nombre == "" || PrimerAp == "" || SegApellido == "" ||  Correo == ""  || Perfil == 0) //verficar si hay un rol con valor 0
-            {
-                bandera = -2;
-            }
-            else
-            {
-           
-                objUsuario.Nombre = Nombre;
-                objUsuario.PirmerApellido = PrimerAp;
-                objUsuario.SegundoApellido = SegApellido;
-                objUsuario.Correo = Correo;
-                objUsuario.IdPerfil = Perfil;
-
-
-
-
-              bandera  =  this.cliente.mtdRegistrarUsario(objUsuario);
-            }
-
-            return bandera;
+            var respuesta = this.cliente.mtdRegistrarUsario(usuario);
+            return respuesta;
         }
 
 

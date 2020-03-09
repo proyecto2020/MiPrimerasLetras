@@ -5,11 +5,12 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace Persistencia
 {
-   
+
     public class SQLCliente
     {
         SqlCommand cmdRegistrar;
@@ -18,56 +19,67 @@ namespace Persistencia
         private SqlConnection conexion = new SqlConnection(connectionString);
 
         private Respuesta<object> respuesta;
-       
+
         public SQLCliente()
         {
             respuesta = new Respuesta<object>();
         }
 
-        public string ObtenerLista(string usuario, string contrasena)
+        public Respuesta<object> ObtenerLista(string usuario, string contrasena)
         {
-            
+
             DynamicParameters parameter = new DynamicParameters();
-            string resultados = null;
-            string queryString = $"EXEC "+ "PR_consultar_usuario_login "+
-                usuario + "," + contrasena +" ";
+            Collection<object> objectoR = null;
+            string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+                usuario + "," + contrasena + " ";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(queryString, connection);                
+                SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
-                parameter.Add("@usuario",usuario);
+                parameter.Add("@usuario", usuario);
                 parameter.Add("@contrasena", contrasena);
                 using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
-                    if (resultados == null)
-                    {
-                        Console.WriteLine("se murio");
-                    }
-                }       
+                    objectoR = new ObservableCollection<object>(multipleResponse.Read<object>().ToList());
+                    respuesta.ResultData = objectoR;
+                }
             }
-            return resultados;
+            return respuesta;
         }
-       
- 
-        public int mtdRegistrarUsario(Usuario obUser)
+
+
+        public Respuesta<object> mtdRegistrarUsario(Usuario usuario)
         {
-            //URG! ADD PASSWORD AL OBJETO USER, VERFICAR LAS COMILLAS
-            string consulta = "insert into Usuario(Nombre,PrimerApellido,SegundoApellido,Correo,IdPerfil)"+
-                 "values(" + obUser.Nombre + ",'" + obUser.PirmerApellido + "','" + obUser.SegundoApellido +
-                 "','" + obUser.Correo + "'," +obUser.IdPerfil +")";
+            DynamicParameters parameter = new DynamicParameters();
+            //Collection<object> objectoR = null;
+            //string queryString = $"EXEC " + "PR_Insertar_Usuario " +
+            //    usuario.IdPerfil + "," + usuario.Nombre + "," + 
+            //    usuario.PirmerApellido + "," + usuario.SegundoApellido + "," + 
+            //    usuario.Correo + "," + usuario.Estado + "," + usuario.contrasena +" ";
+            string storedProcedure = "PR_Insertar_Usuario";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                parameter.Add("@fk_perfiles", usuario.IdPerfil);
+                parameter.Add("@nombre", usuario.Nombre);
+                parameter.Add("@primer_apellido", usuario.PirmerApellido);
+                parameter.Add("@segundo_apellido", usuario.SegundoApellido);
+                parameter.Add("@correo", usuario.Correo, DbType.String);
+                parameter.Add("@estado", usuario.Estado);
+                parameter.Add("@contrasena", usuario.contrasena);
+                int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
+                respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
 
-
-            int registros = this.mtdIDU(consulta);
-         
-            return registros;
-
+            return respuesta;
         }
 
         //LISTAR PERFILES
         List<Perfiles> Perfiles = new List<Perfiles>();
         public List<Perfiles> mtdListarPerfiles()
         {
-            string consulta = "select * from Perfil";
+            string consulta = "select * from perfiles";
             DataTable tblRol = new DataTable();
             tblRol = this.mtdSelect(consulta);
 

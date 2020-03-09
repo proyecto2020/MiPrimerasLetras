@@ -34,9 +34,17 @@ public class Usuario
     /// Usuario.
     /// </summary>
     public string UsuarioC { get; set; }
-
+    /// <summary>
+    /// idPerfil.
+    /// </summary>
     public int IdPerfil { get; set; }
+    /// <summary>
+    /// perfil.
+    /// </summary>
     public string Perfil { get; set; }
-
+   /// <summary>
+   /// contrasena.
+   /// </summary>
+    public string contrasena { get; set; }
 
 }

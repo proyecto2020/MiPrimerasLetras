@@ -64,9 +64,6 @@ namespace MisPirmerasLetras
         private void OpenFormRight(object frmHijo)
         {
             Panel p = this.panelContendor as Panel;
-           
-               // this.panelContendor.Controls.RemoveAt(0);
-
                 Form fh = frmHijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
