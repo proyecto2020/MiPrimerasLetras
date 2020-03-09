@@ -58,7 +58,7 @@ namespace MisPirmerasLetras
 
             
         }
-        private void msError(String msg)
+        public void msError(String msg)
         {
             lblMessage.Text = "   " + msg;
             lblMessage.Visible = true;
