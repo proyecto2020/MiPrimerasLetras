@@ -38,6 +38,10 @@ namespace LoginControlador
            return resultado;
         }
         
-
+        public List<Usuario> ConsultarUsuarios()
+        {
+            var resultado = this.cliente.ConsultarUsuarios();
+            return resultado;
+        }
     }
 }

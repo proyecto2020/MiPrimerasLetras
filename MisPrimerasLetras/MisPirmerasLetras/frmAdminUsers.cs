@@ -1,12 +1,5 @@
 ﻿using System;
-using LoginControlador;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
@@ -15,7 +8,6 @@ namespace MisPirmerasLetras
     public partial class frmAdminUsers : Form
     {
         private LoginControlador.LoginControlador controlador;
-        string IdPerdil;
         public frmAdminUsers()
         {
             InitializeComponent();
@@ -141,6 +133,25 @@ namespace MisPirmerasLetras
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+            List<Usuario> lista = new List<Usuario>();
+            lista = this.controlador.ConsultarUsuarios();
+            if(lista.Count > 0)
+            {
+                dataEstudiantes.AutoGenerateColumns = false;
+                dataEstudiantes.DataSource = lista;
+                this.dataEstudiantes.Refresh();
+
+            }
+        }
+
+        private void dataEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

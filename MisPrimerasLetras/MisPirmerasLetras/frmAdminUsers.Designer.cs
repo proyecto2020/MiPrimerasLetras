@@ -33,6 +33,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
@@ -43,20 +47,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.dataEstudiantes = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PirmerApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SegundoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEstudiantes)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(247, 9);
+            this.lbltitle.Location = new System.Drawing.Point(179, 9);
             this.lbltitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(201, 44);
@@ -111,11 +112,45 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(65, 65);
+            this.panel1.Location = new System.Drawing.Point(12, 55);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 194);
             this.panel1.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(182, 121);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "contraseña";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(46, 121);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "estado";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(182, 141);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(122, 20);
+            this.textBox4.TabIndex = 17;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(37, 141);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(122, 20);
+            this.textBox3.TabIndex = 16;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label1
             // 
@@ -229,74 +264,6 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Primer Apellido";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(65, 305);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(586, 185);
-            this.panel2.TabIndex = 16;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(532, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Editar";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(438, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Estado";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(345, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Correo";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Segundo Apellido";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Primer Apellido";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(389, 264);
@@ -318,39 +285,61 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // textBox3
+            // dataEstudiantes
             // 
-            this.textBox3.Location = new System.Drawing.Point(37, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 20);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.dataEstudiantes.AllowUserToAddRows = false;
+            this.dataEstudiantes.AllowUserToDeleteRows = false;
+            this.dataEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEstudiantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.PirmerApellido,
+            this.SegundoApellido,
+            this.correo,
+            this.perfil});
+            this.dataEstudiantes.Location = new System.Drawing.Point(37, 25);
+            this.dataEstudiantes.Name = "dataEstudiantes";
+            this.dataEstudiantes.Size = new System.Drawing.Size(536, 166);
+            this.dataEstudiantes.TabIndex = 6;
+            this.dataEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEstudiantes_CellContentClick);
             // 
-            // textBox4
+            // panel2
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 141);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(122, 20);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.panel2.Controls.Add(this.dataEstudiantes);
+            this.panel2.Location = new System.Drawing.Point(12, 291);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(606, 194);
+            this.panel2.TabIndex = 16;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label12
+            // Nombre
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 121);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "estado";
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // label13
+            // PirmerApellido
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(182, 121);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "contraseña";
+            this.PirmerApellido.DataPropertyName = "PirmerApellido";
+            this.PirmerApellido.HeaderText = "Prirmer Apellido";
+            this.PirmerApellido.Name = "PirmerApellido";
+            // 
+            // SegundoApellido
+            // 
+            this.SegundoApellido.DataPropertyName = "SegundoApellido";
+            this.SegundoApellido.HeaderText = "Segundo Apellido";
+            this.SegundoApellido.Name = "SegundoApellido";
+            // 
+            // correo
+            // 
+            this.correo.DataPropertyName = "Correo";
+            this.correo.HeaderText = "correo";
+            this.correo.Name = "correo";
+            // 
+            // perfil
+            // 
+            this.perfil.DataPropertyName = "Perfil";
+            this.perfil.HeaderText = "perfil";
+            this.perfil.Name = "perfil";
             // 
             // frmAdminUsers
             // 
@@ -358,7 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(719, 640);
+            this.ClientSize = new System.Drawing.Size(629, 640);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
@@ -366,15 +355,14 @@
             this.Controls.Add(this.lbltitle);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdminUsers";
             this.Text = "frmAdminUsers";
             this.Load += new System.EventHandler(this.frmAdminUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEstudiantes)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,18 +384,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dataEstudiantes;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PirmerApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SegundoApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perfil;
     }
 }

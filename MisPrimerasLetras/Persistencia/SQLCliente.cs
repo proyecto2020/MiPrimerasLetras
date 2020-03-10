@@ -51,15 +51,9 @@ namespace Persistencia
         public Respuesta<object> mtdRegistrarUsario(Usuario usuario)
         {
             DynamicParameters parameter = new DynamicParameters();
-            //Collection<object> objectoR = null;
-            //string queryString = $"EXEC " + "PR_Insertar_Usuario " +
-            //    usuario.IdPerfil + "," + usuario.Nombre + "," + 
-            //    usuario.PirmerApellido + "," + usuario.SegundoApellido + "," + 
-            //    usuario.Correo + "," + usuario.Estado + "," + usuario.contrasena +" ";
-            string storedProcedure = "PR_Insertar_Usuario";
+            string storedProcedure = RecursosSQL.InsertaUsuarios;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                //SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
                 parameter.Add("@fk_perfiles", usuario.IdPerfil);
                 parameter.Add("@nombre", usuario.Nombre);
@@ -74,12 +68,10 @@ namespace Persistencia
 
             return respuesta;
         }
-
-        //LISTAR PERFILES
         List<Perfiles> Perfiles = new List<Perfiles>();
         public List<Perfiles> mtdListarPerfiles()
         {
-            string consulta = "select * from perfiles";
+            string consulta = RecursosSQL.ConsultaPerfiles;
             DataTable tblRol = new DataTable();
             tblRol = this.mtdSelect(consulta);
 
@@ -92,12 +84,34 @@ namespace Persistencia
             }
             return Perfiles;
         }
+        public List<Usuario> ConsultarUsuarios()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            string consulta = RecursosSQL.ConsultaUsuarios;
+            SqlCommand command = new SqlCommand(consulta, conexion);
+            conexion.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    Usuario usuario = new Usuario();
+                    usuario.Perfil = reader["perfil"].ToString();
+                    usuario.Nombre = reader["nombre"].ToString();
+                    usuario.PirmerApellido = reader["primer_apellido"].ToString();
+                    usuario.SegundoApellido = reader["segundo_apellido"].ToString();
+                    usuario.Correo = reader["correo"].ToString();
 
-        /// <summary>
-        /// Este metodo hace la administracion de datos(incert-delete-up)
-        /// </summary>
-        /// <param name="consulta"></param>
-        /// <returns></returns>
+                    lista.Add(usuario);
+                }
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return lista;
+        }
         public int mtdIDU(string consulta)
         {
             //conexion.Open();
@@ -111,7 +125,6 @@ namespace Persistencia
 
         public DataTable mtdSelect(string consulta)
         {
-            //conexion.Open();
             adaptador = new SqlDataAdapter(consulta, conexion);
             DataTable tblDatos = new DataTable();
             adaptador.Fill(tblDatos);
