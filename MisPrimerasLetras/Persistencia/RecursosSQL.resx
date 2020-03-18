@@ -121,6 +121,10 @@
     <value>select * from perfiles</value>
     <comment>consulta todos los perfiles</comment>
   </data>
+  <data name="consultarLogin" xml:space="preserve">
+    <value>PR_consultar_usuario_login</value>
+    <comment>validaCredenciales</comment>
+  </data>
   <data name="ConsultaUsuarios" xml:space="preserve">
     <value>select p.perfil,
 u.nombre,

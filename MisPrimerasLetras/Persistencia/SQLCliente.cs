@@ -30,7 +30,7 @@ namespace Persistencia
 
             DynamicParameters parameter = new DynamicParameters();
             Collection<object> objectoR = null;
-            string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+            string queryString = $"EXEC " + RecursosSQL.consultarLogin +
                 usuario + "," + contrasena + " ";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

@@ -70,6 +70,15 @@ namespace Persistencia {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PR_consultar_usuario_login.
+        /// </summary>
+        internal static string consultarLogin {
+            get {
+                return ResourceManager.GetString("consultarLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to select p.perfil,
         ///u.nombre,
         ///u.primer_apellido,
