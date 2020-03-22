@@ -235,7 +235,7 @@ namespace Persistencia
         }
         public int mtdIDU(string consulta)
         {
-            conexion.Open();
+            conexion.Open(); //open
             cmdRegistrar = new SqlCommand();
             cmdRegistrar.Connection = conexion;
             cmdRegistrar.CommandText = consulta;
