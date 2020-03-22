@@ -1,15 +1,20 @@
 ﻿using System;
 
+
 public class Usuario
 {
     /// <summary>
+    /// IdUsuario.
+    /// </summary>
+    public int IdUsuario { get; set; }
+    /// <summary>
     /// nombre.
     /// </summary>
-   public string Nombre { get; set; }
+    public string Nombre { get; set; }
     /// <summary>
     /// PirmerApellido.
     /// </summary>
-    public string PirmerApellido { get; set; }
+    public string PrimerApellido { get; set; }
     /// <summary>
     /// SegundoApellido.
     /// </summary>
@@ -46,5 +51,10 @@ public class Usuario
    /// contrasena.
    /// </summary>
     public string contrasena { get; set; }
+
+    public override string ToString()
+    {
+        return Nombre + " " + PrimerApellido;
+    }
 
 }

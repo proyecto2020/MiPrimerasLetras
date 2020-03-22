@@ -2,6 +2,7 @@
 
 public class Area
 {
+    public int IdArea { get; set; }
     /// <summary>
     /// Area.
     /// </summary>
@@ -18,4 +19,9 @@ public class Area
     /// Usuario.
     /// </summary>
     public string Usuario { get; set; }
+
+    public override string ToString()
+    {
+        return AreaM;
+    }
 }

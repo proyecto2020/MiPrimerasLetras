@@ -70,3 +70,5 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persiste
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.RecursosSQL.resources
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.RecursosSQL.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache

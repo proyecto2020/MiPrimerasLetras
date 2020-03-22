@@ -17,5 +17,10 @@ public class Grupo
     /// <summary>
     /// Usuario.
     /// </summary>
-    public string Usuario { get; set; }
+    public int Usuario { get; set; }
+
+    /// <summary>
+    /// Grado.
+    /// </summary>
+    public int Grado { get; set; }
 }

@@ -2,6 +2,7 @@
 
 public class Materia
 {
+    public int IdMateria { get; set; }
     /// <summary>
     /// NombreMateria.
     /// </summary>
@@ -18,4 +19,11 @@ public class Materia
     /// Usuario.
     /// </summary>
     public string Usuario { get; set; }
+
+    public int IdArea { get; set; }
+
+    public override string ToString()
+    {
+        return NombreMateria;
+    }
 }

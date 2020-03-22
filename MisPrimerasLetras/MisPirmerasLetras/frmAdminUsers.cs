@@ -88,7 +88,7 @@ namespace MisPirmerasLetras
 
             Usuario usuario = new Usuario();
             usuario.Nombre = Nombre;
-            usuario.PirmerApellido = PrimerApellido;
+            usuario.PrimerApellido = PrimerApellido;
             usuario.SegundoApellido = SegundoApellido;
             usuario.Correo = correo;
             usuario.IdPerfil = Perfil;
