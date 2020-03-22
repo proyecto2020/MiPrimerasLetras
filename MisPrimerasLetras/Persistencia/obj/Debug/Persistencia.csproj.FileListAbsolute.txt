@@ -72,3 +72,28 @@ D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persis
 D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.RecursosSQL.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.RecursosSQL.resources
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
