@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C56E53D-1326-4255-8A22-B9358FEC9182}</ProjectGuid>
+    <ProjectGuid>{492AD039-9399-4155-9B5D-01CC7D49C20D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Entidades</RootNamespace>
-    <AssemblyName>Entidades</AssemblyName>
+    <RootNamespace>prueba</RootNamespace>
+    <AssemblyName>prueba</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,21 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumnos.cs" />
-    <Compile Include="Area.cs" />
-    <Compile Include="DiaHora.cs" />
-    <Compile Include="Grado.cs" />
-    <Compile Include="Grupos.cs" />
-    <Compile Include="Horario.cs" />
-    <Compile Include="Materia.cs" />
-    <Compile Include="Notas.cs" />
-    <Compile Include="Pagos.cs" />
-    <Compile Include="Perfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Respuesta.cs" />
-    <Compile Include="respuestaLogin.cs" />
-    <Compile Include="salones.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
