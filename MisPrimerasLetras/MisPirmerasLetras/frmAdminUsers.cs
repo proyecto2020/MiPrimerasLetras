@@ -32,7 +32,7 @@ namespace MisPirmerasLetras
         private void button1_Click(object sender, EventArgs e)
         {
            
-            string Nombre = tbxName.Text;
+            string Nombre = tbxName.Text;   
             string PrimerAp = textBox1.Text;
             string SegundAp = textBox2.Text;
             string Correo = txtCorreo.Text;
@@ -152,6 +152,11 @@ namespace MisPirmerasLetras
         }
 
         private void dataEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

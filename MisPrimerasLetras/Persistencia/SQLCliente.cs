@@ -19,18 +19,20 @@ namespace Persistencia
         private SqlConnection conexion = new SqlConnection(connectionString);
 
         private Respuesta<object> respuesta;
+        private Respuesta<RespuestaLogin> respuestaLogin;
 
         public SQLCliente()
         {
             respuesta = new Respuesta<object>();
+            respuestaLogin = new Respuesta<RespuestaLogin>();
         }
 
-        public Respuesta<object> ObtenerLista(string usuario, string contrasena)
+        public Collection<RespuestaLogin> ConsultarLogin(string usuario, string contrasena)
         {
 
             DynamicParameters parameter = new DynamicParameters();
-            Collection<object> objectoR = null;
-            string queryString = $"EXEC " + RecursosSQL.consultarLogin +
+            Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
+            string queryString = $"EXEC " + "PR_consultar_usuario_login "  +
                 usuario + "," + contrasena + " ";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -40,15 +42,14 @@ namespace Persistencia
                 parameter.Add("@contrasena", contrasena);
                 using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
-                    objectoR = new ObservableCollection<object>(multipleResponse.Read<object>().ToList());
-                    respuesta.ResultData = objectoR;
+                    objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
                 }
             }
-            return respuesta;
+            return objectoR;
         }
 
 
-        public Respuesta<object> mtdRegistrarUsario(Usuario usuario)
+        public Respuesta<object> ValidacionRegistroUsuario(Usuario usuario)
         {
             DynamicParameters parameter = new DynamicParameters();
             string storedProcedure = RecursosSQL.InsertaUsuarios;

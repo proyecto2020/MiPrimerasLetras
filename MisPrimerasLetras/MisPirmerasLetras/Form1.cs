@@ -2,7 +2,9 @@
 using Entidades;
 using LoginControlador;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -23,17 +25,18 @@ namespace MisPirmerasLetras
         public Form1()
         {
             InitializeComponent();
-           this.controlador = new LoginControlador.LoginControlador();
+            this.controlador = new LoginControlador.LoginControlador();
         }
 
         private void label1_Click(object sender, EventArgs e)
+
         {
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtUser.Text;
-           
+
 
             if (usuario == "Usuario" || txtPassword.Text == "Contraseña")
             {
@@ -42,12 +45,25 @@ namespace MisPirmerasLetras
             else
             {
                 string contrasena = txtPassword.Text;
-                Respuesta<object> ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
+                Collection<RespuestaLogin> ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
 
-                if (ingreso.ResultData.Count > 0)
+                if (ingreso.Count > 0)
                 {
-                    this.Hide();
-                    this.FrmDashboard.Show();
+                    switch (ingreso[0].perfil)
+                    {
+                        case "administrador":
+                            this.Hide();
+                            this.FrmDashboard.Show();
+                            break;
+                        case "secretaria":
+                            Console.WriteLine("Case 2");
+                            break;
+                        case "docente":
+
+                        default:
+                            msError("Señor usuario Su Usario No pertenece a Ningun Perfil");
+                            break;
+                    }
                 }
                 else
                 {

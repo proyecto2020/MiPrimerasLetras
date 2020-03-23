@@ -50,12 +50,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataEstudiantes = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PirmerApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SegundoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEstudiantes)).BeginInit();
             this.panel2.SuspendLayout();
@@ -117,6 +117,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(606, 194);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label13
             // 
@@ -302,15 +303,6 @@
             this.dataEstudiantes.TabIndex = 6;
             this.dataEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEstudiantes_CellContentClick);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataEstudiantes);
-            this.panel2.Location = new System.Drawing.Point(12, 291);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(606, 194);
-            this.panel2.TabIndex = 16;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
@@ -340,6 +332,15 @@
             this.perfil.DataPropertyName = "Perfil";
             this.perfil.HeaderText = "perfil";
             this.perfil.Name = "perfil";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataEstudiantes);
+            this.panel2.Location = new System.Drawing.Point(12, 291);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(606, 194);
+            this.panel2.TabIndex = 16;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // frmAdminUsers
             // 

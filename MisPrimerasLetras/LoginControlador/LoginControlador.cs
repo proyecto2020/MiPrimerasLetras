@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -18,16 +19,16 @@ namespace LoginControlador
         {
             this.cliente = new SQLCliente();
         }
-        public Respuesta<object> ConsultarLogin(string usuario, string clave)
-        { 
-            var resultado = this.cliente.ObtenerLista( usuario, clave);   
+        public Collection<RespuestaLogin> ConsultarLogin(string usuario, string clave)
+        {
+            Collection<RespuestaLogin> resultado = this.cliente.ConsultarLogin( usuario, clave);   
             return resultado;
         }
 
 
         public Respuesta<object> ValidacionRegistroUsuario(Usuario usuario)
         {
-            var respuesta = this.cliente.mtdRegistrarUsario(usuario);
+            var respuesta = this.cliente.ValidacionRegistroUsuario(usuario);
             return respuesta;
         }
 

@@ -18,6 +18,8 @@ namespace Entidades
 
         public int RowsAffected { get; set; }
 
+        public int perfil { get; set; }
+
         public Collection<T> ResultData { get; set; }
 
     }
