@@ -63,13 +63,18 @@ namespace MisPirmerasLetras
 
         private void OpenFormRight(object frmHijo)
         {
-            Panel p = this.panelContendor as Panel;
+            if(this.panelContendor.Controls.Count > 0)
+            {
+                this.panelContendor.Controls.RemoveAt(0);
+                Panel p = this.panelContendor as Panel;
                 Form fh = frmHijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
                 this.panelContendor.Controls.Add(fh);
                 this.panelContendor.Tag = fh;
                 fh.Show();
+            }
+            
            
         }
         private void button1_Click(object sender, EventArgs e)
@@ -84,12 +89,17 @@ namespace MisPirmerasLetras
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //OpenFormRight(new frmGestion());
+            OpenFormRight(new frmGestion());
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFormRight(new frmMatricula());
         }
     }
 }

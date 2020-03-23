@@ -12,4 +12,8 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.c
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
-D:\misPrimerasLetras\MisPrimerasLetras\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
+C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb

@@ -2,6 +2,7 @@
 
 public class Grado
 {
+    public int IdGrado { get; set; }
     /// <summary>
     /// Grado.
     /// </summary>

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace Persistencia
 {
@@ -17,7 +18,7 @@ namespace Persistencia
         SqlDataAdapter adaptador;
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
         private SqlConnection conexion = new SqlConnection(connectionString);
-
+       
         private Respuesta<object> respuesta;
         private Respuesta<RespuestaLogin> respuestaLogin;
 
@@ -58,7 +59,7 @@ namespace Persistencia
                 connection.Open();
                 parameter.Add("@fk_perfiles", usuario.IdPerfil);
                 parameter.Add("@nombre", usuario.Nombre);
-                parameter.Add("@primer_apellido", usuario.PirmerApellido);
+                parameter.Add("@primer_apellido", usuario.PrimerApellido);
                 parameter.Add("@segundo_apellido", usuario.SegundoApellido);
                 parameter.Add("@correo", usuario.Correo, DbType.String);
                 parameter.Add("@estado", usuario.Estado);
@@ -85,6 +86,126 @@ namespace Persistencia
             }
             return Perfiles;
         }
+        // REFACTOR
+        List<Usuario> Usuario = new List<Usuario>();
+        public List<Usuario> mtdListarUsuariosPorPerfil(int perfil)
+        {
+            string consulta = "select  id_usuario, nombre, primer_apellido from usuario where fk_perfiles = " + perfil;
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                Usuario objUsuario = new Usuario();
+                objUsuario.IdUsuario = int.Parse(tblRol.Rows[i][0].ToString());
+                objUsuario.Nombre = tblRol.Rows[i][1].ToString();
+                objUsuario.PrimerApellido = tblRol.Rows[i][2].ToString();
+                Usuario.Add(objUsuario);
+            }
+            return Usuario;
+        }
+
+        List<Grado> Grado = new List<Grado>();
+        public List<Grado> mtdListarGrado()
+        {
+            string consulta = "select * from Grado";
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                Grado objGrado = new Grado();
+                objGrado.IdGrado = int.Parse(tblRol.Rows[i][0].ToString());
+                objGrado.Grados = tblRol.Rows[i][1].ToString();
+                Grado.Add(objGrado);
+            }
+            return Grado;
+        }
+
+        public int mtdRegistrarGrado(Grado grado)
+        {
+            string storedProcedure = "INSERT INTO grado(grado) values ('" + grado.Grados +"')";
+           
+             int respuesta = this.mtdIDU(storedProcedure);
+             return respuesta;
+        }
+        public int mtdRegistrarGrupo(Grupo grupo)
+        {
+            string storedProcedure = "INSERT INTO grupo(grupo, fk_grado, fk_usuario) values ('" + grupo.Grupos + "',"+ grupo.Grado+","+grupo.Usuario+")";
+
+            int respuesta = this.mtdIDU(storedProcedure);
+            return respuesta;
+        }
+
+        public int mtdMateriaArea(Materia materia = null, Area area = null)
+        {
+            string storedProcedure = "";
+            int respuesta = 0;
+
+            if (materia.NombreMateria != "")
+            {
+                storedProcedure = "INSERT INTO materia(materia, fecha_creacion) values ('" + materia.NombreMateria + "','" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "')";
+                respuesta = this.mtdIDU(storedProcedure);
+
+            }
+
+            if (area.AreaM!= "")
+            {
+                storedProcedure = "INSERT INTO area(area, fecha_creacion) values ('" + area.AreaM + "','" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "')";
+                respuesta = this.mtdIDU(storedProcedure);
+
+            }
+
+           
+            return respuesta;
+        
+        
+        }
+        public int mtdAsociacionMateriaArea(Materia materia, int idArea)
+        {
+            string storedProcedure = "UPDATE materia SET fk_area = "+idArea+ " WHERE materia.id_materia = " + materia.IdMateria+"";
+
+            int respuesta = this.mtdIDU(storedProcedure);
+            return respuesta;
+        }
+
+        List<Area> area = new List<Area>();
+        public List<Area> mtdListarArea()
+        {
+            string consulta = "select  id_area, area  from area";
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                Area objArea = new Area();
+                objArea.IdArea = int.Parse(tblRol.Rows[i][0].ToString());
+                objArea.AreaM = tblRol.Rows[i][1].ToString();
+               
+                area.Add(objArea);
+            }
+            return area;
+        }
+
+        List<Materia> materia = new List<Materia>();
+        public List<Materia> mtdListarMateria()
+        {
+            string consulta = "select id_materia, materia  from materia";
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                Materia objMateria = new Materia();
+                objMateria.IdMateria = int.Parse(tblRol.Rows[i][0].ToString());
+                objMateria.NombreMateria = tblRol.Rows[i][1].ToString();
+
+                materia.Add(objMateria);
+            }
+            return materia;
+        }
+
+
         public List<Usuario> ConsultarUsuarios()
         {
             List<Usuario> lista = new List<Usuario>();
@@ -99,7 +220,7 @@ namespace Persistencia
                     Usuario usuario = new Usuario();
                     usuario.Perfil = reader["perfil"].ToString();
                     usuario.Nombre = reader["nombre"].ToString();
-                    usuario.PirmerApellido = reader["primer_apellido"].ToString();
+                    usuario.PrimerApellido = reader["primer_apellido"].ToString();
                     usuario.SegundoApellido = reader["segundo_apellido"].ToString();
                     usuario.Correo = reader["correo"].ToString();
 
@@ -115,7 +236,7 @@ namespace Persistencia
         }
         public int mtdIDU(string consulta)
         {
-            //conexion.Open();
+            conexion.Open(); //open
             cmdRegistrar = new SqlCommand();
             cmdRegistrar.Connection = conexion;
             cmdRegistrar.CommandText = consulta;
