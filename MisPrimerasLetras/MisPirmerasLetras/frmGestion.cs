@@ -185,9 +185,7 @@ namespace MisPirmerasLetras
             int[] array1;
 
             Area area = lbArea.SelectedItem as Area;
-            //lbMateria.CheckedItems;
-            //CheckedListBox.CheckedItemCollection materias2 = lbMateria.CheckedItems;  
-            //List<Materia> materias2 = lbMateria.CheckedItems;  
+
 
             if (lbMateria.Items.Count > 0 && area != null)
             {

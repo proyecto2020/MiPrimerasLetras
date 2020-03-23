@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
 using System.Threading;
+using System.Text;
 
 namespace Persistencia
 {
@@ -51,6 +52,7 @@ namespace Persistencia
 
         public Respuesta<object> mtdRegistrarUsario(Usuario usuario)
         {
+            string contrasena = CreatePassword(10);
             DynamicParameters parameter = new DynamicParameters();
             string storedProcedure = RecursosSQL.InsertaUsuarios;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -62,7 +64,8 @@ namespace Persistencia
                 parameter.Add("@segundo_apellido", usuario.SegundoApellido);
                 parameter.Add("@correo", usuario.Correo, DbType.String);
                 parameter.Add("@estado", usuario.Estado);
-                parameter.Add("@contrasena", usuario.contrasena);
+                parameter.Add("@contrasena", contrasena);
+                EnviarCorreo(usuario.Nombre, usuario.Correo, contrasena);
                 int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
                 respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
             }
@@ -232,6 +235,31 @@ namespace Persistencia
             }
 
             return lista;
+        }
+        public void EnviarCorreo(string nombre, string correo, string contrasena)
+        {
+
+            var mailService = new Persistencia.SoporteDeSistema();
+
+            mailService.EnviarEmail(
+                
+                subject: "Bienvenido al sistema de  Jardin Infantil Mis Primeras Letras",
+                cuerpo: "Hola " +  nombre + "\n te damos la Bienvenida a nuestra plataforma \n"+
+                "esta es tu contraseña: " + contrasena + 
+                "\n Recuerda que la puedes cambiar una vez ingreses a la plataforma",
+                usuarioEmail: correo
+                );
+        }
+        public string CreatePassword(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            while (0 < length--)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            return res.ToString();
         }
         public int mtdIDU(string consulta)
         {

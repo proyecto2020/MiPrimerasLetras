@@ -81,8 +81,8 @@ namespace MisPirmerasLetras
             string SegundoApellido = textBox2.Text;
             string correo = txtCorreo.Text;
             int Perfil = int.Parse(cmbRol.SelectedValue.ToString());
-            int estado = int.Parse(textBox3.Text);
-            string contraseña = textBox4.Text;
+            int estado = 1;
+           // string contraseña = textBox4.Text;
             
 
 
@@ -93,8 +93,7 @@ namespace MisPirmerasLetras
             usuario.Correo = correo;
             usuario.IdPerfil = Perfil;
             usuario.Estado = Convert.ToBoolean(estado);
-            usuario.contrasena = contraseña;
-            Respuesta<object> registro =this.controlador.ValidacionRegistroUsuario(usuario);
+            Respuesta<object> registro = this.controlador.ValidacionRegistroUsuario(usuario);
             if (registro.ResultData.Count > 0)
             {
                 MessageBox.Show("El usuario Se Creo Correctamente");
@@ -140,15 +139,15 @@ namespace MisPirmerasLetras
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-            List<Usuario> lista = new List<Usuario>();
-            lista = this.controlador.ConsultarUsuarios();
-            if(lista.Count > 0)
-            {
-                dataEstudiantes.AutoGenerateColumns = false;
-                dataEstudiantes.DataSource = lista;
-                this.dataEstudiantes.Refresh();
+            //List<Usuario> lista = new List<Usuario>();
+            //lista = this.controlador.ConsultarUsuarios();
+            //if(lista.Count > 0)
+            //{
+            //    dataEstudiantes.AutoGenerateColumns = false;
+            //    dataEstudiantes.DataSource = lista;
+            //    this.dataEstudiantes.Refresh();
 
-            }
+            //}
         }
 
         private void dataEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)

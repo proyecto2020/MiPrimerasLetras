@@ -69,6 +69,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RecursosSQL.resx</DependentUpon>
     </Compile>
+    <Compile Include="ServidorDeCorreo.cs" />
+    <Compile Include="SoporteDeSistema.cs" />
     <Compile Include="SQLCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
