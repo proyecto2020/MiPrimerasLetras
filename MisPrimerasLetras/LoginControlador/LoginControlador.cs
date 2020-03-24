@@ -101,7 +101,11 @@ namespace LoginControlador
             var resultado = this.cliente.mtdListarMateria();
             return resultado;
         }
-
+        public Respuesta<object> InsertarAlumnos(Alumnos alumnos)
+        {
+            var resultado = this.cliente.InsertarAlumnos(alumnos);
+            return resultado;
+        }
 
     }
 }
