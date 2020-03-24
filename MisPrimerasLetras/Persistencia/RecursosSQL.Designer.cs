@@ -94,6 +94,15 @@ namespace Persistencia {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PR_Insertar_Alumnos.
+        /// </summary>
+        internal static string InsertarAlumnos {
+            get {
+                return ResourceManager.GetString("InsertarAlumnos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PR_Insertar_Usuario.
         /// </summary>
         internal static string InsertaUsuarios {

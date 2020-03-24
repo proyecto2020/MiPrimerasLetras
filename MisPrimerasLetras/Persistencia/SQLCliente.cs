@@ -281,5 +281,30 @@ namespace Persistencia
             conexion.Close();
             return tblDatos;
         }
+        public Respuesta<object> InsertarAlumnos(Alumnos alumnos)
+        {
+            DynamicParameters parameter = new DynamicParameters();
+            string storedProcedure = RecursosSQL.InsertarAlumnos;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                parameter.Add("@nombres", alumnos.Nombres);
+                parameter.Add("@PrimerApellido", alumnos.PrimerApellido);
+                parameter.Add("@SegundoApellido", alumnos.SegundoApellido);
+                parameter.Add("@FechaNacimiento", alumnos.FechaNacimiento);
+                parameter.Add("@Acudiente", alumnos.Acudiente, DbType.String);
+                parameter.Add("@Direccion", alumnos.Dirección,DbType.String);
+                parameter.Add("@Telefono", alumnos.Telefono);
+                parameter.Add("@Correo", alumnos.Correo, DbType.String);
+                parameter.Add("@Observaciones", alumnos.Observaciones, DbType.String);
+                parameter.Add("@IdGrupo", alumnos.IdGrupo);
+                parameter.Add("@ocupacion", alumnos.Ocupacion);
+
+                int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
+                respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
+
+            return respuesta;
+        }
     }
 }

@@ -57,8 +57,8 @@ namespace MisPirmerasLetras
             alumnos.Telefono = Convert.ToInt32(textBox6.Text);
             alumnos.Correo = textBox7.Text;
             alumnos.Observaciones = richTextBox1.Text;
-            alumnos.IdGrado= Convert.ToInt32(comboBox1.Text);
             alumnos.IdGrupo = Convert.ToInt32(comboBox2.Text);
+            alumnos.Ocupacion = textBox8.Text;
 
             Respuesta<object> registroEstudiantes = this.controlador.InsertarAlumnos(alumnos);
             if(registroEstudiantes.ResultData.Count> 0)
@@ -115,6 +115,16 @@ namespace MisPirmerasLetras
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }

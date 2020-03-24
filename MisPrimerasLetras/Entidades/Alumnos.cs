@@ -38,7 +38,7 @@ public class Alumnos
     /// Observaciones.
     /// </summary>
     public string Observaciones { get; set; }
-    public int IdGrado { get; set; }
+    public string Ocupacion { get; set; }
     public int IdGrupo {get; set; }
     /// <summary>
     /// FechaCreacion.
