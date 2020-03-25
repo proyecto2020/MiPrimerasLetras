@@ -139,15 +139,15 @@ namespace MisPirmerasLetras
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-            //List<Usuario> lista = new List<Usuario>();
-            //lista = this.controlador.ConsultarUsuarios();
-            //if(lista.Count > 0)
-            //{
-            //    dataEstudiantes.AutoGenerateColumns = false;
-            //    dataEstudiantes.DataSource = lista;
-            //    this.dataEstudiantes.Refresh();
+            List<Usuario> lista = new List<Usuario>();
+            lista = this.controlador.ConsultarUsuarios();
+            if (lista.Count > 0)
+            {
+                dataEstudiantes.AutoGenerateColumns = false;
+                dataEstudiantes.DataSource = lista;
+                this.dataEstudiantes.Refresh();
 
-            //}
+            }
         }
 
         private void dataEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
