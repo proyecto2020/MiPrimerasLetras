@@ -36,21 +36,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.pnlSubMenu = new System.Windows.Forms.Panel();
+            this.btnMaterias = new System.Windows.Forms.Button();
+            this.btnGrupos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pnlSubMenu = new System.Windows.Forms.Panel();
-            this.btnGrupos = new System.Windows.Forms.Button();
-            this.btnMaterias = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mnVertical.SuspendLayout();
+            this.pnlSubMenu.SuspendLayout();
             this.panelContendor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.pnlSubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -141,6 +143,7 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.pictureBox4);
             this.mnVertical.Controls.Add(this.pnlSubMenu);
             this.mnVertical.Controls.Add(this.button2);
             this.mnVertical.Controls.Add(this.button1);
@@ -151,6 +154,54 @@
             this.mnVertical.Name = "mnVertical";
             this.mnVertical.Size = new System.Drawing.Size(251, 788);
             this.mnVertical.TabIndex = 0;
+            // 
+            // pnlSubMenu
+            // 
+            this.pnlSubMenu.Controls.Add(this.btnMaterias);
+            this.pnlSubMenu.Controls.Add(this.btnGrupos);
+            this.pnlSubMenu.Location = new System.Drawing.Point(60, 369);
+            this.pnlSubMenu.Name = "pnlSubMenu";
+            this.pnlSubMenu.Size = new System.Drawing.Size(188, 119);
+            this.pnlSubMenu.TabIndex = 4;
+            this.pnlSubMenu.Visible = false;
+            // 
+            // btnMaterias
+            // 
+            this.btnMaterias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaterias.FlatAppearance.BorderSize = 0;
+            this.btnMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterias.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
+            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaterias.Location = new System.Drawing.Point(3, 67);
+            this.btnMaterias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMaterias.Name = "btnMaterias";
+            this.btnMaterias.Size = new System.Drawing.Size(234, 34);
+            this.btnMaterias.TabIndex = 2;
+            this.btnMaterias.Text = "Materias";
+            this.btnMaterias.UseVisualStyleBackColor = true;
+            this.btnMaterias.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnGrupos
+            // 
+            this.btnGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrupos.FlatAppearance.BorderSize = 0;
+            this.btnGrupos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrupos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnGrupos.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupos.Image")));
+            this.btnGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrupos.Location = new System.Drawing.Point(3, 16);
+            this.btnGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Size = new System.Drawing.Size(234, 34);
+            this.btnGrupos.TabIndex = 1;
+            this.btnGrupos.Text = "Grupos";
+            this.btnGrupos.UseVisualStyleBackColor = true;
+            this.btnGrupos.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -192,8 +243,8 @@
             // 
             // panelContendor
             // 
-            this.panelContendor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContendor.BackgroundImage")));
             this.panelContendor.Controls.Add(this.pictureBox3);
+            this.panelContendor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContendor.Location = new System.Drawing.Point(251, 60);
             this.panelContendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -215,53 +266,13 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // pnlSubMenu
+            // pictureBox4
             // 
-            this.pnlSubMenu.Controls.Add(this.btnMaterias);
-            this.pnlSubMenu.Controls.Add(this.btnGrupos);
-            this.pnlSubMenu.Location = new System.Drawing.Point(60, 369);
-            this.pnlSubMenu.Name = "pnlSubMenu";
-            this.pnlSubMenu.Size = new System.Drawing.Size(188, 119);
-            this.pnlSubMenu.TabIndex = 4;
-            this.pnlSubMenu.Visible = false;
-            // 
-            // btnGrupos
-            // 
-            this.btnGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGrupos.FlatAppearance.BorderSize = 0;
-            this.btnGrupos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrupos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnGrupos.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupos.Image")));
-            this.btnGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrupos.Location = new System.Drawing.Point(3, 16);
-            this.btnGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(234, 34);
-            this.btnGrupos.TabIndex = 1;
-            this.btnGrupos.Text = "Grupos";
-            this.btnGrupos.UseVisualStyleBackColor = true;
-            this.btnGrupos.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnMaterias
-            // 
-            this.btnMaterias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaterias.FlatAppearance.BorderSize = 0;
-            this.btnMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaterias.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
-            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaterias.Location = new System.Drawing.Point(3, 67);
-            this.btnMaterias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMaterias.Name = "btnMaterias";
-            this.btnMaterias.Size = new System.Drawing.Size(234, 34);
-            this.btnMaterias.TabIndex = 2;
-            this.btnMaterias.Text = "Materias";
-            this.btnMaterias.UseVisualStyleBackColor = true;
-            this.btnMaterias.Click += new System.EventHandler(this.button4_Click);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(233, 126);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // frmDashboard
             // 
@@ -282,9 +293,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mnVertical.ResumeLayout(false);
+            this.pnlSubMenu.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.pnlSubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,5 +316,6 @@
         private System.Windows.Forms.Panel pnlSubMenu;
         private System.Windows.Forms.Button btnGrupos;
         private System.Windows.Forms.Button btnMaterias;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
