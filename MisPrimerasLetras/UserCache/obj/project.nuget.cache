@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "s6QR1Du3vtTSlt3S0MdtjNU+24SKqoyyySdGPoB6q74XHfg0PHdst6endbl0FruCWg6UuU8NX7zqL3rwNsd4tA==",
+  "success": true,
+  "projectFilePath": "C:\\wamp64\\www\\MiPrimerasLetras\\MisPrimerasLetras\\UserCache\\UserCache.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JDIAZ\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JDIAZ\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -33,6 +33,7 @@ namespace MisPirmerasLetras
             if(mnVertical.Width == 244)
             {
                 mnVertical.Width = 70; //pixeles! test
+                pnlSubMenu.Visible = false;
             }
             else
             {
@@ -89,7 +90,9 @@ namespace MisPirmerasLetras
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenFormRight(new frmGestion());
+            
+
+            pnlSubMenu.Visible = true;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -100,6 +103,18 @@ namespace MisPirmerasLetras
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFormRight(new frmMatricula());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pnlSubMenu.Visible = false;
+            OpenFormRight(new frmGestionGrupos());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pnlSubMenu.Visible = false;
+            OpenFormRight(new frmGestionMaterias());
         }
     }
 }

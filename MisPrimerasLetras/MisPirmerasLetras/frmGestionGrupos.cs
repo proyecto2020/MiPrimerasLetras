@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace MisPirmerasLetras
 {
-    public partial class frmGestion : Form
+    public partial class frmGestionGrupos : Form
     {
         private LoginControlador.LoginControlador controlador;
-        public frmGestion()
+        public frmGestionGrupos()
         {
             InitializeComponent();
             this.controlador = new LoginControlador.LoginControlador();
@@ -96,29 +96,7 @@ namespace MisPirmerasLetras
             cmbGrado.ValueMember = "IdGrado";
         }
 
-        public void llenarArea()
-        {
-            List<Area> Area = this.controlador.ConsultarAreas();
-
-
-            foreach (Area areas in Area)
-            {
-                lbArea.Items.Add(areas);
-
-            }
-        }
-        public void llenarMateria()
-        {
-            List<Materia> Materia = this.controlador.ConsultarMaterias();
-
-
-            foreach (Materia materias in Materia)
-            {
-                lbMateria.Items.Add(materias);
-
-            }
-        }
-
+       
         public void llenarUsuarios()
         {
             List<Usuario> Usuario = this.controlador.ConsultarProfesores();
@@ -135,10 +113,11 @@ namespace MisPirmerasLetras
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
+
+            cmbAB.DropDownStyle = ComboBoxStyle.DropDownList; 
             llenarComoBox();
             llenarUsuarios();
-            llenarArea();
-            llenarMateria();
+           
         }
 
         private void cmbGrado_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,63 +127,12 @@ namespace MisPirmerasLetras
 
         private void btnGuardarAM_Click(object sender, EventArgs e)
         {
-            string AreaNombre = txtArea.Text;
-            string MateriaNombre = txtMateria.Text;
-            Materia ObjMateria = new Materia();
-            Area objArea = new Area();
-            int respuesta = 0;
-
-
-
-            if(AreaNombre != "" || MateriaNombre != "")
-            {
-                ObjMateria.NombreMateria = MateriaNombre;
-                objArea.AreaM = AreaNombre;
-
-                respuesta = this.controlador.RegistroAreaMateria(ObjMateria, objArea);
-            }
-            else
-            {
-                MessageBox.Show("Por favor ingrese datos validos");
-            }
-
-            if(respuesta > 0)
-            {
-                MessageBox.Show("Creado con exito!");
-                txtArea.Text = "";
-                txtMateria.Text = "";
-            }
-            else { MessageBox.Show("no se pudieron ingresar los datos");}
+            
         }
 
         private void btnGuardarARMA_Click(object sender, EventArgs e)
         {
            
-            int respuesta = 0;
-            Materia objMateria = new Materia();
-            int[] array1;
-
-            Area area = lbArea.SelectedItem as Area;
-
-
-            if (lbMateria.Items.Count > 0 && area != null)
-            {
-                
-                foreach (Materia materia in lbMateria.CheckedItems)
-                {
-                    respuesta = this.controlador.RegistroAsociacionMateriaArea(materia, area.IdArea);
-               
-                }
-
-
-
-            }
-
-            if(respuesta > 0)
-            {
-                MessageBox.Show("se han asociado con exito!");
-            }
-
 
 
         }

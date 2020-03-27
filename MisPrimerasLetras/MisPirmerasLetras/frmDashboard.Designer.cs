@@ -40,6 +40,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pnlSubMenu = new System.Windows.Forms.Panel();
+            this.btnGrupos = new System.Windows.Forms.Button();
+            this.btnMaterias = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -47,6 +50,7 @@
             this.mnVertical.SuspendLayout();
             this.panelContendor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -137,6 +141,7 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.pnlSubMenu);
             this.mnVertical.Controls.Add(this.button2);
             this.mnVertical.Controls.Add(this.button1);
             this.mnVertical.Controls.Add(this.btnUsers);
@@ -157,7 +162,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 320);
+            this.button2.Location = new System.Drawing.Point(0, 231);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(323, 54);
@@ -176,7 +181,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 236);
+            this.button1.Location = new System.Drawing.Point(0, 315);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(323, 54);
@@ -210,6 +215,54 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
+            // pnlSubMenu
+            // 
+            this.pnlSubMenu.Controls.Add(this.btnMaterias);
+            this.pnlSubMenu.Controls.Add(this.btnGrupos);
+            this.pnlSubMenu.Location = new System.Drawing.Point(60, 369);
+            this.pnlSubMenu.Name = "pnlSubMenu";
+            this.pnlSubMenu.Size = new System.Drawing.Size(188, 119);
+            this.pnlSubMenu.TabIndex = 4;
+            this.pnlSubMenu.Visible = false;
+            // 
+            // btnGrupos
+            // 
+            this.btnGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGrupos.FlatAppearance.BorderSize = 0;
+            this.btnGrupos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrupos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnGrupos.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupos.Image")));
+            this.btnGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrupos.Location = new System.Drawing.Point(3, 16);
+            this.btnGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Size = new System.Drawing.Size(234, 34);
+            this.btnGrupos.TabIndex = 1;
+            this.btnGrupos.Text = "Grupos";
+            this.btnGrupos.UseVisualStyleBackColor = true;
+            this.btnGrupos.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnMaterias
+            // 
+            this.btnMaterias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaterias.FlatAppearance.BorderSize = 0;
+            this.btnMaterias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaterias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterias.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
+            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaterias.Location = new System.Drawing.Point(3, 67);
+            this.btnMaterias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMaterias.Name = "btnMaterias";
+            this.btnMaterias.Size = new System.Drawing.Size(234, 34);
+            this.btnMaterias.TabIndex = 2;
+            this.btnMaterias.Text = "Materias";
+            this.btnMaterias.UseVisualStyleBackColor = true;
+            this.btnMaterias.Click += new System.EventHandler(this.button4_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +284,7 @@
             this.mnVertical.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -247,5 +301,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlSubMenu;
+        private System.Windows.Forms.Button btnGrupos;
+        private System.Windows.Forms.Button btnMaterias;
     }
 }
