@@ -21,7 +21,7 @@ namespace LoginControlador
         }
         public Collection<RespuestaLogin> ConsultarLogin(string usuario, string clave)
         {
-            Collection<RespuestaLogin> resultado = this.cliente.ConsultarLogin( usuario, clave);   
+            Collection<RespuestaLogin> resultado = this.cliente.ConsultarLogin(usuario, clave);
             return resultado;
         }
 
@@ -35,10 +35,10 @@ namespace LoginControlador
 
         public List<Perfiles> ConsultarPerfiles()
         {
-           var resultado =   this.cliente.mtdListarPerfiles();
-           return resultado;
+            var resultado = this.cliente.mtdListarPerfiles();
+            return resultado;
         }
-        
+
         public List<Usuario> ConsultarUsuarios()
         {
             var resultado = this.cliente.ConsultarUsuarios();
@@ -71,10 +71,10 @@ namespace LoginControlador
             return respuesta;
         }
 
-        public int RegistroAreaMateria(Materia materia = null, Area area = null )
+        public int RegistroAreaMateria(Materia materia = null, Area area = null)
         {
-           
-            if (materia.NombreMateria == "" && area.AreaM == "") {return -1;}
+
+            if (materia.NombreMateria == "" && area.AreaM == "") { return -1; }
 
 
             var respuesta = this.cliente.mtdMateriaArea(materia, area);
@@ -105,6 +105,22 @@ namespace LoginControlador
         {
             var resultado = this.cliente.InsertarAlumnos(alumnos);
             return resultado;
+        }
+
+        List<Grupo> lista = new List<Grupo>();
+
+        public List<Grupo> mtdListarGrupo()
+        {
+            lista = this.cliente.mtdListarGrupo();
+     
+            return lista;
+        }
+
+        public string mtdValidar(Grupo obGrupo = null)
+        {
+            string respuesta = "";
+            respuesta = this.cliente.mtdValidacion(obGrupo);
+            return respuesta;
         }
 
     }

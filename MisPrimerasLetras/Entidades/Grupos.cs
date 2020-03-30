@@ -23,4 +23,6 @@ public class Grupo
     /// Grado.
     /// </summary>
     public int Grado { get; set; }
+
+    public string NombreGrado { get; set; }
 }

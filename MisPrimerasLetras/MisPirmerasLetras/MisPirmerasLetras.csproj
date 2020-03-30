@@ -84,6 +84,11 @@
     <Compile Include="frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="MisPrimerasLetrasDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -113,6 +118,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="MisPrimerasLetrasDBDataSet.xsc">
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MisPrimerasLetrasDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MisPrimerasLetrasDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MisPrimerasLetrasDBDataSet.xss">
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

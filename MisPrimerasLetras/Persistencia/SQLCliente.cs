@@ -93,7 +93,7 @@ namespace Persistencia
         List<Usuario> Usuario = new List<Usuario>();
         public List<Usuario> mtdListarUsuariosPorPerfil(int perfil)
         {
-            string consulta = "select  id_usuario, nombre, primer_apellido from usuario where fk_perfiles = " + perfil;
+            string consulta = "select  id_usuario, nombre, primer_apellido FROM usuario u WHERE NOT EXISTS(SELECT NULL FROM grupo g WHERE g.fk_usuario = u.id_usuario ) AND u.fk_perfiles = " + perfil +"";
             DataTable tblRol = new DataTable();
             tblRol = this.mtdSelect(consulta);
 
@@ -305,6 +305,65 @@ namespace Persistencia
             }
 
             return respuesta;
+        }
+
+        public List<Grupo> mtdListarGrupo()
+        {
+
+            string consulta = "select grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
+
+            DataTable tblGrupo = new DataTable();
+            List<Grupo> listaGrupo = new List<Grupo>();
+
+            tblGrupo = this.mtdSelect(consulta);
+           
+            for (int i = 0; i < tblGrupo.Rows.Count; i++)
+            {
+                Grupo objGrupo = new Grupo();
+                objGrupo.Grupos = tblGrupo.Rows[i][0].ToString();
+
+
+                listaGrupo.Add(objGrupo);
+            }
+
+            return listaGrupo;
+
+
+        }
+
+        public string mtdValidacion(Grupo objGrupo = null)
+        {
+            string grp = "";
+            string consulta = "select grupo from Grupo where grupo = @grupo";
+
+            try
+            {
+
+                cmdRegistrar = new SqlCommand(consulta, conexion);
+                cmdRegistrar.Parameters.AddWithValue("@grupo", objGrupo.Grupos);
+                conexion.Open();
+             
+
+                 if(cmdRegistrar.ExecuteScalar() != null)
+                {
+                    return cmdRegistrar.ExecuteScalar().ToString();
+                }
+                else
+                {
+                    return grp;
+                }
+            }
+            catch(Exception ex )
+            {
+
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return grp;
+
         }
     }
 }

@@ -47,21 +47,32 @@ namespace MisPirmerasLetras
                 respuesta = this.controlador.RegistroDeGrado(grado);
 
                 mensaje = "Guardado con exito su Grado " + nameGrado;
+              
 
             }
             else if(profesor!= null && profesor.IdUsuario >= 0 && selectedG.IdGrado > 0)
             {
-                
+               
                 grupo.Grupos = cmbGrado.Text + cbmAB;
-                grupo.Grado = selectedG.IdGrado;
-                grupo.Usuario = profesor.IdUsuario;
-                System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
+                if (this.controlador.mtdValidar(grupo) == cmbGrado.Text + cbmAB)
+                {
+                    mensaje = "Este grupo ya existe!";
+                }
+                else
+                {
+
+                    grupo.Grado = selectedG.IdGrado;
+                    grupo.Usuario = profesor.IdUsuario;
+                    System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
 
 
-                respuesta = this.controlador.RegistroDeGradoGrupoProfesor(grupo);
+                    respuesta = this.controlador.RegistroDeGradoGrupoProfesor(grupo);
 
+
+                    mensaje = "Guardado con exito su grupo!";
+                    dataGrupos.DataSource = this.controlador.mtdListarGrupo();
+                }
                 
-                mensaje = "Guardado con exito su grupo!";
             }
             else
             {
@@ -110,9 +121,12 @@ namespace MisPirmerasLetras
 
 
         }
+    
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
+            dataGrupos.DataSource = this.controlador.mtdListarGrupo();
+ 
 
             cmbAB.DropDownStyle = ComboBoxStyle.DropDownList; 
             llenarComoBox();
@@ -134,6 +148,16 @@ namespace MisPirmerasLetras
         {
            
 
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGrupos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
