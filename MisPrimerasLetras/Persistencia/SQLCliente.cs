@@ -331,16 +331,36 @@ namespace Persistencia
 
         }
 
-        public string mtdValidacion(Grupo objGrupo = null)
+        public string mtdValidacion(Grupo objGrupo = null, Grado objGrado = null)
         {
             string grp = "";
-            string consulta = "select grupo from Grupo where grupo = @grupo";
+            string consulta = "";
+            string parametro = "";
+            object objValue  = null; // por default
+            if (objGrupo != null)
+            {
+                 consulta = "select grupo from Grupo where grupo = @grupo";
+                parametro = "@grupo";
+                 objValue = objGrupo.Grupos;
+
+            }
+            else if(objGrado != null)
+            {
+                consulta = "select grado from grado where grado = @grado";
+                parametro = "@grado";
+                 objValue = objGrado.Grados;
+
+
+
+            }
+
+           
 
             try
             {
 
                 cmdRegistrar = new SqlCommand(consulta, conexion);
-                cmdRegistrar.Parameters.AddWithValue("@grupo", objGrupo.Grupos);
+                cmdRegistrar.Parameters.AddWithValue(parametro, objValue);
                 conexion.Open();
              
 

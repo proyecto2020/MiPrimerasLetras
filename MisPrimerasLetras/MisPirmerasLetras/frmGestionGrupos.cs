@@ -44,9 +44,17 @@ namespace MisPirmerasLetras
             {
 
                 grado.Grados = nameGrado;
-                respuesta = this.controlador.RegistroDeGrado(grado);
+                if (this.controlador.mtdValidar(null,grado) == nameGrado)
+                {
+                    mensaje = "Este grupo ya existe!";
+                }
+                else
+                {
+                    respuesta = this.controlador.RegistroDeGrado(grado);
 
-                mensaje = "Guardado con exito su Grado " + nameGrado;
+                    mensaje = "Guardado con exito su Grado " + nameGrado;
+                }
+                
               
 
             }
@@ -54,7 +62,7 @@ namespace MisPirmerasLetras
             {
                
                 grupo.Grupos = cmbGrado.Text + cbmAB;
-                if (this.controlador.mtdValidar(grupo) == cmbGrado.Text + cbmAB)
+                if (this.controlador.mtdValidar(grupo, null) == cmbGrado.Text + cbmAB)
                 {
                     mensaje = "Este grupo ya existe!";
                 }

@@ -116,10 +116,10 @@ namespace LoginControlador
             return lista;
         }
 
-        public string mtdValidar(Grupo obGrupo = null)
+        public string mtdValidar(Grupo obGrupo = null, Grado objGrado = null)
         {
             string respuesta = "";
-            respuesta = this.cliente.mtdValidacion(obGrupo);
+            respuesta = this.cliente.mtdValidacion(obGrupo, objGrado);
             return respuesta;
         }
 
