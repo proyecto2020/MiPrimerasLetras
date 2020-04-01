@@ -128,8 +128,13 @@ namespace MisPirmerasLetras
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = "Contraseña";
-              
+
+                //Comment J.B 25.03.2020
                 txtPassword.UseSystemPasswordChar = false;
+                //End Comment J.B 25.03.2020
+                //Add J.B 25.03.2020
+                txtPassword.PasswordChar = char.MinValue;
+                //End Add J.B 25.03.2020
             }
         }
 
@@ -140,7 +145,19 @@ namespace MisPirmerasLetras
             {
                 txtPassword.Text = "";
                 lblMessage.Visible = false;
-                txtPassword.UseSystemPasswordChar = true;
+                //Comment J.B 25.03.2020
+                //txtPassword.UseSystemPasswordChar = true;
+                //End Comment J.B 25.03.2020
+                //Add J.B 25.03.2020
+                if (checkBox1.Checked)
+                {
+                    txtPassword.PasswordChar = char.MinValue;
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
+                //End Add J.B 25.03.2020
             }
         }
 
@@ -151,6 +168,17 @@ namespace MisPirmerasLetras
                 txtUser.Text = "";
                 lblMessage.Visible = false;
                 txtUser.ForeColor = Color.Black;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Contraseña" || checkBox1.Checked )
+            {
+                txtPassword.PasswordChar = char.MinValue;
+            }
+            else {
+                txtPassword.PasswordChar = '*';
             }
         }
     }

@@ -34,19 +34,34 @@ namespace Persistencia
 
             DynamicParameters parameter = new DynamicParameters();
             Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
-            string queryString = $"EXEC " + "PR_consultar_usuario_login "  +
-                usuario + "," + contrasena + " ";
+            //Comment J.B 25.03.2020
+            ////string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+            ////    usuario + "," + contrasena + " ";
+            //End Comment J.B 25.03.2020
+            //Add J.B 25.03.2020
+            string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+                usuario + ",'" + this.Encripsha512(contrasena) + "' ";
+            //End Add J.B 25.03.2020
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
                 connection.Open();
                 parameter.Add("@usuario", usuario);
-                parameter.Add("@contrasena", contrasena);
+
+                //Comment J.B 25.03.2020
+                ////parameter.Add("@contrasena", contrasena);
+                //End Comment J.B 25.03.2020
+                //Add J.B 25.03.2020
+                parameter.Add("@contrasena", this.Encripsha512(contrasena));
+                //End Add J.B 25.03.2020
                 using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
                     objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
                 }
             }
+            conexion.Close();
+
             return objectoR;
         }
 
@@ -54,6 +69,9 @@ namespace Persistencia
         public Respuesta<object> ValidacionRegistroUsuario(Usuario usuario)
         {
             string contrasena = CreatePassword(10);
+            //Add J.B 25.03.2020
+            contrasena = this.Encripsha512(contrasena);
+            //End Add J.B 25.03.2020
             DynamicParameters parameter = new DynamicParameters();
             string storedProcedure = RecursosSQL.InsertaUsuarios;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -235,6 +253,8 @@ namespace Persistencia
                 reader.Close();
             }
 
+            conexion.Close();
+
             return lista;
         }
         public void EnviarCorreo(string nombre, string correo, string contrasena)
@@ -306,5 +326,21 @@ namespace Persistencia
 
             return respuesta;
         }
+
+        //Add J.B 25.03.2020
+        public string Encripsha512(string im_contra)
+        {
+            var bytes = System.Text.Encoding.UTF8.GetBytes(im_contra);
+            using (var hash = System.Security.Cryptography.SHA512.Create())
+            {
+                var hashedInputBytes = hash.ComputeHash(bytes);
+
+                var hashedInputStringBuilder = new System.Text.StringBuilder(128);
+                foreach (var b in hashedInputBytes)
+                    hashedInputStringBuilder.Append(b.ToString("X2"));
+                return hashedInputStringBuilder.ToString();
+            }
+        }
+        //End Add J.B 25.03.2020
     }
 }

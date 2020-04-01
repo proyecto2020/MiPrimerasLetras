@@ -91,3 +91,28 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmMatricula.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmMatricula.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe.config
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.exe
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MisPirmerasLetras.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Entidades.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Dapper.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Entidades.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\LoginControlador.dll.config
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Persistencia.dll.config
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Dapper.xml
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csprojAssemblyReference.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Form1.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmAdminUsers.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestion.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmMatricula.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Properties.Resources.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.GenerateResource.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CopyComplete
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
