@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlSubMenu = new System.Windows.Forms.Panel();
             this.btnMaterias = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
@@ -43,16 +44,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mnVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlSubMenu.SuspendLayout();
             this.panelContendor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -66,7 +66,7 @@
             this.barraTitulo.Location = new System.Drawing.Point(251, 0);
             this.barraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1136, 60);
+            this.barraTitulo.Size = new System.Drawing.Size(1232, 60);
             this.barraTitulo.TabIndex = 1;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
@@ -74,7 +74,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1051, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1126, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 60);
@@ -100,8 +100,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(407, 9);
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(458, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(334, 32);
             this.label1.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(987, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1049, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 60);
@@ -154,6 +154,14 @@
             this.mnVertical.Name = "mnVertical";
             this.mnVertical.Size = new System.Drawing.Size(251, 788);
             this.mnVertical.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(233, 126);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // pnlSubMenu
             // 
@@ -249,9 +257,8 @@
             this.panelContendor.Location = new System.Drawing.Point(251, 60);
             this.panelContendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContendor.Name = "panelContendor";
-            this.panelContendor.Size = new System.Drawing.Size(1136, 728);
-            this.panelContendor.TabIndex = 2;
-            this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint);
+            this.panelContendor.Size = new System.Drawing.Size(1232, 728);
+            this.panelContendor.TabIndex = 5;
             // 
             // pictureBox3
             // 
@@ -266,19 +273,11 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(233, 126);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 788);
+            this.ClientSize = new System.Drawing.Size(1483, 788);
             this.Controls.Add(this.panelContendor);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.mnVertical);
@@ -293,10 +292,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mnVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlSubMenu.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,14 +307,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Panel mnVertical;
-        private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlSubMenu;
         private System.Windows.Forms.Button btnGrupos;
         private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panelContendor;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

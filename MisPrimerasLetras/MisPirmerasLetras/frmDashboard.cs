@@ -30,14 +30,14 @@ namespace MisPirmerasLetras
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
-            if(mnVertical.Width == 244)
+            if(mnVertical.Width == 205)
             {
                 mnVertical.Width = 70; //pixeles! test
                 pnlSubMenu.Visible = false;
             }
             else
             {
-                mnVertical.Width = 244;
+                mnVertical.Width = 205;
             }
         }
 

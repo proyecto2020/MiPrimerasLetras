@@ -181,7 +181,7 @@
             this.panel1.Controls.Add(this.btnRegistrarTodo);
             this.panel1.Controls.Add(this.cmbGrado);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel1.Location = new System.Drawing.Point(80, 102);
+            this.panel1.Location = new System.Drawing.Point(48, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 604);
             this.panel1.TabIndex = 26;
@@ -230,7 +230,7 @@
             // 
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.dataGrupos);
-            this.panel2.Location = new System.Drawing.Point(736, 102);
+            this.panel2.Location = new System.Drawing.Point(687, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(511, 604);
             this.panel2.TabIndex = 28;
