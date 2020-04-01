@@ -42,6 +42,10 @@
             this.btnGrupos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblBienvenida = new System.Windows.Forms.Label();
+            this.lblNombreUser = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblApellidoUser = new System.Windows.Forms.Label();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
@@ -99,11 +103,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Location = new System.Drawing.Point(458, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 32);
+            this.label1.Size = new System.Drawing.Size(299, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "MIS PRIMERAS LETRAS";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -143,6 +147,10 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.lblApellidoUser);
+            this.mnVertical.Controls.Add(this.lblPerfil);
+            this.mnVertical.Controls.Add(this.lblNombreUser);
+            this.mnVertical.Controls.Add(this.lblBienvenida);
             this.mnVertical.Controls.Add(this.pictureBox4);
             this.mnVertical.Controls.Add(this.pnlSubMenu);
             this.mnVertical.Controls.Add(this.button2);
@@ -159,7 +167,7 @@
             // 
             this.pictureBox4.Location = new System.Drawing.Point(12, 12);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(233, 126);
+            this.pictureBox4.Size = new System.Drawing.Size(88, 121);
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
@@ -249,6 +257,43 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // lblBienvenida
+            // 
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.Location = new System.Drawing.Point(106, 19);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(117, 23);
+            this.lblBienvenida.TabIndex = 5;
+            this.lblBienvenida.Text = "Bienvenido";
+            // 
+            // lblNombreUser
+            // 
+            this.lblNombreUser.AutoSize = true;
+            this.lblNombreUser.Location = new System.Drawing.Point(116, 60);
+            this.lblNombreUser.Name = "lblNombreUser";
+            this.lblNombreUser.Size = new System.Drawing.Size(46, 17);
+            this.lblNombreUser.TabIndex = 6;
+            this.lblNombreUser.Text = "label3";
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Location = new System.Drawing.Point(116, 99);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(46, 17);
+            this.lblPerfil.TabIndex = 7;
+            this.lblPerfil.Text = "label4";
+            // 
+            // lblApellidoUser
+            // 
+            this.lblApellidoUser.AutoSize = true;
+            this.lblApellidoUser.Location = new System.Drawing.Point(157, 60);
+            this.lblApellidoUser.Name = "lblApellidoUser";
+            this.lblApellidoUser.Size = new System.Drawing.Size(46, 17);
+            this.lblApellidoUser.TabIndex = 8;
+            this.lblApellidoUser.Text = "label2";
+            // 
             // panelContendor
             // 
             this.panelContendor.Controls.Add(this.pictureBox3);
@@ -258,7 +303,8 @@
             this.panelContendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContendor.Name = "panelContendor";
             this.panelContendor.Size = new System.Drawing.Size(1232, 728);
-            this.panelContendor.TabIndex = 5;
+            this.panelContendor.TabIndex = 6;
+            this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint_2);
             // 
             // pictureBox3
             // 
@@ -286,12 +332,14 @@
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.barraTitulo.ResumeLayout(false);
             this.barraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mnVertical.ResumeLayout(false);
+            this.mnVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlSubMenu.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
@@ -314,6 +362,10 @@
         private System.Windows.Forms.Button btnGrupos;
         private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblApellidoUser;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.Label lblNombreUser;
+        private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Collections.ObjectModel;
+
+using Entidades;
+using LoginControlador;
 
 namespace MisPirmerasLetras
 {
     public partial class frmDashboard : Form
     {
+        private LoginControlador.LoginControlador controlador;
         public frmDashboard()
         {
             InitializeComponent();
+            this.controlador = new LoginControlador.LoginControlador();
         }
         //palabras reservadas, de la libreria.
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -80,7 +86,17 @@ namespace MisPirmerasLetras
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFormRight(new frmAdminUsers());
+           string rol =  SoporteControlador.CacheUsuario.ApellidoUsuario;
+            if(rol == "administrador")
+            {
+
+                OpenFormRight(new frmAdminUsers());
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos!");
+            }
+            
         }
 
         private void panelContendor_Paint(object sender, PaintEventArgs e)
@@ -115,6 +131,30 @@ namespace MisPirmerasLetras
         {
             pnlSubMenu.Visible = false;
             OpenFormRight(new frmGestionMaterias());
+        }
+
+        private void panelContendor_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            DatosUsuario();
+        }
+
+        private void DatosUsuario()
+        {
+            
+
+            lblApellidoUser.Text = SoporteControlador.CacheUsuario.ApellidoUsuario;
+            lblNombreUser.Text = SoporteControlador.CacheUsuario.NombreUsuario;
+            lblPerfil.Text = SoporteControlador.CacheUsuario.Perfil;
+        }
+
+        private void panelContendor_Paint_2(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

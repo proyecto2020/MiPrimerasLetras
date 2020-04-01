@@ -17,3 +17,6 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CopyComplete

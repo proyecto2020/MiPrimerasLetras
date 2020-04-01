@@ -84,6 +84,12 @@
     <Compile Include="frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MisPrimerasLetrasDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +159,10 @@
     <ProjectReference Include="..\LoginControlador\LoginControlador.csproj">
       <Project>{C9AC1E2D-DEB5-434E-9A10-741375E1F0F1}</Project>
       <Name>LoginControlador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoporteControlador\SoporteControlador.csproj">
+      <Project>{9c3b5788-6a2f-46fd-bdcc-afa75b13bd80}</Project>
+      <Name>SoporteControlador</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

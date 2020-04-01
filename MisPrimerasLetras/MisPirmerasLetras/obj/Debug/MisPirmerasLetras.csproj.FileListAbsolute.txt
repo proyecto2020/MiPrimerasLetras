@@ -92,3 +92,6 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmMatricula.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestionGrupos.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestionMaterias.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmPagos.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\SoporteControlador.pdb

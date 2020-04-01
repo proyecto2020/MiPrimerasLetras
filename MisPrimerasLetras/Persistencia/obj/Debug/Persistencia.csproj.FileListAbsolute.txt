@@ -97,3 +97,5 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\SoporteControlador.pdb

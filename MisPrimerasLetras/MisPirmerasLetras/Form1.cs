@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace MisPirmerasLetras
 {
@@ -49,21 +50,9 @@ namespace MisPirmerasLetras
 
                 if (ingreso.Count > 0)
                 {
-                    switch (ingreso[0].perfil)
-                    {
-                        case "administrador":
-                            this.Hide();
-                            this.FrmDashboard.Show();
-                            break;
-                        case "secretaria":
-                            Console.WriteLine("Case 2");
-                            break;
-                        case "docente":
-
-                        default:
-                            msError("Señor usuario Su Usario No pertenece a Ningun Perfil");
-                            break;
-                    }
+                    this.Hide();
+                    this.FrmDashboard.Show();
+                    
                 }
                 else
                 {

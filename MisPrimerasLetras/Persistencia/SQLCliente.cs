@@ -9,6 +9,8 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Text;
+using SoporteControlador;
+
 
 namespace Persistencia
 {
@@ -46,7 +48,17 @@ namespace Persistencia
                 {
                     objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
                 }
+                if (objectoR.Count > 0)
+                {
+
+                    SoporteControlador.CacheUsuario.Perfil = objectoR[0].perfil;
+                    SoporteControlador.CacheUsuario.NombreUsuario = objectoR[0].nombre;
+                    SoporteControlador.CacheUsuario.ApellidoUsuario = objectoR[0].primer_apellido;
+                    SoporteControlador.CacheUsuario.Correo = objectoR[0].correo;
+                    
+                }
             }
+
             return objectoR;
         }
 

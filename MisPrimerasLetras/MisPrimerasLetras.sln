@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginControlador", "LoginCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{4B1E32BB-417B-4C50-9894-87AF2F594F9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoporteControlador", "SoporteControlador\SoporteControlador.csproj", "{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4B1E32BB-417B-4C50-9894-87AF2F594F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B1E32BB-417B-4C50-9894-87AF2F594F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B1E32BB-417B-4C50-9894-87AF2F594F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{5C56E53D-1326-4255-8A22-B9358FEC9182} = {F9661652-339E-46E0-869A-DDB613FF6086}
 		{C9AC1E2D-DEB5-434E-9A10-741375E1F0F1} = {79744B73-361A-4787-8CBB-6B0443751CF1}
 		{4B1E32BB-417B-4C50-9894-87AF2F594F9B} = {F9661652-339E-46E0-869A-DDB613FF6086}
+		{9C3B5788-6A2F-46FD-BDCC-AFA75B13BD80} = {79744B73-361A-4787-8CBB-6B0443751CF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD671A8-1E0E-4D90-8993-101A610DD2C8}

@@ -103,3 +103,5 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csproj.CopyComplete
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.pdb
