@@ -48,6 +48,7 @@
             this.lblApellidoUser = new System.Windows.Forms.Label();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblMensajeAlternativo = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -162,6 +163,7 @@
             this.mnVertical.Name = "mnVertical";
             this.mnVertical.Size = new System.Drawing.Size(251, 788);
             this.mnVertical.TabIndex = 0;
+            this.mnVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.mnVertical_Paint);
             // 
             // pictureBox4
             // 
@@ -296,6 +298,7 @@
             // 
             // panelContendor
             // 
+            this.panelContendor.Controls.Add(this.lblMensajeAlternativo);
             this.panelContendor.Controls.Add(this.pictureBox3);
             this.panelContendor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -310,7 +313,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(603, 599);
+            this.pictureBox3.Location = new System.Drawing.Point(651, 657);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 60);
@@ -318,6 +321,16 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
+            // 
+            // lblMensajeAlternativo
+            // 
+            this.lblMensajeAlternativo.AutoSize = true;
+            this.lblMensajeAlternativo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeAlternativo.Location = new System.Drawing.Point(459, 574);
+            this.lblMensajeAlternativo.Name = "lblMensajeAlternativo";
+            this.lblMensajeAlternativo.Size = new System.Drawing.Size(84, 28);
+            this.lblMensajeAlternativo.TabIndex = 3;
+            this.lblMensajeAlternativo.Text = "label2";
             // 
             // frmDashboard
             // 
@@ -343,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlSubMenu.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
+            this.panelContendor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -368,5 +382,6 @@
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblMensajeAlternativo;
     }
 }
