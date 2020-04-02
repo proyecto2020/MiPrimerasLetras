@@ -1,0 +1,9 @@
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.deps.json
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.csprojAssemblyReference.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.csproj.CoreCompileInputs.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.AssemblyInfoInputs.cache
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.AssemblyInfo.cs
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.pdb

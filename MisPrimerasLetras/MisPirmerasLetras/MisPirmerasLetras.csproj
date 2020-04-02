@@ -66,17 +66,34 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestion.cs">
+    <Compile Include="frmGestionGrupos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestion.designer.cs">
-      <DependentUpon>frmGestion.cs</DependentUpon>
+    <Compile Include="frmGestionGrupos.designer.cs">
+      <DependentUpon>frmGestionGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionMaterias.Designer.cs">
+      <DependentUpon>frmGestionMaterias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MisPrimerasLetrasDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,11 +106,17 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestion.resx">
-      <DependentUpon>frmGestion.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionGrupos.resx">
+      <DependentUpon>frmGestionGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionMaterias.resx">
+      <DependentUpon>frmGestionMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +127,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="MisPrimerasLetrasDBDataSet.xsc">
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MisPrimerasLetrasDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MisPrimerasLetrasDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MisPrimerasLetrasDBDataSet.xss">
+      <DependentUpon>MisPrimerasLetrasDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +159,10 @@
     <ProjectReference Include="..\LoginControlador\LoginControlador.csproj">
       <Project>{C9AC1E2D-DEB5-434E-9A10-741375E1F0F1}</Project>
       <Name>LoginControlador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoporteControlador\SoporteControlador.csproj">
+      <Project>{9c3b5788-6a2f-46fd-bdcc-afa75b13bd80}</Project>
+      <Name>SoporteControlador</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,15 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Collections.ObjectModel;
+
+using Entidades;
+using LoginControlador;
 
 namespace MisPirmerasLetras
 {
     public partial class frmDashboard : Form
     {
+        private LoginControlador.LoginControlador controlador;
+     
         public frmDashboard()
         {
             InitializeComponent();
+            this.controlador = new LoginControlador.LoginControlador();
+        
         }
+
+        
         //palabras reservadas, de la libreria.
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 
@@ -30,13 +40,14 @@ namespace MisPirmerasLetras
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
-            if(mnVertical.Width == 244)
+            if(mnVertical.Width == 205)
             {
                 mnVertical.Width = 70; //pixeles! test
+                pnlSubMenu.Visible = false;
             }
             else
             {
-                mnVertical.Width = 244;
+                mnVertical.Width = 205;
             }
         }
 
@@ -77,9 +88,21 @@ namespace MisPirmerasLetras
             
            
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFormRight(new frmAdminUsers());
+           string rol = SoporteControlador.CacheUsuario.Perfil;
+            if (rol == "administrador")
+            {
+
+                OpenFormRight(new frmAdminUsers());
+            }
+            else
+            {
+                ShowMensaje();
+
+            }
         }
 
         private void panelContendor_Paint(object sender, PaintEventArgs e)
@@ -89,7 +112,18 @@ namespace MisPirmerasLetras
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenFormRight(new frmGestion());
+            string rol = SoporteControlador.CacheUsuario.Perfil;
+            if (rol == "administrador")
+            {
+
+                pnlSubMenu.Visible = true;
+            }
+            else
+            {
+                ShowMensaje();
+            }
+
+          
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -99,7 +133,69 @@ namespace MisPirmerasLetras
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFormRight(new frmMatricula());
+            string rol = SoporteControlador.CacheUsuario.Perfil;
+            if (rol == "secretaria")
+            {
+
+                OpenFormRight(new frmMatricula());
+            }
+            else
+            {
+
+                ShowMensaje();
+            }
+            
+        }
+        private void ShowMensaje()
+        {
+            MessageBox.Show("Lo sentimos no tienes permisos \n por favor comunicate con soporte \n",
+"Sin permisos",
+MessageBoxButtons.OK,
+         // for Warning  
+         MessageBoxIcon.Error // for Error 
+                              //MessageBoxIcon.Information  // for Information
+                              //MessageBoxIcon.Question // for Question
+);
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pnlSubMenu.Visible = false;
+            OpenFormRight(new frmGestionGrupos());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pnlSubMenu.Visible = false;
+            OpenFormRight(new frmGestionMaterias());
+        }
+
+        private void panelContendor_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            DatosUsuario();
+        }
+
+        private void DatosUsuario()
+        {
+            
+
+            lblApellidoUser.Text = SoporteControlador.CacheUsuario.ApellidoUsuario;
+            lblNombreUser.Text = SoporteControlador.CacheUsuario.NombreUsuario;
+            lblPerfil.Text = SoporteControlador.CacheUsuario.Perfil;
+        }
+
+        private void panelContendor_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mnVertical_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

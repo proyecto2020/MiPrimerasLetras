@@ -10,6 +10,9 @@ namespace Entidades
     {
         public string correo { get; set; }
         public string contraseña { get; set; }
+
+        public  string  nombre { get; set; }
+        public  string primer_apellido { get; set; }
         public string perfil { get; set; }
     }
 }

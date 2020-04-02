@@ -97,29 +97,5 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll.config
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Persistencia.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Dapper.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Buffers.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Memory.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.RecursosSQL.resources
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.GenerateResource.cache
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Persistencia\obj\Debug\Persistencia.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\SoporteControlador.pdb

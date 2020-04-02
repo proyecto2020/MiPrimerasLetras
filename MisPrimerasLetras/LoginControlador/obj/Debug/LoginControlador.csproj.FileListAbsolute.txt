@@ -103,30 +103,5 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csproj.CopyComplete
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.dll
 C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\LoginControlador.dll.config
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\LoginControlador.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\LoginControlador.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Entidades.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Persistencia.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Buffers.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Memory.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Dapper.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Entidades.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Persistencia.pdb
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Persistencia.dll.config
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Buffers.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Memory.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Dapper.xml
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csprojAssemblyReference.cache
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csproj.CoreCompileInputs.cache
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.csproj.CopyComplete
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.dll
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.pdb
