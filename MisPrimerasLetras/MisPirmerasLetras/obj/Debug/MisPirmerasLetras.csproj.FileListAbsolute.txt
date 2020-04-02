@@ -108,7 +108,6 @@ C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Form1.resources
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmAdminUsers.resources
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmDashboard.resources
-C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestion.resources
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmMatricula.resources
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.Properties.Resources.resources
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.GenerateResource.cache
@@ -116,3 +115,8 @@ C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.csproj.CopyComplete
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.exe
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\SoporteControlador.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\SoporteControlador.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestionGrupos.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmGestionMaterias.resources
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmPagos.resources

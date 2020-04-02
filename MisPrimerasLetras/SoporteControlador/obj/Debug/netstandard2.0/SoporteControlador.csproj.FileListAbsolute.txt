@@ -7,3 +7,12 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\ne
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.AssemblyInfo.cs
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.deps.json
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\bin\Debug\netstandard2.0\SoporteControlador.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.csprojAssemblyReference.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.AssemblyInfo.cs
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\SoporteControlador\obj\Debug\netstandard2.0\SoporteControlador.pdb

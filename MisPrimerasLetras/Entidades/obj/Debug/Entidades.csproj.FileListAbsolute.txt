@@ -20,3 +20,12 @@ C:\Users\Jorge David Escobar\Documents\c# .net projects\uninpahu\MiPrimerasLetra
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\SoporteControlador.pdb
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
+C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4LlUApsP36oiiv3kmvbhyO2VQ7jvyK61VWDbCH7khtVGYrkUmirFdQGyN5UE9EruWk88I9cBvMmaEZPz9FrA0A==",
+  "dgSpecHash": "0RsNPh1xvSxnsAAcDQqBlH9V8WQWotK+0FU/Ur0P7c67nrTlPS/WC8wO8yRwG8hO1ZsCOQpp9okta1zYmIVZCA==",
   "success": true,
-  "projectFilePath": "C:\\wamp64\\www\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
+  "projectFilePath": "C:\\Users\\santi\\source\\repos\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\JDIAZ\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\JDIAZ\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

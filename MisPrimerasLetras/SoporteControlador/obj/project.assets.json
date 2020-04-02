@@ -180,19 +180,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JDIAZ\\.nuget\\packages\\": {}
+    "C:\\Users\\santi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\wamp64\\www\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
+      "projectUniqueName": "C:\\Users\\santi\\source\\repos\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
       "projectName": "SoporteControlador",
-      "projectPath": "C:\\wamp64\\www\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
-      "packagesPath": "C:\\Users\\JDIAZ\\.nuget\\packages\\",
-      "outputPath": "C:\\wamp64\\www\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\obj\\",
+      "projectPath": "C:\\Users\\santi\\source\\repos\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\SoporteControlador.csproj",
+      "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\santi\\source\\repos\\MiPrimerasLetras\\MisPrimerasLetras\\SoporteControlador\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JDIAZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -233,7 +233,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-014977\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
