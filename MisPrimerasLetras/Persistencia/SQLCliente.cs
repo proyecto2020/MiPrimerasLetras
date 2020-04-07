@@ -35,12 +35,12 @@ namespace Persistencia
             DynamicParameters parameter = new DynamicParameters();
             Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
             //Comment J.B 25.03.2020
-            ////string queryString = $"EXEC " + "PR_consultar_usuario_login " +
-            ////    usuario + "," + contrasena + " ";
+            string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+                usuario + "," + contrasena + " ";
             //End Comment J.B 25.03.2020
             //Add J.B 25.03.2020
-            string queryString = $"EXEC " + "PR_consultar_usuario_login " +
-                usuario + ",'" + this.Encripsha512(contrasena) + "' ";
+            //string queryString = $"EXEC " + "PR_consultar_usuario_login " +
+            //    usuario + ",'" + this.Encripsha512(contrasena) + "' ";
             //End Add J.B 25.03.2020
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -53,11 +53,21 @@ namespace Persistencia
                 ////parameter.Add("@contrasena", contrasena);
                 //End Comment J.B 25.03.2020
                 //Add J.B 25.03.2020
-                parameter.Add("@contrasena", this.Encripsha512(contrasena));
+                parameter.Add("@contrasena", contrasena);
                 //End Add J.B 25.03.2020
                 using (var multipleResponse = connection.QueryMultiple(queryString, parameter))
                 {
                     objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
+                }
+
+                if (objectoR.Count > 0)
+                {
+
+                    SoporteControlador.CacheUsuario.Perfil = objectoR[0].perfil;
+                    SoporteControlador.CacheUsuario.NombreUsuario = objectoR[0].nombre;
+                    SoporteControlador.CacheUsuario.ApellidoUsuario = objectoR[0].primer_apellido;
+                    SoporteControlador.CacheUsuario.Correo = objectoR[0].correo;
+
                 }
             }
             conexion.Close();
@@ -326,9 +336,83 @@ namespace Persistencia
 
             return respuesta;
         }
+        public List<Grupo> mtdListarGrupo()
+        {
 
-        //Add J.B 25.03.2020
-        public string Encripsha512(string im_contra)
+            string consulta = "select grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
+
+            DataTable tblGrupo = new DataTable();
+            List<Grupo> listaGrupo = new List<Grupo>();
+
+            tblGrupo = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGrupo.Rows.Count; i++)
+            {
+                Grupo objGrupo = new Grupo();
+                objGrupo.Grupos = tblGrupo.Rows[i][0].ToString();
+
+
+                listaGrupo.Add(objGrupo);
+            }
+
+            return listaGrupo;
+
+
+        }
+        public string mtdValidacion(Grupo objGrupo = null, Grado objGrado = null)
+        {
+            string grp = "";
+            string consulta = "";
+            string parametro = "";
+            object objValue = null; // por default
+            if (objGrupo != null)
+            {
+                consulta = "select grupo from Grupo where grupo = @grupo";
+                parametro = "@grupo";
+                objValue = objGrupo.Grupos;
+
+            }
+            else if (objGrado != null)
+            {
+                consulta = "select grado from grado where grado = @grado";
+                parametro = "@grado";
+                objValue = objGrado.Grados;
+
+
+
+            }
+            try
+            {
+
+                cmdRegistrar = new SqlCommand(consulta, conexion);
+                cmdRegistrar.Parameters.AddWithValue(parametro, objValue);
+                conexion.Open();
+
+
+                if (cmdRegistrar.ExecuteScalar() != null)
+                {
+                    return cmdRegistrar.ExecuteScalar().ToString();
+                }
+                else
+                {
+                    return grp;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return grp;
+
+        }
+    
+    //Add J.B 25.03.2020
+    public string Encripsha512(string im_contra)
         {
             var bytes = System.Text.Encoding.UTF8.GetBytes(im_contra);
             using (var hash = System.Security.Cryptography.SHA512.Create())
