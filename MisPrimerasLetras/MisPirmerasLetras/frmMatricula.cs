@@ -48,17 +48,17 @@ namespace MisPirmerasLetras
         private void button1_Click(object sender, EventArgs e)
         {
             Alumnos alumnos = new Alumnos();
-            alumnos.Nombres = textBox1.Text;
-            alumnos.PrimerApellido = textBox2.Text;
-            alumnos.SegundoApellido = textBox3.Text;
-            alumnos.FechaNacimiento = dateTimePicker1.Value;
-            alumnos.Acudiente = textBox4.Text;
-            alumnos.Dirección = textBox5.Text;
-            alumnos.Telefono = Convert.ToInt32(textBox6.Text);
-            alumnos.Correo = textBox7.Text;
-            alumnos.Observaciones = richTextBox1.Text;
-            alumnos.IdGrupo = Convert.ToInt32(comboBox2.Text);
-            alumnos.Ocupacion = textBox8.Text;
+            alumnos.nombre = textBox1.Text;
+            alumnos.primer_apellido = textBox2.Text;
+            alumnos.segundo_apellido = textBox3.Text;
+            alumnos.fecha_nacimiento = dateTimePicker1.Value;
+            alumnos.acudiente = textBox4.Text;
+            alumnos.direccion = textBox5.Text;
+            alumnos.telefono = Convert.ToInt32(textBox6.Text);
+            alumnos.correo = textBox7.Text;
+            alumnos.observaciones = richTextBox1.Text;
+            alumnos.fk_grupo = Convert.ToInt32(comboBox2.Text);
+            alumnos.ocupacion = textBox8.Text;
 
             Respuesta<object> registroEstudiantes = this.controlador.InsertarAlumnos(alumnos);
             if(registroEstudiantes.ResultData.Count> 0)

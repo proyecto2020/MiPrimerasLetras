@@ -86,6 +86,7 @@
             this.tbxName.Size = new System.Drawing.Size(161, 22);
             this.tbxName.TabIndex = 8;
             this.tbxName.TextChanged += new System.EventHandler(this.tbxName_TextChanged);
+            this.tbxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxName_KeyPress);
             // 
             // panel1
             // 
@@ -127,6 +128,7 @@
             this.txtCorreo.Size = new System.Drawing.Size(161, 22);
             this.txtCorreo.TabIndex = 14;
             this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // cmbRol
             // 
@@ -147,6 +149,7 @@
             this.textBox1.Size = new System.Drawing.Size(161, 22);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // bntAddUsuario
             // 

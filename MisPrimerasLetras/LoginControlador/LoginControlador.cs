@@ -10,11 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
+
 namespace LoginControlador
 {
-    public class LoginControlador
+    public class LoginControlador : SQLCliente
     {
         public SQLCliente cliente;
+        private int _reg_por_pagina, _num_pagina = 1;
+        public int _seccion { get; set; }
+        private int _idCliente = 0;
+ 
         public LoginControlador()
         {
             this.cliente = new SQLCliente();
@@ -124,6 +130,20 @@ namespace LoginControlador
             respuesta = this.cliente.mtdValidacion(obGrupo, objGrado);
             return respuesta;
         }
+        public List<Alumnos> mtdListarAlumnos()
+        {
+            List<Alumnos> query = new List<Alumnos>();
+            query = TAlumnos.ToList();
+            return query;
+        }
+        List<Pagos> ListaPagos = new List<Pagos>();
+        public List<Pagos> listarPago(int idAlumno)
+        {
 
+            ListaPagos = this.cliente.mtdListarPagos(idAlumno);
+
+            return ListaPagos;
+        }
+       
     }
 }

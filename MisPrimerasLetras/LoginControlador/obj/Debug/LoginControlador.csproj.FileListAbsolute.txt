@@ -134,3 +134,6 @@ C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\obj\Debug\LoginControlador.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\SoporteControlador.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.xml

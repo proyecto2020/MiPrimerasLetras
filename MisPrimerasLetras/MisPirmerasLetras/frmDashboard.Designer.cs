@@ -36,19 +36,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.lblApellidoUser = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblNombreUser = new System.Windows.Forms.Label();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlSubMenu = new System.Windows.Forms.Panel();
             this.btnMaterias = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblBienvenida = new System.Windows.Forms.Label();
-            this.lblNombreUser = new System.Windows.Forms.Label();
-            this.lblPerfil = new System.Windows.Forms.Label();
-            this.lblApellidoUser = new System.Windows.Forms.Label();
             this.panelContendor = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMensajeAlternativo = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPagos = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -148,6 +149,7 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.btnPagos);
             this.mnVertical.Controls.Add(this.lblApellidoUser);
             this.mnVertical.Controls.Add(this.lblPerfil);
             this.mnVertical.Controls.Add(this.lblNombreUser);
@@ -165,6 +167,43 @@
             this.mnVertical.TabIndex = 0;
             this.mnVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.mnVertical_Paint);
             // 
+            // lblApellidoUser
+            // 
+            this.lblApellidoUser.AutoSize = true;
+            this.lblApellidoUser.Location = new System.Drawing.Point(157, 60);
+            this.lblApellidoUser.Name = "lblApellidoUser";
+            this.lblApellidoUser.Size = new System.Drawing.Size(46, 17);
+            this.lblApellidoUser.TabIndex = 8;
+            this.lblApellidoUser.Text = "label2";
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Location = new System.Drawing.Point(116, 99);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(46, 17);
+            this.lblPerfil.TabIndex = 7;
+            this.lblPerfil.Text = "label4";
+            // 
+            // lblNombreUser
+            // 
+            this.lblNombreUser.AutoSize = true;
+            this.lblNombreUser.Location = new System.Drawing.Point(116, 60);
+            this.lblNombreUser.Name = "lblNombreUser";
+            this.lblNombreUser.Size = new System.Drawing.Size(46, 17);
+            this.lblNombreUser.TabIndex = 6;
+            this.lblNombreUser.Text = "label3";
+            // 
+            // lblBienvenida
+            // 
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.Location = new System.Drawing.Point(106, 19);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(117, 23);
+            this.lblBienvenida.TabIndex = 5;
+            this.lblBienvenida.Text = "Bienvenido";
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Location = new System.Drawing.Point(12, 12);
@@ -177,7 +216,7 @@
             // 
             this.pnlSubMenu.Controls.Add(this.btnMaterias);
             this.pnlSubMenu.Controls.Add(this.btnGrupos);
-            this.pnlSubMenu.Location = new System.Drawing.Point(60, 369);
+            this.pnlSubMenu.Location = new System.Drawing.Point(60, 500);
             this.pnlSubMenu.Name = "pnlSubMenu";
             this.pnlSubMenu.Size = new System.Drawing.Size(188, 119);
             this.pnlSubMenu.TabIndex = 4;
@@ -231,7 +270,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 231);
+            this.button2.Location = new System.Drawing.Point(0, 240);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(323, 54);
@@ -250,7 +289,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 315);
+            this.button1.Location = new System.Drawing.Point(0, 446);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(323, 54);
@@ -258,43 +297,6 @@
             this.button1.Text = "Gestión";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // lblBienvenida
-            // 
-            this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(106, 19);
-            this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(117, 23);
-            this.lblBienvenida.TabIndex = 5;
-            this.lblBienvenida.Text = "Bienvenido";
-            // 
-            // lblNombreUser
-            // 
-            this.lblNombreUser.AutoSize = true;
-            this.lblNombreUser.Location = new System.Drawing.Point(116, 60);
-            this.lblNombreUser.Name = "lblNombreUser";
-            this.lblNombreUser.Size = new System.Drawing.Size(46, 17);
-            this.lblNombreUser.TabIndex = 6;
-            this.lblNombreUser.Text = "label3";
-            // 
-            // lblPerfil
-            // 
-            this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Location = new System.Drawing.Point(116, 99);
-            this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(46, 17);
-            this.lblPerfil.TabIndex = 7;
-            this.lblPerfil.Text = "label4";
-            // 
-            // lblApellidoUser
-            // 
-            this.lblApellidoUser.AutoSize = true;
-            this.lblApellidoUser.Location = new System.Drawing.Point(157, 60);
-            this.lblApellidoUser.Name = "lblApellidoUser";
-            this.lblApellidoUser.Size = new System.Drawing.Size(46, 17);
-            this.lblApellidoUser.TabIndex = 8;
-            this.lblApellidoUser.Text = "label2";
             // 
             // panelContendor
             // 
@@ -309,6 +311,16 @@
             this.panelContendor.TabIndex = 6;
             this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint_2);
             // 
+            // lblMensajeAlternativo
+            // 
+            this.lblMensajeAlternativo.AutoSize = true;
+            this.lblMensajeAlternativo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeAlternativo.Location = new System.Drawing.Point(459, 574);
+            this.lblMensajeAlternativo.Name = "lblMensajeAlternativo";
+            this.lblMensajeAlternativo.Size = new System.Drawing.Size(84, 28);
+            this.lblMensajeAlternativo.TabIndex = 3;
+            this.lblMensajeAlternativo.Text = "label2";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -322,15 +334,24 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // lblMensajeAlternativo
+            // btnPagos
             // 
-            this.lblMensajeAlternativo.AutoSize = true;
-            this.lblMensajeAlternativo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeAlternativo.Location = new System.Drawing.Point(459, 574);
-            this.lblMensajeAlternativo.Name = "lblMensajeAlternativo";
-            this.lblMensajeAlternativo.Size = new System.Drawing.Size(84, 28);
-            this.lblMensajeAlternativo.TabIndex = 3;
-            this.lblMensajeAlternativo.Text = "label2";
+            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 341);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(323, 54);
+            this.btnPagos.TabIndex = 9;
+            this.btnPagos.Text = "Pago";
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
             // frmDashboard
             // 
@@ -383,5 +404,6 @@
         private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblMensajeAlternativo;
+        private System.Windows.Forms.Button btnPagos;
     }
 }

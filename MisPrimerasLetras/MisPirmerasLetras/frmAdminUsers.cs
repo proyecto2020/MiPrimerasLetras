@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Entidades;
+using System.Drawing;
+using MisPirmerasLetras.Libreria;
 
 namespace MisPirmerasLetras
 {
@@ -103,22 +105,56 @@ namespace MisPirmerasLetras
 
         private void tbxName_TextChanged(object sender, EventArgs e)
         {
-
+            if (tbxName.Text.Equals(""))
+            {
+                label4.ForeColor = Color.Black;
+            }
+            else
+            {
+                label4.Text = "Nombre";
+                label4.ForeColor = Color.Green;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (textBox1.Text.Equals(""))
+            {
+                label8.ForeColor = Color.Black;
+            }
+            else
+            {
+                label8.Text = "Primer Apellido";
+                label8.ForeColor = Color.Green;
+            }
 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox2.Text.Equals(""))
+            {
+                label7.ForeColor = Color.Black;
+            }
+            else
+            {
+                label7.Text = "Segundo Apellido";
+                label7.ForeColor = Color.Green;
+            }
         }
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
 
+            if (txtCorreo.Text.Equals(""))
+            {
+                label1.ForeColor = Color.Black;
+            }
+            else
+            {
+                label1.Text = "Correo";
+                label1.ForeColor = Color.Green;
+            }
         }
 
         private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,6 +192,22 @@ namespace MisPirmerasLetras
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            Objetos.eventos.textKeyPress(e);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Objetos.eventos.textKeyPress(e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

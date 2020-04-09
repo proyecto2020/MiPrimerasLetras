@@ -29,3 +29,6 @@ C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Deb
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.pdb
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.xml

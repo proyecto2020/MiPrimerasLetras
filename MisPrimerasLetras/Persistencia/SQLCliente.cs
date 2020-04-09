@@ -9,20 +9,35 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Text;
+using LinqToDB;
+using LinqToDB.Data;
 
 namespace Persistencia
 {
 
-    public class SQLCliente
+    public class SQLCliente : DataConnection
     {
         SqlCommand cmdRegistrar;
         SqlDataAdapter adaptador;
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
         private SqlConnection conexion = new SqlConnection(connectionString);
-       
+        //Utilizando LinqTo
+        /**************************************
+          *                                    *
+          *      CODIGO DE COFIGURACION        * 
+          *                                    *
+          **************************************/
+      
+        public ITable<Alumnos> TAlumnos { get { return GetTable<Alumnos>(); } }
+        public ITable<Pagos> TPagos { get { return GetTable<Pagos>(); } }
+        
+
+
+
+
         private Respuesta<object> respuesta;
         private Respuesta<RespuestaLogin> respuestaLogin;
-
+       
         public SQLCliente()
         {
             respuesta = new Respuesta<object>();
@@ -318,17 +333,17 @@ namespace Persistencia
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                parameter.Add("@nombres", alumnos.Nombres);
-                parameter.Add("@PrimerApellido", alumnos.PrimerApellido);
-                parameter.Add("@SegundoApellido", alumnos.SegundoApellido);
-                parameter.Add("@FechaNacimiento", alumnos.FechaNacimiento);
-                parameter.Add("@Acudiente", alumnos.Acudiente, DbType.String);
-                parameter.Add("@Direccion", alumnos.Dirección,DbType.String);
-                parameter.Add("@Telefono", alumnos.Telefono);
-                parameter.Add("@Correo", alumnos.Correo, DbType.String);
-                parameter.Add("@Observaciones", alumnos.Observaciones, DbType.String);
-                parameter.Add("@IdGrupo", alumnos.IdGrupo);
-                parameter.Add("@ocupacion", alumnos.Ocupacion);
+                parameter.Add("@nombres", alumnos.nombre);
+                parameter.Add("@PrimerApellido", alumnos.primer_apellido);
+                parameter.Add("@SegundoApellido", alumnos.segundo_apellido);
+                parameter.Add("@FechaNacimiento", alumnos.fecha_nacimiento);
+                parameter.Add("@Acudiente", alumnos.acudiente, DbType.String);
+                parameter.Add("@Direccion", alumnos.direccion,DbType.String);
+                parameter.Add("@Telefono", alumnos.telefono);
+                parameter.Add("@Correo", alumnos.correo, DbType.String);
+                parameter.Add("@Observaciones", alumnos.observaciones, DbType.String);
+                parameter.Add("@IdGrupo", alumnos.fk_grupo);
+                parameter.Add("@ocupacion", alumnos.ocupacion);
 
                 int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
                 respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -359,6 +374,47 @@ namespace Persistencia
 
 
         }
+
+        public List<Pagos> mtdListarPagos(int idAlumno)
+        {
+            DataTable tblPagos = new DataTable();
+            List<Pagos> listaPagos = new List<Pagos>();
+             
+            var query = TAlumnos.Join(TPagos,
+                     t => t.id_alumno,
+                     a => a.fk_alumno,
+                    (t, a) => new
+                    {
+                        a.fk_alumno,
+                        a.total,
+                        a.saldo,
+                        a.abono,
+                        a.mes,
+                        a.paz_y_salvo
+                    }).Where(a => a.fk_alumno.Equals(idAlumno)).ToList();
+
+            if (0 < query.Count)
+            {
+                foreach (var item in query)
+                {
+                    var cliente = new Pagos
+                    {
+                        fk_alumno = item.fk_alumno,
+                        total = item.total,
+                        saldo = item.saldo,
+                        abono = item.abono,
+                        mes = item.mes,
+                        paz_y_salvo = item.paz_y_salvo
+                       
+                    };
+                    listaPagos.Add(cliente);
+                }
+                
+
+            }
+            return listaPagos;
+        }
+
         public string mtdValidacion(Grupo objGrupo = null, Grado objGrado = null)
         {
             string grp = "";

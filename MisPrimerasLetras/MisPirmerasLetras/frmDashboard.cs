@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
-
 using Entidades;
 using LoginControlador;
 
@@ -196,6 +195,11 @@ MessageBoxButtons.OK,
         private void mnVertical_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            OpenFormRight(new frmPagos());
         }
     }
 }
