@@ -272,6 +272,7 @@ namespace MisPirmerasLetras.Libreria
         }
         public void ImprimirTicket(String impresora)
         {
+//RawPrinterHelper.SendFileToPrinter(impresora, "Imagen.png");
             RawPrinterHelper.SendStringToPrinter(impresora, lineas.ToString());
             lineas.Clear();
         }

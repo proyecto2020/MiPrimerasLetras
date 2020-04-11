@@ -30,15 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGuardarARMA = new System.Windows.Forms.Button();
-            this.txtPagoAlumno = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTicket = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblNombreEs = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGEstudiantes = new System.Windows.Forms.DataGridView();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.labelReport_Pagos = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblFechaPago = new System.Windows.Forms.Label();
             this.lblTxFechaPago = new System.Windows.Forms.Label();
@@ -48,10 +41,21 @@
             this.lblTxFechaDeuda = new System.Windows.Forms.Label();
             this.lblDeuda = new System.Windows.Forms.Label();
             this.lblTxDeuda = new System.Windows.Forms.Label();
+            this.btnGuardarARMA = new System.Windows.Forms.Button();
+            this.txtPagoAlumno = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTicket = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombreEs = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGEstudiantes = new System.Windows.Forms.DataGridView();
+            this.lblHidden2 = new System.Windows.Forms.Label();
+            this.lblHidden1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +70,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Controls.Add(this.labelReport_Pagos);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnGuardarARMA);
             this.panel1.Controls.Add(this.txtPagoAlumno);
@@ -79,6 +85,134 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 742);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblStatus.Location = new System.Drawing.Point(139, 90);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            this.lblStatus.TabIndex = 30;
+            // 
+            // labelReport_Pagos
+            // 
+            this.labelReport_Pagos.AutoSize = true;
+            this.labelReport_Pagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReport_Pagos.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelReport_Pagos.Location = new System.Drawing.Point(254, 614);
+            this.labelReport_Pagos.Name = "labelReport_Pagos";
+            this.labelReport_Pagos.Size = new System.Drawing.Size(0, 18);
+            this.labelReport_Pagos.TabIndex = 32;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblFechaPago);
+            this.groupBox1.Controls.Add(this.lblTxFechaPago);
+            this.groupBox1.Controls.Add(this.lblUltimoPago);
+            this.groupBox1.Controls.Add(this.lblTxUltimoPago);
+            this.groupBox1.Controls.Add(this.lblFechaDeuda);
+            this.groupBox1.Controls.Add(this.lblTxFechaDeuda);
+            this.groupBox1.Controls.Add(this.lblDeuda);
+            this.groupBox1.Controls.Add(this.lblTxDeuda);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Location = new System.Drawing.Point(15, 110);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(529, 264);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblFechaPago
+            // 
+            this.lblFechaPago.AutoSize = true;
+            this.lblFechaPago.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaPago.Location = new System.Drawing.Point(279, 228);
+            this.lblFechaPago.Name = "lblFechaPago";
+            this.lblFechaPago.Size = new System.Drawing.Size(76, 23);
+            this.lblFechaPago.TabIndex = 17;
+            this.lblFechaPago.Text = "--/--/--";
+            this.lblFechaPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTxFechaPago
+            // 
+            this.lblTxFechaPago.AutoSize = true;
+            this.lblTxFechaPago.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxFechaPago.Location = new System.Drawing.Point(309, 180);
+            this.lblTxFechaPago.Name = "lblTxFechaPago";
+            this.lblTxFechaPago.Size = new System.Drawing.Size(199, 19);
+            this.lblTxFechaPago.TabIndex = 16;
+            this.lblTxFechaPago.Text = " Fecha del ultimo pago";
+            this.lblTxFechaPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblUltimoPago
+            // 
+            this.lblUltimoPago.AutoSize = true;
+            this.lblUltimoPago.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoPago.Location = new System.Drawing.Point(64, 228);
+            this.lblUltimoPago.Name = "lblUltimoPago";
+            this.lblUltimoPago.Size = new System.Drawing.Size(48, 23);
+            this.lblUltimoPago.TabIndex = 15;
+            this.lblUltimoPago.Text = "0.00";
+            this.lblUltimoPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTxUltimoPago
+            // 
+            this.lblTxUltimoPago.AutoSize = true;
+            this.lblTxUltimoPago.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxUltimoPago.Location = new System.Drawing.Point(55, 180);
+            this.lblTxUltimoPago.Name = "lblTxUltimoPago";
+            this.lblTxUltimoPago.Size = new System.Drawing.Size(111, 19);
+            this.lblTxUltimoPago.TabIndex = 14;
+            this.lblTxUltimoPago.Text = "Saldo actual";
+            this.lblTxUltimoPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblFechaDeuda
+            // 
+            this.lblFechaDeuda.AutoSize = true;
+            this.lblFechaDeuda.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaDeuda.Location = new System.Drawing.Point(279, 66);
+            this.lblFechaDeuda.Name = "lblFechaDeuda";
+            this.lblFechaDeuda.Size = new System.Drawing.Size(76, 23);
+            this.lblFechaDeuda.TabIndex = 13;
+            this.lblFechaDeuda.Text = "--/--/--";
+            this.lblFechaDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTxFechaDeuda
+            // 
+            this.lblTxFechaDeuda.AutoSize = true;
+            this.lblTxFechaDeuda.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxFechaDeuda.Location = new System.Drawing.Point(309, 28);
+            this.lblTxFechaDeuda.Name = "lblTxFechaDeuda";
+            this.lblTxFechaDeuda.Size = new System.Drawing.Size(189, 19);
+            this.lblTxFechaDeuda.TabIndex = 12;
+            this.lblTxFechaDeuda.Text = " Fecha limite de pago";
+            this.lblTxFechaDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblDeuda
+            // 
+            this.lblDeuda.AutoSize = true;
+            this.lblDeuda.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeuda.Location = new System.Drawing.Point(64, 66);
+            this.lblDeuda.Name = "lblDeuda";
+            this.lblDeuda.Size = new System.Drawing.Size(48, 23);
+            this.lblDeuda.TabIndex = 11;
+            this.lblDeuda.Text = "0.00";
+            this.lblDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTxDeuda
+            // 
+            this.lblTxDeuda.AutoSize = true;
+            this.lblTxDeuda.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxDeuda.Location = new System.Drawing.Point(55, 28);
+            this.lblTxDeuda.Name = "lblTxDeuda";
+            this.lblTxDeuda.Size = new System.Drawing.Size(137, 19);
+            this.lblTxDeuda.TabIndex = 10;
+            this.lblTxDeuda.Text = "Deuda Original:";
+            this.lblTxDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnGuardarARMA
             // 
@@ -94,12 +228,13 @@
             this.btnGuardarARMA.TabIndex = 31;
             this.btnGuardarARMA.Text = "Guardar";
             this.btnGuardarARMA.UseVisualStyleBackColor = false;
+            this.btnGuardarARMA.Click += new System.EventHandler(this.btnGuardarARMA_Click);
             // 
             // txtPagoAlumno
             // 
-            this.txtPagoAlumno.Location = new System.Drawing.Point(90, 607);
+            this.txtPagoAlumno.Location = new System.Drawing.Point(83, 610);
             this.txtPagoAlumno.Name = "txtPagoAlumno";
-            this.txtPagoAlumno.Size = new System.Drawing.Size(171, 22);
+            this.txtPagoAlumno.Size = new System.Drawing.Size(156, 22);
             this.txtPagoAlumno.TabIndex = 14;
             this.txtPagoAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -151,7 +286,7 @@
             // 
             this.lblNombreEs.AutoSize = true;
             this.lblNombreEs.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEs.Location = new System.Drawing.Point(200, 77);
+            this.lblNombreEs.Location = new System.Drawing.Point(200, 63);
             this.lblNombreEs.Name = "lblNombreEs";
             this.lblNombreEs.Size = new System.Drawing.Size(170, 21);
             this.lblNombreEs.TabIndex = 1;
@@ -180,118 +315,32 @@
             this.dataGEstudiantes.TabIndex = 29;
             this.dataGEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGEstudiantes_CellContentClick);
             // 
-            // groupBox1
+            // lblHidden2
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.lblFechaPago);
-            this.groupBox1.Controls.Add(this.lblTxFechaPago);
-            this.groupBox1.Controls.Add(this.lblUltimoPago);
-            this.groupBox1.Controls.Add(this.lblTxUltimoPago);
-            this.groupBox1.Controls.Add(this.lblFechaDeuda);
-            this.groupBox1.Controls.Add(this.lblTxFechaDeuda);
-            this.groupBox1.Controls.Add(this.lblDeuda);
-            this.groupBox1.Controls.Add(this.lblTxDeuda);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(15, 110);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 264);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
+            this.lblHidden2.AutoSize = true;
+            this.lblHidden2.Location = new System.Drawing.Point(791, 69);
+            this.lblHidden2.Name = "lblHidden2";
+            this.lblHidden2.Size = new System.Drawing.Size(0, 17);
+            this.lblHidden2.TabIndex = 3;
+            this.lblHidden2.Visible = false;
             // 
-            // lblFechaPago
+            // lblHidden1
             // 
-            this.lblFechaPago.AutoSize = true;
-            this.lblFechaPago.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPago.Location = new System.Drawing.Point(289, 228);
-            this.lblFechaPago.Name = "lblFechaPago";
-            this.lblFechaPago.Size = new System.Drawing.Size(76, 23);
-            this.lblFechaPago.TabIndex = 17;
-            this.lblFechaPago.Text = "--/--/--";
-            this.lblFechaPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTxFechaPago
-            // 
-            this.lblTxFechaPago.AutoSize = true;
-            this.lblTxFechaPago.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxFechaPago.Location = new System.Drawing.Point(309, 180);
-            this.lblTxFechaPago.Name = "lblTxFechaPago";
-            this.lblTxFechaPago.Size = new System.Drawing.Size(145, 19);
-            this.lblTxFechaPago.TabIndex = 16;
-            this.lblTxFechaPago.Text = " Fecha del pago";
-            this.lblTxFechaPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblUltimoPago
-            // 
-            this.lblUltimoPago.AutoSize = true;
-            this.lblUltimoPago.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoPago.Location = new System.Drawing.Point(64, 228);
-            this.lblUltimoPago.Name = "lblUltimoPago";
-            this.lblUltimoPago.Size = new System.Drawing.Size(48, 23);
-            this.lblUltimoPago.TabIndex = 15;
-            this.lblUltimoPago.Text = "0.00";
-            this.lblUltimoPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTxUltimoPago
-            // 
-            this.lblTxUltimoPago.AutoSize = true;
-            this.lblTxUltimoPago.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxUltimoPago.Location = new System.Drawing.Point(55, 180);
-            this.lblTxUltimoPago.Name = "lblTxUltimoPago";
-            this.lblTxUltimoPago.Size = new System.Drawing.Size(112, 19);
-            this.lblTxUltimoPago.TabIndex = 14;
-            this.lblTxUltimoPago.Text = "Ultimo pago ";
-            this.lblTxUltimoPago.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblFechaDeuda
-            // 
-            this.lblFechaDeuda.AutoSize = true;
-            this.lblFechaDeuda.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDeuda.Location = new System.Drawing.Point(289, 66);
-            this.lblFechaDeuda.Name = "lblFechaDeuda";
-            this.lblFechaDeuda.Size = new System.Drawing.Size(76, 23);
-            this.lblFechaDeuda.TabIndex = 13;
-            this.lblFechaDeuda.Text = "--/--/--";
-            this.lblFechaDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTxFechaDeuda
-            // 
-            this.lblTxFechaDeuda.AutoSize = true;
-            this.lblTxFechaDeuda.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxFechaDeuda.Location = new System.Drawing.Point(309, 28);
-            this.lblTxFechaDeuda.Name = "lblTxFechaDeuda";
-            this.lblTxFechaDeuda.Size = new System.Drawing.Size(171, 19);
-            this.lblTxFechaDeuda.TabIndex = 12;
-            this.lblTxFechaDeuda.Text = " Fecha de la deuda";
-            this.lblTxFechaDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblDeuda
-            // 
-            this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeuda.Location = new System.Drawing.Point(64, 66);
-            this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(48, 23);
-            this.lblDeuda.TabIndex = 11;
-            this.lblDeuda.Text = "0.00";
-            this.lblDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblTxDeuda
-            // 
-            this.lblTxDeuda.AutoSize = true;
-            this.lblTxDeuda.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxDeuda.Location = new System.Drawing.Point(55, 28);
-            this.lblTxDeuda.Name = "lblTxDeuda";
-            this.lblTxDeuda.Size = new System.Drawing.Size(69, 19);
-            this.lblTxDeuda.TabIndex = 10;
-            this.lblTxDeuda.Text = "Deuda:";
-            this.lblTxDeuda.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblHidden1.AutoSize = true;
+            this.lblHidden1.Location = new System.Drawing.Point(692, 69);
+            this.lblHidden1.Name = "lblHidden1";
+            this.lblHidden1.Size = new System.Drawing.Size(0, 17);
+            this.lblHidden1.TabIndex = 4;
+            this.lblHidden1.Visible = false;
+            this.lblHidden1.Click += new System.EventHandler(this.lblHidden1_Click);
             // 
             // frmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1576, 765);
+            this.Controls.Add(this.lblHidden1);
+            this.Controls.Add(this.lblHidden2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -300,11 +349,12 @@
             this.Load += new System.EventHandler(this.frmPagos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -330,5 +380,9 @@
         private System.Windows.Forms.Label lblTxFechaDeuda;
         private System.Windows.Forms.Label lblDeuda;
         private System.Windows.Forms.Label lblTxDeuda;
+        private System.Windows.Forms.Label labelReport_Pagos;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblHidden2;
+        private System.Windows.Forms.Label lblHidden1;
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text;
 
 namespace MisPirmerasLetras.Libreria
 {
@@ -94,6 +96,36 @@ namespace MisPirmerasLetras.Libreria
             SendBytesToPrinter(szPrinterName, pBytes, dwCount);
             Marshal.FreeCoTaskMem(pBytes);
             return true;
+        }
+
+        public static bool SendFileToPrinter(string szPrinterName, string szFileName)
+        {
+            // Open the file.
+            FileStream fs = new FileStream(szFileName, FileMode.Open);
+            // Create a BinaryReader on the file.
+            BinaryReader br = new BinaryReader(fs);
+            // Dim an array of bytes big enough to hold the file's contents.
+            Byte[] bytes = new Byte[fs.Length];
+            bool bSuccess = false;
+            // Your unmanaged pointer.
+            IntPtr pUnmanagedBytes = new IntPtr(0);
+            int nLength;
+
+            nLength = Convert.ToInt32(fs.Length);
+            // Read the contents of the file into the array.
+            bytes = br.ReadBytes(nLength);
+            // Allocate some unmanaged memory for those bytes.
+            pUnmanagedBytes = Marshal.AllocCoTaskMem(nLength);
+            // Copy the managed byte array into the unmanaged array.
+            Marshal.Copy(bytes, 0, pUnmanagedBytes, nLength);
+            // Send the unmanaged bytes to the printer.
+            bSuccess = SendBytesToPrinter(szPrinterName, pUnmanagedBytes, nLength);
+            // Free the unmanaged memory that you allocated earlier.
+            Marshal.FreeCoTaskMem(pUnmanagedBytes);
+            fs.Close();
+            fs.Dispose();
+            fs = null;
+            return bSuccess;
         }
     }
 }

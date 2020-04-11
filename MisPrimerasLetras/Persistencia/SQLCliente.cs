@@ -374,6 +374,13 @@ namespace Persistencia
 
 
         }
+        public List<Alumnos> mtdListarAlumnos()
+        {
+            List<Alumnos> lstAlumnos = new List<Alumnos>();
+            lstAlumnos = TAlumnos.ToList();
+            return lstAlumnos;
+        }
+
 
         public List<Pagos> mtdListarPagos(int idAlumno)
         {
@@ -385,13 +392,18 @@ namespace Persistencia
                      a => a.fk_alumno,
                     (t, a) => new
                     {
+                    
+                        a.id_pago,
                         a.fk_alumno,
                         a.total,
                         a.saldo,
                         a.abono,
                         a.mes,
-                        a.paz_y_salvo
-                    }).Where(a => a.fk_alumno.Equals(idAlumno)).ToList();
+                        a.paz_y_salvo,
+                        a.fecha_limite,
+                        a.fecha_modificacion
+
+                    }).Where(a => a.fk_alumno.Equals(idAlumno) && a.fecha_modificacion.Equals(null)).ToList();
 
             if (0 < query.Count)
             {
@@ -399,13 +411,15 @@ namespace Persistencia
                 {
                     var cliente = new Pagos
                     {
+                        id_pago = item.id_pago,
                         fk_alumno = item.fk_alumno,
                         total = item.total,
                         saldo = item.saldo,
                         abono = item.abono,
                         mes = item.mes,
-                        paz_y_salvo = item.paz_y_salvo
-                       
+                        paz_y_salvo = item.paz_y_salvo,
+                        fecha_limite = item.fecha_limite
+
                     };
                     listaPagos.Add(cliente);
                 }
@@ -413,6 +427,27 @@ namespace Persistencia
 
             }
             return listaPagos;
+        }
+
+        public int mtdIngresarPago(Pagos objPagos, int id_pago)
+        {
+            TPagos.Where(u => u.id_pago.Equals(id_pago))
+                                                                      .Set(u => u.fecha_modificacion, DateTime.Now)
+                                                                      .Update();
+
+            int retorno =  TPagos.Value(u => u.fk_alumno, objPagos.fk_alumno)
+                                          .Value(u => u.abono, objPagos.abono)
+                                               .Value(u => u.saldo, objPagos.saldo)
+                                               .Value(u => u.mes, objPagos.mes)
+                                               .Value(u => u.ticket, objPagos.ticket)
+                                               .Value(u => u.total, objPagos.total)
+                                               .Value(u => u.fecha_limite, objPagos.fecha_limite)
+                                               .Value(u => u.paz_y_salvo, objPagos.paz_y_salvo)
+                                               .Value(u => u.usuario_modificacion, "SSS")
+                                               .Insert();
+     
+           
+            return retorno;
         }
 
         public string mtdValidacion(Grupo objGrupo = null, Grado objGrado = null)

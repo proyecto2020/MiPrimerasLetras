@@ -133,7 +133,7 @@ namespace LoginControlador
         public List<Alumnos> mtdListarAlumnos()
         {
             List<Alumnos> query = new List<Alumnos>();
-            query = TAlumnos.ToList();
+            query = this.cliente.mtdListarAlumnos();
             return query;
         }
         List<Pagos> ListaPagos = new List<Pagos>();
@@ -144,6 +144,18 @@ namespace LoginControlador
 
             return ListaPagos;
         }
-       
+
+        public int mtdInsertarPago(Pagos objPagos, decimal saldoDeuda, int id_pago)
+        {
+            decimal saldo = saldoDeuda - objPagos.abono;
+             
+              objPagos.saldo = saldo;
+           
+
+           int confirmacion =  this.cliente.mtdIngresarPago(objPagos, id_pago);
+
+            return confirmacion;
+        }
+
     }
 }

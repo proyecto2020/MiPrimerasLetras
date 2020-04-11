@@ -8,15 +8,15 @@ public class Pagos
     /// <summary>
     /// Total.
     /// </summary>
-	public int total { get; set; }
+	public Decimal total { get; set; }
     /// <summary>
     /// Saldo.
     /// </summary>
-    public int saldo { get; set; }
+    public Decimal saldo { get; set; }
     /// <summary>
     /// Abono.
     /// </summary>
-    public int abono { get; set; }
+    public Decimal abono { get; set; }
     /// <summary>
     /// Mes.
     /// </summary>
@@ -29,15 +29,22 @@ public class Pagos
     /// FechaCreacion.
     /// </summary>
     public DateTime fecha_modificacion { get; set; }
-    /// <summary>
-    /// FechaModificación.
-    /// </summary>
-    public DateTime FechaModificación { get; set; }
+
     /// <summary>
     /// Usuario.
     /// </summary>
     public string usuario_modificacion { get; set; }
 
     public int fk_alumno { get; set; }
+
+    /// <summary>
+    /// Ticket.
+    /// </summary>
+    public string ticket { get; set; }
+
+    /// <summary>
+    /// FechaLimite.
+    /// </summary>
+    public string fecha_limite { get; set; }
 
 }
