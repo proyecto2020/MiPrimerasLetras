@@ -102,3 +102,4 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\SoporteC
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\linq2db.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\linq2db.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\linq2db.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Persistencia\bin\Debug\Entidades.dll.config

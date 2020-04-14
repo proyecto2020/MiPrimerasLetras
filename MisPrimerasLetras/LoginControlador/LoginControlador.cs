@@ -109,9 +109,22 @@ namespace LoginControlador
             var resultado = this.cliente.mtdListarMateria();
             return resultado;
         }
-        public Respuesta<object> InsertarAlumnos(Alumnos alumnos)
+        public int InsertarAlumnos(Alumnos alumnos)
         {
             var resultado = this.cliente.InsertarAlumnos(alumnos);
+  
+            return resultado;
+        }
+
+        public int InsertarPago(Pagos pagos)
+        {
+            var resultado = this.cliente.InsertarPago(pagos);
+            return resultado;
+        }
+
+        public Respuesta<object> InsertarMatricula(Matricula matricula)
+        {
+            var resultado = this.cliente.InsertarMatricula(matricula);
             return resultado;
         }
 
@@ -130,12 +143,24 @@ namespace LoginControlador
             respuesta = this.cliente.mtdValidacion(obGrupo, objGrado);
             return respuesta;
         }
-        public List<Alumnos> mtdListarAlumnos()
+        public List<Alumnos> mtdListarAlumnos(string campo)
         {
             List<Alumnos> query = new List<Alumnos>();
-            query = this.cliente.mtdListarAlumnos();
+            if (campo.Equals(""))
+            {
+                query = this.cliente.mtdListarAlumnos();
+            }
+            else
+            {
+                query = this.cliente.mtdBuscarAlumnos(campo);
+                
+            }
+            
+            
             return query;
         }
+
+
         List<Pagos> ListaPagos = new List<Pagos>();
         public List<Pagos> listarPago(int idAlumno)
         {
@@ -156,6 +181,6 @@ namespace LoginControlador
 
             return confirmacion;
         }
-
+      
     }
 }

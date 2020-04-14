@@ -137,3 +137,4 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Sopo
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\linq2db.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\LoginControlador\bin\Debug\Entidades.dll.config

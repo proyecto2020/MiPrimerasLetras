@@ -26,10 +26,14 @@ public class Pagos
     /// </summary>
     public bool paz_y_salvo { get; set; }
     /// <summary>
-    /// FechaCreacion.
+    /// FechaModifiacion.
     /// </summary>
     public DateTime fecha_modificacion { get; set; }
 
+    /// <summary>
+    /// FechaModifiacion.
+    /// </summary>
+    public DateTime fecha_creacion { get; set; }
     /// <summary>
     /// Usuario.
     /// </summary>

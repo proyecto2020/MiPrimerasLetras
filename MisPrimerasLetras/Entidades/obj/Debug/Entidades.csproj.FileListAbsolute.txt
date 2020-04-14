@@ -32,3 +32,8 @@ C:\Users\santi\source\repos\MiPrimerasLetras\MisPrimerasLetras\Entidades\obj\Deb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.pdb
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\linq2db.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\Entidades.dll.config
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\EntityFramework.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\EntityFramework.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\Entidades\bin\Debug\EntityFramework.SqlServer.xml

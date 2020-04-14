@@ -32,10 +32,10 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.btnPagos = new System.Windows.Forms.Button();
             this.lblApellidoUser = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblNombreUser = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.panelContendor = new System.Windows.Forms.Panel();
             this.lblMensajeAlternativo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnPagos = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -64,9 +64,9 @@
             // barraTitulo
             // 
             this.barraTitulo.BackColor = System.Drawing.Color.OldLace;
+            this.barraTitulo.Controls.Add(this.label2);
             this.barraTitulo.Controls.Add(this.pictureBox2);
             this.barraTitulo.Controls.Add(this.btnSlide);
-            this.barraTitulo.Controls.Add(this.label1);
             this.barraTitulo.Controls.Add(this.pictureBox1);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(251, 0);
@@ -101,18 +101,6 @@
             this.btnSlide.TabIndex = 0;
             this.btnSlide.TabStop = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(458, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MIS PRIMERAS LETRAS";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // pictureBox1
             // 
@@ -166,6 +154,25 @@
             this.mnVertical.Size = new System.Drawing.Size(251, 788);
             this.mnVertical.TabIndex = 0;
             this.mnVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.mnVertical_Paint);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 341);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(323, 54);
+            this.btnPagos.TabIndex = 9;
+            this.btnPagos.Text = "Pago";
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
             // lblApellidoUser
             // 
@@ -334,24 +341,17 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // btnPagos
+            // label2
             // 
-            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPagos.FlatAppearance.BorderSize = 0;
-            this.btnPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
-            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagos.Location = new System.Drawing.Point(0, 341);
-            this.btnPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(323, 54);
-            this.btnPagos.TabIndex = 9;
-            this.btnPagos.Text = "Pago";
-            this.btnPagos.UseVisualStyleBackColor = true;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(350, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(421, 46);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Mis Primeras Letras";
             // 
             // frmDashboard
             // 
@@ -390,7 +390,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Panel mnVertical;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlSubMenu;
@@ -405,5 +404,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblMensajeAlternativo;
         private System.Windows.Forms.Button btnPagos;
+        private System.Windows.Forms.Label label2;
     }
 }

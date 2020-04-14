@@ -61,7 +61,7 @@ namespace MisPirmerasLetras
             else if(profesor!= null && profesor.IdUsuario >= 0 && selectedG.IdGrado > 0)
             {
                
-                grupo.Grupos = cmbGrado.Text + cbmAB;
+                grupo.grupo = cmbGrado.Text + cbmAB;
                 if (this.controlador.mtdValidar(grupo, null) == cmbGrado.Text + cbmAB)
                 {
                     mensaje = "Este grupo ya existe!";
@@ -106,7 +106,7 @@ namespace MisPirmerasLetras
             
         }
 
-        public void llenarComoBox()
+        private void llenarComoBox()
         {
             List<Grado> Grado = this.controlador.ConsultarGrado();
             Grado.Insert(0, new Grado() { IdGrado = 0, Grados = "Seleccione" });

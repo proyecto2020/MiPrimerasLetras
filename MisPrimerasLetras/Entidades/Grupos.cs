@@ -2,10 +2,11 @@
 
 public class Grupo
 {
+    public int id_grupo { get; set; }
     /// <summary>
     /// Grupo.
     /// </summary>
-    public string Grupos { get; set; }
+    public string grupo { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>

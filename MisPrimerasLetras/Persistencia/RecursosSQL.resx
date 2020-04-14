@@ -139,6 +139,14 @@ u.fk_perfiles = p.id_perfil</value>
     <value>PR_Insertar_Alumnos</value>
     <comment>inserta alumnos</comment>
   </data>
+  <data name="InsertarMatricula" xml:space="preserve">
+    <value>PR_insertar_Matricula</value>
+    <comment>proceso para creacion de matricula</comment>
+  </data>
+  <data name="InsertarPago" xml:space="preserve">
+    <value>PR_insertar_Pago</value>
+    <comment>proceso para la creacion de pagos</comment>
+  </data>
   <data name="InsertaUsuarios" xml:space="preserve">
     <value>PR_Insertar_Usuario</value>
     <comment>inserta los usuarios</comment>

@@ -42,7 +42,6 @@ public class Alumnos
     /// </summary>
     public string observaciones { get; set; }
     public string ocupacion { get; set; }
-    public int fk_grupo { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>

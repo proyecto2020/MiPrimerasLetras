@@ -11,7 +11,7 @@ namespace MisPirmerasLetras.Libreria
         public String codigosTickets(String Codigo)
         {
             String ticket = null;
-            if (Codigo.Equals("0000000000"))
+            if (Codigo.Equals("0000000000") || Codigo.Equals(null))
             {
                 ticket = "0000000001";
             }

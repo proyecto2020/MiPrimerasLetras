@@ -21,9 +21,10 @@ namespace MisPirmerasLetras
 
         public int _seccion { get; set; }
         private int _idCliente = 0;
-        private int _reg_por_pagina = 10, _num_pagina = 1;
+        private int _reg_por_pagina = 30, _num_pagina = 1;
         private decimal saldo, total_pagar;
         private int Id_pago;
+        string fecha_limite, numero_ticket;
         
         public frmPagos()
         {
@@ -35,7 +36,7 @@ namespace MisPirmerasLetras
         {
 
         }
-
+       
         private void frmPagos_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +47,7 @@ namespace MisPirmerasLetras
                 dataGEstudiantes.DataSource = alumnos.Skip(inicio).Take(_reg_por_pagina).ToList();
                 dataGEstudiantes.Columns[0].Visible = false;
                 dataGEstudiantes.Columns[8].Visible = false;
-                dataGEstudiantes.Columns[14].Visible = false;
+              //  dataGEstudiantes.Columns[14].Visible = false;
                 dataGEstudiantes.Columns[13].Visible = false;
                 dataGEstudiantes.Columns[10].Visible = false;
                 dataGEstudiantes.Columns[11].Visible = false;
@@ -76,6 +77,23 @@ namespace MisPirmerasLetras
             saldo = resultado[0].saldo;
             total_pagar = resultado[0].total;
             Id_pago = resultado[0].id_pago;
+            fecha_limite = resultado[0].fecha_limite;
+            numero_ticket = Convert.ToString(resultado[0].id_pago);
+
+            if (lblFechaPago.Text == "")
+            {
+                lblFechaPago.Left = 260;
+                lblFechaPago.Text = "sin pago";
+                // lblFechaPago.Location =  new Point(350, 228);
+                lblFechaPago.BackColor = Color.Red;
+            }
+            else
+            {
+                lblFechaPago.Left = 260;
+
+                // lblFechaPago.Location =  new Point(350, 228);
+                lblFechaPago.ForeColor = System.Drawing.Color.Black;
+            }
 
             if (resultado[0].paz_y_salvo)
             {
@@ -92,9 +110,6 @@ namespace MisPirmerasLetras
         {
             if (dataGEstudiantes.Rows.Count != 0)
                 llenarDatosDePago();
-
-                //_idCliente = Convert.ToInt16(dataEstudiantes.CurrentRow.Cells[0].Value);
-                //lblDeuda.Text = Convert.ToString(dataEstudiantes.CurrentRow.Cells[1].Value);
 
 
 
@@ -135,7 +150,7 @@ namespace MisPirmerasLetras
                         var date = DateTime.Now.AddMonths(1);
 
                         var fechalimite = lblFechaDeuda.Equals(0) ? "--/--/--" : $"{date.Day}/{date.Month}/{ date.Year}";
-                        var ticket = codigos.codigosTickets("0000000000");
+                        var ticket = codigos.codigosTickets(numero_ticket);
 
                         var pago = String.Format("{0:#,###,###,##0.00####}", txtPagoAlumno);
                         var deuda = String.Format("{0:#,###,###,##0.00####}", lblDeuda);
@@ -149,7 +164,7 @@ namespace MisPirmerasLetras
                         objPago.fk_alumno = _idEstudante;
                         objPago.ticket = ticket;
                         objPago.total = total_pagar;
-                        objPago.fecha_limite = fechalimite; // la fecha limite la podemos sacar cuando el estudiante es matricualdo y saca credito con el jardin
+                        objPago.fecha_limite = fecha_limite; // la fecha limite la podemos sacar cuando el estudiante es matricualdo y saca credito con el jardin
 
 
 
@@ -204,6 +219,17 @@ namespace MisPirmerasLetras
                     }
                 }
             }
+        }
+
+        private void textBoxAlumno_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            List<Alumnos> alumnos = this.controlador.mtdListarAlumnos(textBoxAlumno_Buscar.Text);
+            dataGEstudiantes.DataSource = alumnos;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void lblHidden1_Click(object sender, EventArgs e)

@@ -52,17 +52,23 @@
             this.dataGEstudiantes = new System.Windows.Forms.DataGridView();
             this.lblHidden2 = new System.Windows.Forms.Label();
             this.lblHidden1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxAlumno_Buscar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 21);
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(194, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 22);
             this.label1.TabIndex = 0;
@@ -125,12 +131,13 @@
             this.groupBox1.Size = new System.Drawing.Size(529, 264);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblFechaPago
             // 
             this.lblFechaPago.AutoSize = true;
             this.lblFechaPago.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaPago.Location = new System.Drawing.Point(279, 228);
+            this.lblFechaPago.Location = new System.Drawing.Point(309, 228);
             this.lblFechaPago.Name = "lblFechaPago";
             this.lblFechaPago.Size = new System.Drawing.Size(76, 23);
             this.lblFechaPago.TabIndex = 17;
@@ -174,7 +181,7 @@
             // 
             this.lblFechaDeuda.AutoSize = true;
             this.lblFechaDeuda.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDeuda.Location = new System.Drawing.Point(279, 66);
+            this.lblFechaDeuda.Location = new System.Drawing.Point(309, 66);
             this.lblFechaDeuda.Name = "lblFechaDeuda";
             this.lblFechaDeuda.Size = new System.Drawing.Size(76, 23);
             this.lblFechaDeuda.TabIndex = 13;
@@ -298,7 +305,7 @@
             this.panel2.Controls.Add(this.dataGEstudiantes);
             this.panel2.Location = new System.Drawing.Point(623, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(924, 664);
+            this.panel2.Size = new System.Drawing.Size(765, 664);
             this.panel2.TabIndex = 2;
             // 
             // dataGEstudiantes
@@ -311,7 +318,7 @@
             this.dataGEstudiantes.ReadOnly = true;
             this.dataGEstudiantes.RowHeadersWidth = 51;
             this.dataGEstudiantes.RowTemplate.Height = 24;
-            this.dataGEstudiantes.Size = new System.Drawing.Size(859, 613);
+            this.dataGEstudiantes.Size = new System.Drawing.Size(698, 613);
             this.dataGEstudiantes.TabIndex = 29;
             this.dataGEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGEstudiantes_CellContentClick);
             // 
@@ -334,11 +341,59 @@
             this.lblHidden1.Visible = false;
             this.lblHidden1.Click += new System.EventHandler(this.lblHidden1_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.textBoxAlumno_Buscar);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(623, 20);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(774, 64);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            // 
+            // textBoxAlumno_Buscar
+            // 
+            this.textBoxAlumno_Buscar.Location = new System.Drawing.Point(487, 26);
+            this.textBoxAlumno_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAlumno_Buscar.Multiline = true;
+            this.textBoxAlumno_Buscar.Name = "textBoxAlumno_Buscar";
+            this.textBoxAlumno_Buscar.Size = new System.Drawing.Size(263, 30);
+            this.textBoxAlumno_Buscar.TabIndex = 2;
+            this.textBoxAlumno_Buscar.TextChanged += new System.EventHandler(this.textBoxAlumno_Buscar_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(412, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Buscar";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label6.Location = new System.Drawing.Point(9, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 40);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Alumnos";
+            // 
             // frmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1576, 765);
+            this.ClientSize = new System.Drawing.Size(1409, 765);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblHidden1);
             this.Controls.Add(this.lblHidden2);
             this.Controls.Add(this.panel2);
@@ -353,6 +408,8 @@
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,5 +441,9 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblHidden2;
         private System.Windows.Forms.Label lblHidden1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBoxAlumno_Buscar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

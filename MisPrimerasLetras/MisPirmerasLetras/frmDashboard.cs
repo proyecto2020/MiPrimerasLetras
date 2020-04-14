@@ -71,7 +71,7 @@ namespace MisPirmerasLetras
             SendMessage(this.Handle, 0x112, 0xf012,0);
         }
 
-        private void OpenFormRight(object frmHijo)
+        public void OpenFormRight(object frmHijo)
         {
             if(this.panelContendor.Controls.Count > 0)
             {

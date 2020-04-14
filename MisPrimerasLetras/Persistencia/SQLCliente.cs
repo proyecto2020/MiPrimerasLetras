@@ -177,7 +177,7 @@ namespace Persistencia
         }
         public int mtdRegistrarGrupo(Grupo grupo)
         {
-            string storedProcedure = "INSERT INTO grupo(grupo, fk_grado, fk_usuario) values ('" + grupo.Grupos + "',"+ grupo.Grado+","+grupo.Usuario+")";
+            string storedProcedure = "INSERT INTO grupo(grupo, fk_grado, fk_usuario) values ('" + grupo.grupo + "',"+ grupo.Grado+","+grupo.Usuario+")";
 
             int respuesta = this.mtdIDU(storedProcedure);
             return respuesta;
@@ -326,24 +326,99 @@ namespace Persistencia
             conexion.Close();
             return tblDatos;
         }
-        public Respuesta<object> InsertarAlumnos(Alumnos alumnos)
+        public int InsertarAlumnos(Alumnos alumnos)
         {
+            
             DynamicParameters parameter = new DynamicParameters();
             string storedProcedure = RecursosSQL.InsertarAlumnos;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+               
+                //parameter.Add("@nombres", alumnos.nombre);
+                //parameter.Add("@PrimerApellido", alumnos.primer_apellido);
+                //parameter.Add("@SegundoApellido", alumnos.segundo_apellido);
+                //parameter.Add("@FechaNacimiento", alumnos.fecha_nacimiento);
+                //parameter.Add("@Acudiente", alumnos.acudiente, DbType.String);
+                //parameter.Add("@Direccion", alumnos.direccion,DbType.String);
+                //parameter.Add("@Telefono", alumnos.telefono);
+                //parameter.Add("@Correo", alumnos.correo, DbType.String);
+                //parameter.Add("@Observaciones", alumnos.observaciones, DbType.String);
+                //parameter.Add("@ocupacion", alumnos.ocupacion);
+
+
+                //int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
+
+                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+
+                SqlCommand myCommand = new SqlCommand(storedProcedure, connection);
+                myCommand.CommandType = CommandType.StoredProcedure;
+                
+
+                myCommand.Parameters.AddWithValue("@nombres", alumnos.nombre);
+                myCommand.Parameters.AddWithValue("@PrimerApellido", alumnos.primer_apellido);
+                myCommand.Parameters.AddWithValue("@SegundoApellido", alumnos.segundo_apellido);
+                myCommand.Parameters.AddWithValue("@FechaNacimiento", alumnos.fecha_nacimiento);
+                myCommand.Parameters.AddWithValue("@Acudiente", alumnos.acudiente).SqlDbType.ToString();
+                myCommand.Parameters.AddWithValue("@Direccion", alumnos.direccion).SqlDbType.ToString(); ;
+                myCommand.Parameters.AddWithValue("@Telefono", alumnos.telefono);
+                myCommand.Parameters.AddWithValue("@Correo", alumnos.correo).SqlDbType.ToString(); ;
+                myCommand.Parameters.AddWithValue("@Observaciones", alumnos.observaciones).SqlDbType.ToString(); ;
+                myCommand.Parameters.AddWithValue("@ocupacion", alumnos.ocupacion);
+                //myCommand.ExecuteNonQuery();
                 connection.Open();
-                parameter.Add("@nombres", alumnos.nombre);
-                parameter.Add("@PrimerApellido", alumnos.primer_apellido);
-                parameter.Add("@SegundoApellido", alumnos.segundo_apellido);
-                parameter.Add("@FechaNacimiento", alumnos.fecha_nacimiento);
-                parameter.Add("@Acudiente", alumnos.acudiente, DbType.String);
-                parameter.Add("@Direccion", alumnos.direccion,DbType.String);
-                parameter.Add("@Telefono", alumnos.telefono);
-                parameter.Add("@Correo", alumnos.correo, DbType.String);
-                parameter.Add("@Observaciones", alumnos.observaciones, DbType.String);
-                parameter.Add("@IdGrupo", alumnos.fk_grupo);
-                parameter.Add("@ocupacion", alumnos.ocupacion);
+
+                Int32  IdCreado = Convert.ToInt32(myCommand.ExecuteScalar());
+                return IdCreado;
+
+            }
+
+           
+        }
+
+
+
+        public int InsertarPago(Pagos tblPagos)
+        {
+
+            DynamicParameters parameter = new DynamicParameters();
+            string storedProcedure = RecursosSQL.InsertarPago;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand myCommand = new SqlCommand(storedProcedure, connection);
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+
+                myCommand.Parameters.AddWithValue("@fk_alumno", tblPagos.fk_alumno);
+                myCommand.Parameters.AddWithValue("@total", tblPagos.total);
+                myCommand.Parameters.AddWithValue("@saldo", tblPagos.saldo);
+                myCommand.Parameters.AddWithValue("@abono", tblPagos.abono);
+                myCommand.Parameters.AddWithValue("@mes", tblPagos.mes);
+                myCommand.Parameters.AddWithValue("@usuario_modificacion", "PEPE");
+                myCommand.Parameters.AddWithValue("@fecha_limite", tblPagos.fecha_limite);
+                
+                //myCommand.ExecuteNonQuery();
+                connection.Open();
+
+                Int32 IdCreado = Convert.ToInt32(myCommand.ExecuteScalar());
+                return IdCreado;
+
+            }
+
+
+        }
+
+        public Respuesta<object> InsertarMatricula(Matricula tblMatricula)
+        {
+            DynamicParameters parameter = new DynamicParameters();
+            string storedProcedure = RecursosSQL.InsertarMatricula;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                parameter.Add("@fk_alumno", tblMatricula.fk_alumno);
+                parameter.Add("@fk_grupo", tblMatricula.fk_grupo);
+                parameter.Add("@fk_pagos", tblMatricula.fk_pagos);
+                parameter.Add("@usuario_creacion", tblMatricula.usuario_creacion);
+                
 
                 int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
                 respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -351,10 +426,13 @@ namespace Persistencia
 
             return respuesta;
         }
+
+
+
         public List<Grupo> mtdListarGrupo()
         {
 
-            string consulta = "select grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
+            string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
 
             DataTable tblGrupo = new DataTable();
             List<Grupo> listaGrupo = new List<Grupo>();
@@ -364,7 +442,8 @@ namespace Persistencia
             for (int i = 0; i < tblGrupo.Rows.Count; i++)
             {
                 Grupo objGrupo = new Grupo();
-                objGrupo.Grupos = tblGrupo.Rows[i][0].ToString();
+                objGrupo.id_grupo = int.Parse(tblGrupo.Rows[i][0].ToString());
+                objGrupo.grupo = tblGrupo.Rows[i][1].ToString();
 
 
                 listaGrupo.Add(objGrupo);
@@ -380,6 +459,16 @@ namespace Persistencia
             lstAlumnos = TAlumnos.ToList();
             return lstAlumnos;
         }
+
+        public List<Alumnos> mtdBuscarAlumnos(string campo)
+        {
+            List<Alumnos> lstAlumnos = new List<Alumnos>();
+            lstAlumnos = TAlumnos.Where(a => a.correo.StartsWith(campo) || a.nombre.StartsWith(campo)
+               || a.primer_apellido.StartsWith(campo)).ToList();
+
+            return lstAlumnos;
+        }
+
 
 
         public List<Pagos> mtdListarPagos(int idAlumno)
@@ -401,7 +490,8 @@ namespace Persistencia
                         a.mes,
                         a.paz_y_salvo,
                         a.fecha_limite,
-                        a.fecha_modificacion
+                        a.fecha_modificacion,
+                        a.ticket
 
                     }).Where(a => a.fk_alumno.Equals(idAlumno) && a.fecha_modificacion.Equals(null)).ToList();
 
@@ -418,7 +508,8 @@ namespace Persistencia
                         abono = item.abono,
                         mes = item.mes,
                         paz_y_salvo = item.paz_y_salvo,
-                        fecha_limite = item.fecha_limite
+                        fecha_limite = item.fecha_limite,
+                        ticket = item.ticket
 
                     };
                     listaPagos.Add(cliente);
@@ -441,6 +532,7 @@ namespace Persistencia
                                                .Value(u => u.mes, objPagos.mes)
                                                .Value(u => u.ticket, objPagos.ticket)
                                                .Value(u => u.total, objPagos.total)
+                                               .Value(u => u.fecha_creacion, DateTime.Now)
                                                .Value(u => u.fecha_limite, objPagos.fecha_limite)
                                                .Value(u => u.paz_y_salvo, objPagos.paz_y_salvo)
                                                .Value(u => u.usuario_modificacion, "SSS")
@@ -460,7 +552,7 @@ namespace Persistencia
             {
                 consulta = "select grupo from Grupo where grupo = @grupo";
                 parametro = "@grupo";
-                objValue = objGrupo.Grupos;
+                objValue = objGrupo.grupo;
 
             }
             else if (objGrado != null)
