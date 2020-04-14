@@ -63,6 +63,8 @@
     <Compile Include="Matricula.cs" />
     <Compile Include="Notas.cs" />
     <Compile Include="Pagos.cs" />
+    <Compile Include="Parametro.cs" />
+    <Compile Include="Parametros.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respuesta.cs" />

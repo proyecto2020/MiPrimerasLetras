@@ -199,7 +199,19 @@ MessageBoxButtons.OK,
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
-            OpenFormRight(new frmPagos());
+
+            string rol = SoporteControlador.CacheUsuario.Perfil;
+            if (rol == "secretaria")
+            {
+
+                OpenFormRight(new frmPagos());
+            }
+            else
+            {
+
+                ShowMensaje();
+            }
+           
         }
     }
 }

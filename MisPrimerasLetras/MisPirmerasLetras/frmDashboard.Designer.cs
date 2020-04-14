@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.buttonConfiguracion = new System.Windows.Forms.Button();
             this.btnPagos = new System.Windows.Forms.Button();
             this.lblApellidoUser = new System.Windows.Forms.Label();
             this.lblPerfil = new System.Windows.Forms.Label();
@@ -49,7 +51,7 @@
             this.panelContendor = new System.Windows.Forms.Panel();
             this.lblMensajeAlternativo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -75,6 +77,18 @@
             this.barraTitulo.Size = new System.Drawing.Size(1232, 60);
             this.barraTitulo.TabIndex = 1;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(350, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(421, 46);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Mis Primeras Letras";
             // 
             // pictureBox2
             // 
@@ -137,6 +151,8 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.button3);
+            this.mnVertical.Controls.Add(this.buttonConfiguracion);
             this.mnVertical.Controls.Add(this.btnPagos);
             this.mnVertical.Controls.Add(this.lblApellidoUser);
             this.mnVertical.Controls.Add(this.lblPerfil);
@@ -155,6 +171,20 @@
             this.mnVertical.TabIndex = 0;
             this.mnVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.mnVertical_Paint);
             // 
+            // buttonConfiguracion
+            // 
+            this.buttonConfiguracion.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfiguracion.FlatAppearance.BorderSize = 0;
+            this.buttonConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("buttonConfiguracion.Image")));
+            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 734);
+            this.buttonConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonConfiguracion.Name = "buttonConfiguracion";
+            this.buttonConfiguracion.Size = new System.Drawing.Size(52, 43);
+            this.buttonConfiguracion.TabIndex = 10;
+            this.buttonConfiguracion.UseVisualStyleBackColor = false;
+            // 
             // btnPagos
             // 
             this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -168,7 +198,7 @@
             this.btnPagos.Location = new System.Drawing.Point(0, 341);
             this.btnPagos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(323, 54);
+            this.btnPagos.Size = new System.Drawing.Size(297, 54);
             this.btnPagos.TabIndex = 9;
             this.btnPagos.Text = "Pago";
             this.btnPagos.UseVisualStyleBackColor = true;
@@ -213,9 +243,11 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(12, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(88, 121);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
@@ -223,7 +255,7 @@
             // 
             this.pnlSubMenu.Controls.Add(this.btnMaterias);
             this.pnlSubMenu.Controls.Add(this.btnGrupos);
-            this.pnlSubMenu.Location = new System.Drawing.Point(60, 500);
+            this.pnlSubMenu.Location = new System.Drawing.Point(60, 580);
             this.pnlSubMenu.Name = "pnlSubMenu";
             this.pnlSubMenu.Size = new System.Drawing.Size(188, 119);
             this.pnlSubMenu.TabIndex = 4;
@@ -296,7 +328,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 446);
+            this.button1.Location = new System.Drawing.Point(0, 526);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(323, 54);
@@ -341,17 +373,23 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // label2
+            // button3
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(350, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(421, 46);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Mis Primeras Letras";
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 435);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(323, 54);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Carga Academica";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
@@ -405,5 +443,7 @@
         private System.Windows.Forms.Label lblMensajeAlternativo;
         private System.Windows.Forms.Button btnPagos;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonConfiguracion;
+        private System.Windows.Forms.Button button3;
     }
 }
