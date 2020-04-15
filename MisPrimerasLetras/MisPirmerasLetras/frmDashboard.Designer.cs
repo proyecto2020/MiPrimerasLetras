@@ -49,7 +49,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelContendor = new System.Windows.Forms.Panel();
-            this.lblMensajeAlternativo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
@@ -178,12 +177,13 @@
             this.buttonConfiguracion.FlatAppearance.BorderSize = 0;
             this.buttonConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("buttonConfiguracion.Image")));
-            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 742);
+            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 746);
             this.buttonConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonConfiguracion.Name = "buttonConfiguracion";
-            this.buttonConfiguracion.Size = new System.Drawing.Size(38, 35);
+            this.buttonConfiguracion.Size = new System.Drawing.Size(38, 31);
             this.buttonConfiguracion.TabIndex = 10;
             this.buttonConfiguracion.UseVisualStyleBackColor = false;
+            this.buttonConfiguracion.Click += new System.EventHandler(this.buttonConfiguracion_Click);
             // 
             // btnPagos
             // 
@@ -339,7 +339,7 @@
             // 
             // panelContendor
             // 
-            this.panelContendor.Controls.Add(this.lblMensajeAlternativo);
+            this.panelContendor.BackColor = System.Drawing.Color.LightGray;
             this.panelContendor.Controls.Add(this.pictureBox3);
             this.panelContendor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelContendor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -349,16 +349,6 @@
             this.panelContendor.Size = new System.Drawing.Size(1232, 728);
             this.panelContendor.TabIndex = 6;
             this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint_2);
-            // 
-            // lblMensajeAlternativo
-            // 
-            this.lblMensajeAlternativo.AutoSize = true;
-            this.lblMensajeAlternativo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajeAlternativo.Location = new System.Drawing.Point(459, 574);
-            this.lblMensajeAlternativo.Name = "lblMensajeAlternativo";
-            this.lblMensajeAlternativo.Size = new System.Drawing.Size(84, 28);
-            this.lblMensajeAlternativo.TabIndex = 3;
-            this.lblMensajeAlternativo.Text = "label2";
             // 
             // pictureBox3
             // 
@@ -415,7 +405,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlSubMenu.ResumeLayout(false);
             this.panelContendor.ResumeLayout(false);
-            this.panelContendor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -440,7 +429,6 @@
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Panel panelContendor;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblMensajeAlternativo;
         private System.Windows.Forms.Button btnPagos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonConfiguracion;

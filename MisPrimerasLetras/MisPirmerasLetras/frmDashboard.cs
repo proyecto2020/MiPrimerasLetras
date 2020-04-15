@@ -213,5 +213,11 @@ MessageBoxButtons.OK,
             }
            
         }
+
+        private void buttonConfiguracion_Click(object sender, EventArgs e)
+        {
+            frmConfiguracion frmcon = new frmConfiguracion();
+            frmcon.Show();
+        }
     }
 }
