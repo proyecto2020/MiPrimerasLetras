@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardarARMA = new System.Windows.Forms.Button();
             this.lbltitle = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -147,11 +149,20 @@
             // 
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(263, 9);
+            this.lbltitle.Location = new System.Drawing.Point(287, 8);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(745, 56);
             this.lbltitle.TabIndex = 31;
             this.lbltitle.Text = "ADMINISTRACIÓN DE MATERIAS";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel3.Controls.Add(this.lbltitle);
+            this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1277, 75);
+            this.panel3.TabIndex = 42;
             // 
             // frmGestionMaterias
             // 
@@ -159,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1275, 810);
-            this.Controls.Add(this.lbltitle);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnGuardarARMA);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -174,6 +185,8 @@
             this.Name = "frmGestionMaterias";
             this.Text = "frmGestionMaterias";
             this.Load += new System.EventHandler(this.frmGestionMaterias_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +205,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardarARMA;
         private System.Windows.Forms.Label lbltitle;
+        private System.Windows.Forms.Panel panel3;
     }
 }

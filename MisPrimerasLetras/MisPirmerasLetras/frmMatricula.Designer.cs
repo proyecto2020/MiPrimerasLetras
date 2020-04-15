@@ -58,7 +58,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.lbltitle = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNombreA
@@ -378,11 +381,32 @@
             this.lblError.TabIndex = 38;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbltitle
+            // 
+            this.lbltitle.AutoSize = true;
+            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Location = new System.Drawing.Point(181, 9);
+            this.lbltitle.Name = "lbltitle";
+            this.lbltitle.Size = new System.Drawing.Size(809, 56);
+            this.lbltitle.TabIndex = 39;
+            this.lbltitle.Text = "ADMINISTRACIÓN DE MATRICULAS";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.lbltitle);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1224, 75);
+            this.panel1.TabIndex = 40;
+            // 
             // frmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1222, 810);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -417,6 +441,8 @@
             this.Load += new System.EventHandler(this.frmMatricula_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +480,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lbltitle;
+        private System.Windows.Forms.Panel panel1;
     }
 }
