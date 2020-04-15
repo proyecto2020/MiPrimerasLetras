@@ -178,10 +178,10 @@
             this.buttonConfiguracion.FlatAppearance.BorderSize = 0;
             this.buttonConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("buttonConfiguracion.Image")));
-            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 734);
+            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 742);
             this.buttonConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonConfiguracion.Name = "buttonConfiguracion";
-            this.buttonConfiguracion.Size = new System.Drawing.Size(52, 43);
+            this.buttonConfiguracion.Size = new System.Drawing.Size(38, 35);
             this.buttonConfiguracion.TabIndex = 10;
             this.buttonConfiguracion.UseVisualStyleBackColor = false;
             // 

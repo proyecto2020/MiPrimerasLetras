@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MisPirmerasLetras.Libreria
 {
-    class EventosTextBox
+    public class EventosTextBox
     {
         public void textKeyPress(KeyPressEventArgs e)
         {

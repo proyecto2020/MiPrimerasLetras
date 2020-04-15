@@ -129,3 +129,7 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\lin
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\linq2db.xml
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\System.ComponentModel.Annotations.dll
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\Entidades.dll.config
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\EntityFramework.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\EntityFramework.xml
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmCargaAcademica.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmConfiguracion.resources

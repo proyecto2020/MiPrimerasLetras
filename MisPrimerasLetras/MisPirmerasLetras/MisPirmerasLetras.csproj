@@ -67,6 +67,18 @@
     <Compile Include="frmAdminUsers.Designer.cs">
       <DependentUpon>frmAdminUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCargaAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargaAcademica.Designer.cs">
+      <DependentUpon>frmCargaAcademica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminUsers.resx">
       <DependentUpon>frmAdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargaAcademica.resx">
+      <DependentUpon>frmCargaAcademica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>

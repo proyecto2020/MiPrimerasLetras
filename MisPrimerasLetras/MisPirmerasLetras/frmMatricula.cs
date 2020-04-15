@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using MisPirmerasLetras.Libreria;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MisPirmerasLetras
 {
     public partial class frmMatricula : Form
     {
         private LoginControlador.LoginControlador controlador;
+        private EventosTextBox evento;
         public frmMatricula()
         {
             InitializeComponent();
@@ -109,7 +112,15 @@ namespace MisPirmerasLetras
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-
+            if (txtOcupacion.Text.Equals(""))
+            {
+                lblOcupacion.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblOcupacion.Text = "Ocupacion";
+                lblOcupacion.ForeColor = Color.Green;
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -119,7 +130,15 @@ namespace MisPirmerasLetras
 
         private void textBox4_TextChanged_1(object sender, EventArgs e)
         {
-
+            if (txtAcudiente.Text.Equals(""))
+            {
+                lblAcudiente.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblAcudiente.Text = "Acudiente";
+                lblAcudiente.ForeColor = Color.Green;
+            }
         }
 
         private void btnGuardarMatricula_Click(object sender, EventArgs e)
@@ -129,14 +148,15 @@ namespace MisPirmerasLetras
             int total_pagar = 500000;
             int saldo = 500000;
             int abono = 0;
-           
+
 
 
             /* ENDCOMMENT */
+            if (Objetos.eventos.comprobarFormatoEmail(txtCorreo.Text))
+            {
+                
 
-
-
-            Alumnos alumnos = new Alumnos();
+                    Alumnos alumnos = new Alumnos();
             alumnos.nombre  = txtNombreA.Text;
             alumnos.primer_apellido = txtPrimerA.Text;
             alumnos.segundo_apellido = txtSegundoA.Text;
@@ -193,8 +213,16 @@ namespace MisPirmerasLetras
                 {
                     MessageBox.Show("por favor seleccine un grupo");
                 }
-            }
+               }
 
+            }
+            else
+            {
+                lblError.Text = "Email invalido";
+                lblCorreo.ForeColor = Color.Red;
+                lblError.ForeColor = Color.Red;
+                txtCorreo.Focus();
+            }
             
 
             //crear alumno
@@ -223,6 +251,111 @@ namespace MisPirmerasLetras
             frmDashboard frm = new frmDashboard();
             this.Hide();
             frm.OpenFormRight(new frmPagos());
+        }
+
+        private void txtNombreA_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombreA.Text.Equals(""))
+            {
+                lblNombreE.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblNombreE.Text = "Nombre";
+                lblNombreE.ForeColor = Color.Green;
+            }
+        }
+
+        private void txtPrimerA_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrimerA.Text.Equals(""))
+            {
+                lblPrimerA.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblPrimerA.Text = "Primer Apellido";
+                lblPrimerA.ForeColor = Color.Green;
+            }
+
+        }
+
+        private void txtSegundoA_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSegundoA.Text.Equals(""))
+            {
+                lblSegundoA.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblSegundoA.Text = "Segundo Apellido";
+                lblSegundoA.ForeColor = Color.Green;
+            }
+
+        }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text.Equals(""))
+            {
+                lblDireccion.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblDireccion.Text = "Direccion";
+                lblDireccion.ForeColor = Color.Green;
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text.Equals(""))
+            {
+                lblTelefono.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblTelefono.Text = "Telefono";
+                lblTelefono.ForeColor = Color.Green;
+            }
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text.Equals(""))
+            {
+                lblCorreo.ForeColor = Color.Black;
+            }
+            else
+            {
+                lblCorreo.Text = "Correo";
+                lblError.Text = "";
+                lblCorreo.ForeColor = Color.Green;
+            }
+        }
+
+        private void rchObservaciones_TextChanged(object sender, EventArgs e)
+        {
+            if (rchObservaciones.Text.Equals(""))
+            {
+                label9.ForeColor = Color.Black;
+            }
+            else
+            {
+                label9.Text = "Observaciones";
+                label9.ForeColor = Color.Green;
+            }
+        }
+
+        private void cmbGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

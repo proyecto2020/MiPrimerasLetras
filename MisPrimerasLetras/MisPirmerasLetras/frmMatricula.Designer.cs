@@ -57,6 +57,7 @@
             this.lblFechaLimitePago = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             this.txtNombreA.Name = "txtNombreA";
             this.txtNombreA.Size = new System.Drawing.Size(132, 22);
             this.txtNombreA.TabIndex = 0;
+            this.txtNombreA.TextChanged += new System.EventHandler(this.txtNombreA_TextChanged);
             // 
             // lblNombreE
             // 
@@ -92,11 +94,12 @@
             // 
             // txtPrimerA
             // 
-            this.txtPrimerA.Location = new System.Drawing.Point(281, 82);
+            this.txtPrimerA.Location = new System.Drawing.Point(280, 84);
             this.txtPrimerA.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrimerA.Name = "txtPrimerA";
             this.txtPrimerA.Size = new System.Drawing.Size(132, 22);
             this.txtPrimerA.TabIndex = 3;
+            this.txtPrimerA.TextChanged += new System.EventHandler(this.txtPrimerA_TextChanged);
             // 
             // lblSegundoA
             // 
@@ -117,14 +120,16 @@
             this.txtSegundoA.Name = "txtSegundoA";
             this.txtSegundoA.Size = new System.Drawing.Size(132, 22);
             this.txtSegundoA.TabIndex = 5;
+            this.txtSegundoA.TextChanged += new System.EventHandler(this.txtSegundoA_TextChanged);
             // 
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(627, 82);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(228, 22);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(224, 22);
             this.dtpFechaNacimiento.TabIndex = 6;
+            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
             // 
             // label4
             // 
@@ -174,6 +179,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(132, 22);
             this.txtDireccion.TabIndex = 11;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblTelefono
             // 
@@ -203,6 +209,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(132, 22);
             this.txtTelefono.TabIndex = 14;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // txtCorreo
             // 
@@ -211,6 +218,7 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(193, 22);
             this.txtCorreo.TabIndex = 15;
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
             // label9
             // 
@@ -230,6 +238,7 @@
             this.rchObservaciones.Size = new System.Drawing.Size(313, 118);
             this.rchObservaciones.TabIndex = 17;
             this.rchObservaciones.Text = "";
+            this.rchObservaciones.TextChanged += new System.EventHandler(this.rchObservaciones_TextChanged);
             // 
             // label11
             // 
@@ -244,11 +253,12 @@
             // cmbGrupo
             // 
             this.cmbGrupo.FormattingEnabled = true;
-            this.cmbGrupo.Location = new System.Drawing.Point(627, 321);
+            this.cmbGrupo.Location = new System.Drawing.Point(651, 321);
             this.cmbGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGrupo.Name = "cmbGrupo";
             this.cmbGrupo.Size = new System.Drawing.Size(160, 24);
             this.cmbGrupo.TabIndex = 21;
+            this.cmbGrupo.SelectedIndexChanged += new System.EventHandler(this.cmbGrupo_SelectedIndexChanged);
             // 
             // lblOcupacion
             // 
@@ -278,7 +288,7 @@
             this.btnGuardarMatricula.FlatAppearance.BorderSize = 0;
             this.btnGuardarMatricula.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarMatricula.Location = new System.Drawing.Point(344, 547);
+            this.btnGuardarMatricula.Location = new System.Drawing.Point(587, 547);
             this.btnGuardarMatricula.Name = "btnGuardarMatricula";
             this.btnGuardarMatricula.Size = new System.Drawing.Size(174, 62);
             this.btnGuardarMatricula.TabIndex = 32;
@@ -335,7 +345,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(599, 547);
+            this.button1.Location = new System.Drawing.Point(865, 547);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 62);
             this.button1.TabIndex = 36;
@@ -351,18 +361,29 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(76, 547);
+            this.button2.Location = new System.Drawing.Point(300, 547);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 62);
             this.button2.TabIndex = 37;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // lblError
+            // 
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(507, 470);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(319, 23);
+            this.lblError.TabIndex = 38;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 810);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -432,5 +453,6 @@
         private System.Windows.Forms.Label lblTexto;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblError;
     }
 }
