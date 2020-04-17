@@ -90,7 +90,7 @@ namespace MisPirmerasLetras
             else
             {
                 lblFechaPago.Left = 260;
-
+                lblFechaPago.BackColor = Color.Transparent;
                 // lblFechaPago.Location =  new Point(350, 228);
                 lblFechaPago.ForeColor = System.Drawing.Color.Black;
             }
@@ -128,7 +128,7 @@ namespace MisPirmerasLetras
         
         private void btnGuardarARMA_Click(object sender, EventArgs e)
         {
-            _idEstudante = Convert.ToInt16(dataGEstudiantes.CurrentRow.Cells[0].Value);
+           
             if (_idEstudante.Equals(0))
             {
                 labelReport_Pagos.Text = "Seleccione un estudiante";
@@ -142,6 +142,7 @@ namespace MisPirmerasLetras
                 }
                 else
                 {
+                  
                     var dateNow = DateTime.Now;
                     var nowDate = $"{dateNow.Day}/{dateNow.Month}/{dateNow.Year}";
                     Codigos codigos = new Codigos();
@@ -211,7 +212,7 @@ namespace MisPirmerasLetras
 
                         Ticket1.CortaTicket(); // corta el ticket
 
-                       // Ticket1.ImprimirTicket("Microsoft XPS Document Writer");
+                        Ticket1.ImprimirTicket("Microsoft XPS Document Writer");
 
 
 

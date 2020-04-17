@@ -184,7 +184,6 @@ namespace MisPirmerasLetras
                 pagos.abono = abono;
                 pagos.saldo = saldo;
                 pagos.fecha_limite =  dtpFechaLimitePago.Value.ToString();
-                pagos.fecha_limite =  dtpFechaLimitePago.Value.ToString();
                 pagos.mes = "";
                 
                 int IdPago = this.controlador.InsertarPago(pagos);

@@ -384,7 +384,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label6.Location = new System.Drawing.Point(9, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 40);
+            this.label6.Size = new System.Drawing.Size(156, 39);
             this.label6.TabIndex = 0;
             this.label6.Text = "Alumnos";
             // 
