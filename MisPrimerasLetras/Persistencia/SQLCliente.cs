@@ -11,6 +11,7 @@ using System.Threading;
 using System.Text;
 using LinqToDB;
 using LinqToDB.Data;
+using System.Runtime.Remoting.Messaging;
 
 namespace Persistencia
 {
@@ -21,23 +22,45 @@ namespace Persistencia
         SqlDataAdapter adaptador;
         private static string connectionString = ConfigurationManager.ConnectionStrings["MisPirmerasLetras.Properties.Settings.conexion"].ToString();
         private SqlConnection conexion = new SqlConnection(connectionString);
-        //Utilizando LinqTo
+
         /**************************************
           *                                    *
           *      CODIGO DE COFIGURACION        * 
           *                                    *
           **************************************/
-      
+            /* INSTANCIAS DE TABLAS LINQTO*/
         public ITable<Alumnos> TAlumnos { get { return GetTable<Alumnos>(); } }
         public ITable<Pagos> TPagos { get { return GetTable<Pagos>(); } }
-        
+        public ITable<gradoMateria> TGradoMateria { get { return GetTable<gradoMateria>(); } }
+        public ITable<Materia> TMateria { get { return GetTable<Materia>(); } }
+
+
 
 
 
 
         private Respuesta<object> respuesta;
         private Respuesta<RespuestaLogin> respuestaLogin;
-       
+        DataTable tblGeneralRetorno = new DataTable();
+
+
+
+        /***********************************/
+        /* INSTANCIAS DE LISTA DE OBJETOS*/
+        List<gradoMateria> GradoMaterias = new List<gradoMateria>();
+        List<Perfiles> Perfiles = new List<Perfiles>();
+        List<DiaHora> diaHoras = new List<DiaHora>();
+        List<Salones> salones = new List<Salones>();
+        List<Usuario> Usuario = new List<Usuario>();
+        List<Grado> Grado = new List<Grado>();
+        List<Area> area = new List<Area>();
+        List<Materia> materia = new List<Materia>();
+
+                     /* END */
+        /***********************************/
+
+
+
         public SQLCliente()
         {
             respuesta = new Respuesta<object>();
@@ -116,53 +139,108 @@ namespace Persistencia
 
             return respuesta;
         }
-        List<Perfiles> Perfiles = new List<Perfiles>();
+       
         public List<Perfiles> mtdListarPerfiles()
         {
             string consulta = RecursosSQL.ConsultaPerfiles;
-            DataTable tblRol = new DataTable();
-            tblRol = this.mtdSelect(consulta);
+            tblGeneralRetorno = this.mtdSelect(consulta);
 
-            for (int i = 0; i < tblRol.Rows.Count; i++)
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Perfiles objPerfil = new Perfiles();
-                objPerfil.IdPerfil = int.Parse(tblRol.Rows[i][0].ToString());
-                objPerfil.Perfil = tblRol.Rows[i][1].ToString();
+                objPerfil.IdPerfil = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objPerfil.Perfil = tblGeneralRetorno.Rows[i][1].ToString();
                 Perfiles.Add(objPerfil);
             }
             return Perfiles;
         }
-        // REFACTOR
-        List<Usuario> Usuario = new List<Usuario>();
+
+       
+        public List<DiaHora> mtdListarHoras()
+        {
+            string consulta = "select dia_hora.id_dia_hora, dia_hora.hora_inicial, dia_hora.hora_final from dia_hora";
+
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
+            {
+                DiaHora objDiaHora = new DiaHora();
+                objDiaHora.id_dia_hora = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objDiaHora.HoraInicial = int.Parse(tblGeneralRetorno.Rows[i][1].ToString());
+                objDiaHora.HoraFinal = int.Parse(tblGeneralRetorno.Rows[i][2].ToString());
+
+
+
+                diaHoras.Add(objDiaHora);
+            }
+            return diaHoras;
+        }
+
+       
+        public List<Salones> mtdListarSalones(int id_grupo = 0)
+        {
+            string consulta = "";
+            if (id_grupo > 0)
+            {
+                //seleccionar 
+                consulta = "SELECT  salon.id_salon, salon.nombre,  salon.sede FROM salon INNER JOIN horario h ON h.fk_salon = salon.id_salon WHERE h.fk_grupo = " + id_grupo + "GROUP BY  salon.nombre, salon.id_salon, salon.sede";
+            }
+            else
+            {
+                // seleccionar salones donde no esten asociados a un grupo o horario
+                //SELECT * FROM salon WHERE NOT EXISTS(SELECT 1 FROM   horario WHERE  salon.id_salon = horario.fk_salon)
+                consulta = "SELECT * FROM salon WHERE NOT EXISTS(SELECT 1 FROM   grupo WHERE  salon.id_salon = grupo.fk_salon)";
+            }
+
+
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
+            {
+                Salones objSalon = new Salones();
+                objSalon.IdSalon = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objSalon.Nombre = tblGeneralRetorno.Rows[i][1].ToString();
+                objSalon.Sede = tblGeneralRetorno.Rows[i][2].ToString();
+
+
+
+
+                salones.Add(objSalon);
+            }
+            return salones;
+        }
+
+
+        
         public List<Usuario> mtdListarUsuariosPorPerfil(int perfil)
         {
             string consulta = "select  id_usuario, nombre, primer_apellido from usuario where fk_perfiles = " + perfil;
-            DataTable tblRol = new DataTable();
-            tblRol = this.mtdSelect(consulta);
 
-            for (int i = 0; i < tblRol.Rows.Count; i++)
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Usuario objUsuario = new Usuario();
-                objUsuario.IdUsuario = int.Parse(tblRol.Rows[i][0].ToString());
-                objUsuario.Nombre = tblRol.Rows[i][1].ToString();
-                objUsuario.PrimerApellido = tblRol.Rows[i][2].ToString();
+                objUsuario.IdUsuario = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objUsuario.Nombre = tblGeneralRetorno.Rows[i][1].ToString();
+                objUsuario.PrimerApellido = tblGeneralRetorno.Rows[i][2].ToString();
                 Usuario.Add(objUsuario);
             }
             return Usuario;
         }
 
-        List<Grado> Grado = new List<Grado>();
+       
         public List<Grado> mtdListarGrado()
         {
-            string consulta = "select * from Grado";
-            DataTable tblRol = new DataTable();
-            tblRol = this.mtdSelect(consulta);
+            string consulta = "select id_grado, grado from Grado";
 
-            for (int i = 0; i < tblRol.Rows.Count; i++)
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Grado objGrado = new Grado();
-                objGrado.IdGrado = int.Parse(tblRol.Rows[i][0].ToString());
-                objGrado.Grados = tblRol.Rows[i][1].ToString();
+                objGrado.IdGrado = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objGrado.Grados = tblGeneralRetorno.Rows[i][1].ToString();
                 Grado.Add(objGrado);
             }
             return Grado;
@@ -170,19 +248,122 @@ namespace Persistencia
 
         public int mtdRegistrarGrado(Grado grado)
         {
-            string storedProcedure = "INSERT INTO grado(grado) values ('" + grado.Grados +"')";
-           
-             int respuesta = this.mtdIDU(storedProcedure);
-             return respuesta;
+            string storedProcedure = RecursosSQL.insertar_grado;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+
+
+
+                SqlCommand myCommand = new SqlCommand(storedProcedure, connection);
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+
+                myCommand.Parameters.AddWithValue("@grado", grado.Grados);
+                myCommand.Parameters.AddWithValue("@usuario_creacion", "pepe");
+
+                //myCommand.ExecuteNonQuery();
+                connection.Open();
+
+                Int32 IdCreado = Convert.ToInt32(myCommand.ExecuteScalar());
+                return IdCreado;
+
+            }
+
+
+
         }
         public int mtdRegistrarGrupo(Grupo grupo)
         {
-            string storedProcedure = "INSERT INTO grupo(grupo, fk_grado, fk_usuario) values ('" + grupo.grupo + "',"+ grupo.Grado+","+grupo.Usuario+")";
+            string storedProcedure = "INSERT INTO grupo(grupo, fk_grado, fk_usuario, fk_salon) values ('" + grupo.grupo + "'," + grupo.Grado + "," + grupo.Usuario + "," + grupo.fk_salon + ")";
 
             int respuesta = this.mtdIDU(storedProcedure);
             return respuesta;
         }
 
+        public int ObtenerIdS(string materia)
+        {
+            int id = 0;
+            switch (materia)
+            {
+                case "Biología":
+                    id = 1;
+                    break;
+
+                case "Sociales":
+                    id = 2;
+                    break;
+
+                case "Artes Plásticas":
+                    id = 3;
+                    break;
+
+                case "Música":
+                    id = 1002;
+                    break;
+                case "Ética":
+                    id = 1004;
+                    break;
+                case "Religión":
+                    id = 1005;
+                    break;
+                case "Educación Física":
+                    id = 1006;
+                    break;
+                case "Danzas":
+                    id = 1007;
+                    break;
+                case "Lengua Castellana":
+                    id = 1008;
+                    break;
+                case "inglés":
+                    id = 1009;
+                    break;
+                case "Matemáticas":
+                    id = 1010;
+                    break;
+                case "Informática":
+                    id = 1011;
+                    break;
+
+                default:
+                    throw new System.InvalidOperationException("No existe tal materia!");
+               
+                   
+            }
+
+            return id;
+        }
+
+        public Respuesta<object> mtdRegistrarGradoMateria(string materia, string hora, int grado)
+        {
+            int Idmateria = this.ObtenerIdS(materia);
+            DynamicParameters parameter = new DynamicParameters();
+            string storedProcedure = RecursosSQL.insertarGradoMateria;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                parameter.Add("@fk_grado", grado);
+                parameter.Add("@fk_materia", Idmateria);
+                parameter.Add("@horas", int.Parse(hora));
+
+
+
+                int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
+                respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
+
+            return respuesta;
+
+        }
+
+        public int mtdActualizarGradoMateria(string materia, string hora, int grado)
+        {
+            int Idmateria = this.ObtenerIdS(materia);
+            string storedProcedure = "UPDATE gradoMateria SET horas = "+int.Parse(hora) +" WHERE fk_grado ="+grado+ " AND fk_materia = "+Idmateria+"";
+
+            int respuesta = this.mtdIDU(storedProcedure);
+            return respuesta;
+        }
         public int mtdMateriaArea(Materia materia = null, Area area = null)
         {
             string storedProcedure = "";
@@ -195,56 +376,87 @@ namespace Persistencia
 
             }
 
-            if (area.AreaM!= "")
+            if (area.AreaM != "")
             {
                 storedProcedure = "INSERT INTO area(area, fecha_creacion) values ('" + area.AreaM + "','" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "')";
                 respuesta = this.mtdIDU(storedProcedure);
 
             }
 
-           
+
             return respuesta;
-        
-        
+
+
         }
         public int mtdAsociacionMateriaArea(Materia materia, int idArea)
         {
-            string storedProcedure = "UPDATE materia SET fk_area = "+idArea+ " WHERE materia.id_materia = " + materia.IdMateria+"";
+            string storedProcedure = "UPDATE materia SET fk_area = " + idArea + " WHERE materia.id_materia = " + materia.IdMateria + "";
 
             int respuesta = this.mtdIDU(storedProcedure);
             return respuesta;
         }
 
-        List<Area> area = new List<Area>();
+  
         public List<Area> mtdListarArea()
         {
             string consulta = "select  id_area, area  from area";
-            DataTable tblRol = new DataTable();
-            tblRol = this.mtdSelect(consulta);
 
-            for (int i = 0; i < tblRol.Rows.Count; i++)
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Area objArea = new Area();
-                objArea.IdArea = int.Parse(tblRol.Rows[i][0].ToString());
-                objArea.AreaM = tblRol.Rows[i][1].ToString();
-               
+                objArea.IdArea = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objArea.AreaM = tblGeneralRetorno.Rows[i][1].ToString();
+
                 area.Add(objArea);
             }
             return area;
         }
 
-        List<Materia> materia = new List<Materia>();
+
+       
+        public  List<object> mtdListarIntensidadHoraria(int id_grado)
+        {
+
+            DataTable tblgradoMaterias = new DataTable();
+            List<object> gradoMaterias = new List<object>();
+
+            string consulta = "select m.materia, gm.horas from gradoMateria gm INNER JOIN materia m ON m.id_materia = gm.fk_materia  where fk_grado = " + id_grado;
+
+
+            tblgradoMaterias = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblgradoMaterias.Rows.Count; i++)
+            {
+               
+                string Materia_nombre  = tblgradoMaterias.Rows[i][0].ToString();
+                int thoras  = int.Parse(tblgradoMaterias.Rows[i][1].ToString());
+                var newObject = new { Materia = Materia_nombre, Horas = thoras }; // creamos un objeto anonimo ya que necesitamos lo que n
+
+                gradoMaterias.Add(newObject);
+            }
+            
+            return gradoMaterias;
+
+          
+
+        }
+
         public List<Materia> mtdListarMateria()
         {
-            string consulta = "select id_materia, materia  from materia";
-            DataTable tblRol = new DataTable();
-            tblRol = this.mtdSelect(consulta);
+           
 
-            for (int i = 0; i < tblRol.Rows.Count; i++)
+             string consulta = "select id_materia, materia  from materia";
+
+
+            tblGeneralRetorno = this.mtdSelect(consulta);
+
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Materia objMateria = new Materia();
-                objMateria.IdMateria = int.Parse(tblRol.Rows[i][0].ToString());
-                objMateria.NombreMateria = tblRol.Rows[i][1].ToString();
+                objMateria.IdMateria = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objMateria.NombreMateria = tblGeneralRetorno.Rows[i][1].ToString();
 
                 materia.Add(objMateria);
             }
@@ -298,6 +510,7 @@ namespace Persistencia
         }
         public string CreatePassword(int length)
         {
+
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             StringBuilder res = new StringBuilder();
             Random rnd = new Random();
@@ -334,21 +547,7 @@ namespace Persistencia
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                
-                //parameter.Add("@nombres", alumnos.nombre);
-                //parameter.Add("@PrimerApellido", alumnos.primer_apellido);
-                //parameter.Add("@SegundoApellido", alumnos.segundo_apellido);
-                //parameter.Add("@FechaNacimiento", alumnos.fecha_nacimiento);
-                //parameter.Add("@Acudiente", alumnos.acudiente, DbType.String);
-                //parameter.Add("@Direccion", alumnos.direccion,DbType.String);
-                //parameter.Add("@Telefono", alumnos.telefono);
-                //parameter.Add("@Correo", alumnos.correo, DbType.String);
-                //parameter.Add("@Observaciones", alumnos.observaciones, DbType.String);
-                //parameter.Add("@ocupacion", alumnos.ocupacion);
-
-
-                //int rowAffected = connection.Execute(storedProcedure, parameter, commandType: CommandType.StoredProcedure);
-
-                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+                
 
                 SqlCommand myCommand = new SqlCommand(storedProcedure, connection);
                 myCommand.CommandType = CommandType.StoredProcedure;
@@ -432,18 +631,19 @@ namespace Persistencia
         public List<Grupo> mtdListarGrupo()
         {
 
-            string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
+            //string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
+            string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo  order by grupo.id_grupo desc";
 
-            DataTable tblGrupo = new DataTable();
+           
             List<Grupo> listaGrupo = new List<Grupo>();
 
-            tblGrupo = this.mtdSelect(consulta);
+            tblGeneralRetorno = this.mtdSelect(consulta);
 
-            for (int i = 0; i < tblGrupo.Rows.Count; i++)
+            for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
             {
                 Grupo objGrupo = new Grupo();
-                objGrupo.id_grupo = int.Parse(tblGrupo.Rows[i][0].ToString());
-                objGrupo.grupo = tblGrupo.Rows[i][1].ToString();
+                objGrupo.id_grupo = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
+                objGrupo.grupo = tblGeneralRetorno.Rows[i][1].ToString();
 
 
                 listaGrupo.Add(objGrupo);
@@ -593,9 +793,101 @@ namespace Persistencia
             return grp;
 
         }
-    
-    //Add J.B 25.03.2020
-    public string Encripsha512(string im_contra)
+
+       
+        public int  mtdValidacionHorario(string id_hora, string dia, string materia, int id_grupo)
+        {
+            
+            string consulta = "";
+            int respuesta = 0;
+            int _idMateria = this.ObtenerIdS(materia);
+            int hora = int.Parse(id_hora);
+            //validamos la intensidad horara de una materia en el grupo, 
+            //validamos que esa hora no este asiganada a una materia en el mismo grupo
+            //validar que se puede agregar la misma hora, la misma materia pero diferente dia
+            gradoMateria objUsuario = new gradoMateria();
+            if (hora > 0)
+            {
+                //validamos la intenisidad horaria
+                consulta = "SELECT gm.horas from gradoMateria gm where  gm.fk_materia = "+ _idMateria +"AND gm.fk_grado ="+ id_grupo+"";
+
+                tblGeneralRetorno = this.mtdSelect(consulta);
+
+              
+                objUsuario.horas = int.Parse(tblGeneralRetorno.Rows[0][0].ToString());
+
+                GradoMaterias.Add(objUsuario);
+               
+            }
+
+            //sino optenemos resultados insertamos 
+            if(GradoMaterias.Count.Equals(0) && hora <= objUsuario.horas )
+            {
+                respuesta = this.mtdInsertarIntensidadHoraria(id_grupo, id_hora, dia, _idMateria);
+            }
+
+            return respuesta;
+
+        }
+
+        public int mtdInsertarIntensidadHoraria(int id_grupo, string hora, string  dia, int materia)
+        {
+            string consulta = "";
+
+            if (id_grupo > 0)
+            {
+                 consulta = "INSERT INTO horario(fk_grupo, fk_dia_hora, dia, fk_materia) VALUES("+id_grupo+","+ hora + "," +dia+","+materia+")";     
+            }
+
+            int respuesta = this.mtdIDU(consulta);
+            return respuesta;
+
+            // consulta = "SELECT * FROM horario INNER JOIN dia_hora dh ON dh.id_dia_hora = horario.fk_dia_hora where horario.fk_dia_hora = @idHora AND fk_grupo = @idGrupo AND dia = @dia";
+            //try
+            //{
+
+            //    cmdRegistrar = new SqlCommand(consulta, conexion);
+            //    SqlParameter idHora = new SqlParameter("@idHora", SqlDbType.Int);
+            //    SqlParameter idGrupo = new SqlParameter("@idGrupo", SqlDbType.Int);
+            //    SqlParameter nDia = new SqlParameter("@dia", SqlDbType.VarChar);
+
+            //    idHora.Value = id_hora;
+            //    idGrupo.Value = id_grupo;
+            //    nDia.Value = dia;
+
+            //    cmdRegistrar.Parameters.Add(idHora);
+            //    cmdRegistrar.Parameters.Add(idGrupo);
+            //    cmdRegistrar.Parameters.Add(nDia);
+            //    conexion.Open();
+            //    SqlDataReader myReader = cmdRegistrar.ExecuteReader(CommandBehavior.CloseConnection);
+
+
+
+            //    Console.WriteLine(consulta);
+            //    if (myReader.Read() == true)
+            //    {
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex);
+            //}
+            //finally
+            //{
+            //    conexion.Close();
+            //}
+
+            //return false;
+
+        }
+
+        //Add J.B 25.03.2020
+        public string Encripsha512(string im_contra)
         {
             var bytes = System.Text.Encoding.UTF8.GetBytes(im_contra);
             using (var hash = System.Security.Cryptography.SHA512.Create())
@@ -608,6 +900,25 @@ namespace Persistencia
                 return hashedInputStringBuilder.ToString();
             }
         }
+
+
         //End Add J.B 25.03.2020
+    
+    
+        //private object mtdBusquedaAvanzada(string consulta, List<Object> lista, int id, string nombre )
+        //{
+        //    DataTable tblRol = new DataTable();
+        //    tblRol = this.mtdSelect(consulta);
+
+        //    for (int i = 0; i < tblRol.Rows.Count; i++)
+        //    {
+        //        Materia objMateria = new Materia();
+        //            id   = int.Parse(tblRol.Rows[i][0].ToString());
+        //            nombre  = tblRol.Rows[i][1].ToString();
+
+        //        lista.Add(objMateria);
+        //    }
+        //    return lista;
+        //}
     }
 }

@@ -2,6 +2,8 @@
 
 public class DiaHora
 {
+
+    public int id_dia_hora { get; set; }
     /// <summary>
     /// HoraInicial.
     /// </summary>
@@ -9,9 +11,13 @@ public class DiaHora
     /// <summary>
     /// HoraFianl.
     /// </summary>
-    public int HoraFianl { get; set; }
+    public int HoraFinal { get; set; }
+
+    public string ConcatenarHoras => $"{HoraInicial} A {HoraFinal}";
     /// <summary>
     /// Dia.
     /// </summary>
-    public string Dia { get; set; }
+    //public string Dia { get; set; }
+
+
 }

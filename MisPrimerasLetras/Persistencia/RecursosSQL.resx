@@ -135,9 +135,21 @@ u.correo
 u.fk_perfiles = p.id_perfil</value>
     <comment>cosulta todos los usuario</comment>
   </data>
+  <data name="insertar grado" xml:space="preserve">
+    <value>PR_insertar_grado</value>
+    <comment>insertar grado</comment>
+  </data>
   <data name="InsertarAlumnos" xml:space="preserve">
     <value>PR_Insertar_Alumnos</value>
     <comment>inserta alumnos</comment>
+  </data>
+  <data name="insertarGradoMateria" xml:space="preserve">
+    <value>PR_insertar_gradoMateria</value>
+    <comment>insertar union grado materia</comment>
+  </data>
+  <data name="InsertarGrupo" xml:space="preserve">
+    <value>PR_insertar_grupo</value>
+    <comment>insertar grupo y retornar su identificador</comment>
   </data>
   <data name="InsertarMatricula" xml:space="preserve">
     <value>PR_insertar_Matricula</value>

@@ -24,5 +24,10 @@ namespace Entidades
         public string usuario_creacion { get; set; }
 
         public DateTime fecha_creacion { get; set; }
+
+        public DateTime ano_lectivo { get; set; }
+
+        public Boolean estado { get; set; }
+
     }
 }

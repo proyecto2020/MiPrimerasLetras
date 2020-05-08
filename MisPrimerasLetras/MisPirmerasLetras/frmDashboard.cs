@@ -219,5 +219,10 @@ MessageBoxButtons.OK,
             frmConfiguracion frmcon = new frmConfiguracion();
             frmcon.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            OpenFormRight(new frmCargaAcademica());
+        }
     }
 }

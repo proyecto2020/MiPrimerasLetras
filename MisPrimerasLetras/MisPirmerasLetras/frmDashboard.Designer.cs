@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.mnVertical = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.buttonConfiguracion = new System.Windows.Forms.Button();
             this.btnPagos = new System.Windows.Forms.Button();
             this.lblApellidoUser = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelContendor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
@@ -150,6 +151,7 @@
             // mnVertical
             // 
             this.mnVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnVertical.Controls.Add(this.button4);
             this.mnVertical.Controls.Add(this.button3);
             this.mnVertical.Controls.Add(this.buttonConfiguracion);
             this.mnVertical.Controls.Add(this.btnPagos);
@@ -166,9 +168,28 @@
             this.mnVertical.Location = new System.Drawing.Point(0, 0);
             this.mnVertical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mnVertical.Name = "mnVertical";
-            this.mnVertical.Size = new System.Drawing.Size(251, 788);
+            this.mnVertical.Size = new System.Drawing.Size(251, 921);
             this.mnVertical.TabIndex = 0;
             this.mnVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.mnVertical_Paint);
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 435);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(323, 54);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Carga Academica";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // buttonConfiguracion
             // 
@@ -177,7 +198,7 @@
             this.buttonConfiguracion.FlatAppearance.BorderSize = 0;
             this.buttonConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("buttonConfiguracion.Image")));
-            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 746);
+            this.buttonConfiguracion.Location = new System.Drawing.Point(12, 879);
             this.buttonConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonConfiguracion.Name = "buttonConfiguracion";
             this.buttonConfiguracion.Size = new System.Drawing.Size(38, 31);
@@ -346,7 +367,7 @@
             this.panelContendor.Location = new System.Drawing.Point(251, 60);
             this.panelContendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContendor.Name = "panelContendor";
-            this.panelContendor.Size = new System.Drawing.Size(1232, 728);
+            this.panelContendor.Size = new System.Drawing.Size(1232, 861);
             this.panelContendor.TabIndex = 6;
             this.panelContendor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContendor_Paint_2);
             // 
@@ -363,29 +384,29 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // button3
+            // button4
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 435);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(323, 54);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Carga Academica";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 744);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(251, 54);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Reportes";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 788);
+            this.ClientSize = new System.Drawing.Size(1483, 921);
             this.Controls.Add(this.panelContendor);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.mnVertical);
@@ -433,5 +454,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonConfiguracion;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

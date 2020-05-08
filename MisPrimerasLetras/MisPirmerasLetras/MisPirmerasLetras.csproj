@@ -97,6 +97,12 @@
     <Compile Include="frmGestionMaterias.Designer.cs">
       <DependentUpon>frmGestionMaterias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIntensidadHoraria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntensidadHoraria.Designer.cs">
+      <DependentUpon>frmIntensidadHoraria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionMaterias.resx">
       <DependentUpon>frmGestionMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntensidadHoraria.resx">
+      <DependentUpon>frmIntensidadHoraria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>

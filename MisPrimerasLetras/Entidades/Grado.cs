@@ -20,4 +20,9 @@ public class Grado
     /// </summary>
     public string Usuario { get; set; }
 
+
+    public override string ToString()
+    {
+        return Grados;
+    }
 }

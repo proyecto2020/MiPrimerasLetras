@@ -202,7 +202,17 @@ namespace MisPirmerasLetras
                     Respuesta<object> registroMatricula = this.controlador.InsertarMatricula(objMatricula);
                     if (registroMatricula.ResultData.Count > 0)
                     {
-                        MessageBox.Show("este Almuno ha sido pre matriculado con exito");
+                            MessageBox.Show("este Almuno ha sido pre matriculado con exito");
+                            txtNombreA.Text = "";
+                            txtPrimerA.Text = "";
+                            txtSegundoA.Text = "";
+                            txtAcudiente.Text = ""; 
+                            txtDireccion.Text = ""; 
+                            txtTelefono.Text = ""; 
+                            txtCorreo.Text = ""; 
+                            txtOcupacion.Text = ""; 
+                            rchObservaciones.Text = "";
+                            
 
                     }
 

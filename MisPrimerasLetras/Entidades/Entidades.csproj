@@ -57,6 +57,7 @@
     <Compile Include="Area.cs" />
     <Compile Include="DiaHora.cs" />
     <Compile Include="Grado.cs" />
+    <Compile Include="gradoMateria.cs" />
     <Compile Include="Grupos.cs" />
     <Compile Include="Horario.cs" />
     <Compile Include="Materia.cs" />

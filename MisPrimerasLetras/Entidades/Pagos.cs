@@ -51,4 +51,5 @@ public class Pagos
     /// </summary>
     public string fecha_limite { get; set; }
 
+    public int fk_matricula { set; get; }
 }

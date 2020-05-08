@@ -2,7 +2,9 @@
 
 public class Salones
 {
-	public string Nombre { get; set; }
+
+    public int IdSalon { get; set; }
+    public string Nombre { get; set; }
 
     public int CodigoUbicación { get; set; }
 

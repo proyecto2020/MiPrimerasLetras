@@ -33,13 +33,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.txtMatricula = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblValor = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -75,11 +75,13 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.BackColor = System.Drawing.Color.Moccasin;
             this.groupBox9.Controls.Add(this.btnSave);
             this.groupBox9.Controls.Add(this.lblValor);
             this.groupBox9.Controls.Add(this.label2);
             this.groupBox9.Controls.Add(this.label1);
             this.groupBox9.Controls.Add(this.txtMatricula);
+            this.groupBox9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox9.Location = new System.Drawing.Point(6, 6);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
@@ -88,42 +90,15 @@
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             // 
-            // tabPage9
+            // btnSave
             // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage9.Size = new System.Drawing.Size(744, 312);
-            this.tabPage9.TabIndex = 1;
-            this.tabPage9.Text = "Credenciales";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // txtMatricula
-            // 
-            this.txtMatricula.Location = new System.Drawing.Point(33, 69);
-            this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(180, 22);
-            this.txtMatricula.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.txtMatricula, "Por favor ingrese el nuevo valor de la matricula");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Valor matricula";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Valor matricula actual";
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Location = new System.Drawing.Point(220, 226);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(310, 33);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // lblValor
             // 
@@ -134,14 +109,42 @@
             this.lblValor.TabIndex = 4;
             this.lblValor.Text = "label3";
             // 
-            // btnSave
+            // label2
             // 
-            this.btnSave.Location = new System.Drawing.Point(220, 226);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(310, 33);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(457, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Valor matricula actual";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Valor matricula";
+            // 
+            // txtMatricula
+            // 
+            this.txtMatricula.Location = new System.Drawing.Point(33, 69);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(180, 22);
+            this.txtMatricula.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtMatricula, "Por favor ingrese el nuevo valor de la matricula");
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage9.Size = new System.Drawing.Size(769, 345);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "Credenciales";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 

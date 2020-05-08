@@ -165,8 +165,7 @@ namespace MisPirmerasLetras
                         objPago.fk_alumno = _idEstudante;
                         objPago.ticket = ticket;
                         objPago.total = total_pagar;
-                        objPago.fecha_limite = fecha_limite; // la fecha limite la podemos sacar cuando el estudiante es matricualdo y saca credito con el jardin
-
+                        objPago.fecha_limite = fecha_limite; 
 
 
                         if (objPago.abono == saldo)

@@ -40,7 +40,11 @@ namespace LoginControlador
             return respuesta;
         }
 
-
+        public List<DiaHora> ConsultarHoras()
+        {
+            var resultado = this.cliente.mtdListarHoras();
+            return resultado;
+        }
         public List<Perfiles> ConsultarPerfiles()
         {
             var resultado = this.cliente.mtdListarPerfiles();
@@ -59,10 +63,11 @@ namespace LoginControlador
             return resultado;
         }
 
+        List<Grado> resultadoGrados = new List<Grado>();
         public List<Grado> ConsultarGrado()
         {
-            var resultado = this.cliente.mtdListarGrado();
-            return resultado;
+            resultadoGrados = this.cliente.mtdListarGrado();
+            return resultadoGrados;
         }
 
 
@@ -128,6 +133,22 @@ namespace LoginControlador
             return resultado;
         }
 
+        public int ActualizarGradoMateriaLogica(string materia, string hora, int grado)
+        {
+            var resultado = this.cliente.mtdActualizarGradoMateria(materia, hora, grado);
+            return resultado;
+        }
+
+        public Respuesta<object> InsertarGradoMateria(string  materia, string hora, int grado )
+        {
+           
+
+         var  resultado = this.cliente.mtdRegistrarGradoMateria(materia, hora, grado);
+
+            
+            return resultado;
+        }
+
         List<Grupo> lista = new List<Grupo>();
 
         public List<Grupo> mtdListarGrupo()
@@ -141,6 +162,12 @@ namespace LoginControlador
         {
             string respuesta = "";
             respuesta = this.cliente.mtdValidacion(obGrupo, objGrado);
+            return respuesta;
+        }
+        public int mtdValidarHorario(string id_hora, string dia, string materia, int id_grupo)
+        {
+           
+           var respuesta = this.cliente.mtdValidacionHorario(id_hora, dia, materia, id_grupo);
             return respuesta;
         }
         public List<Alumnos> mtdListarAlumnos(string campo)
@@ -159,6 +186,26 @@ namespace LoginControlador
             
             return query;
         }
+
+        List<Salones> ListaSalones = new List<Salones>();
+        public List<Salones> mtdListarSalones(int idGrupo = 0)
+        {
+            ListaSalones.Clear();
+            if (idGrupo > 0)
+            {
+               // ListaSalones.Clear();
+                ListaSalones = this.cliente.mtdListarSalones(idGrupo);
+            }
+
+            if(ListaSalones.Count == 0)
+            {
+                ListaSalones = this.cliente.mtdListarSalones();
+            }
+            
+
+            return ListaSalones;
+        }
+
 
 
         List<Pagos> ListaPagos = new List<Pagos>();
@@ -181,6 +228,14 @@ namespace LoginControlador
 
             return confirmacion;
         }
-      
+
+        List<object> ListaGradoMateria = new List<object>();
+        public List<object> mtdListarIntensidadHorariaCliente(int id_grado)
+        {
+            ListaGradoMateria = this.cliente.mtdListarIntensidadHoraria(id_grado);
+
+            return ListaGradoMateria;
+        }
+
     }
 }

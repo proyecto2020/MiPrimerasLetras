@@ -352,7 +352,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(774, 64);
+            this.groupBox2.Size = new System.Drawing.Size(794, 64);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -392,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1409, 765);
+            this.ClientSize = new System.Drawing.Size(1429, 771);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblHidden1);
             this.Controls.Add(this.lblHidden2);
