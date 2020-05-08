@@ -307,7 +307,7 @@ namespace MisPirmerasLetras
                         }
                         else
                         {
-                            this.Close();
+                            //this.Close();
                             // Do something  
                         }
 
@@ -327,6 +327,17 @@ namespace MisPirmerasLetras
                 this.repuesta(respuesta, mensaje);
             }
            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmIntensidadHoraria frm = new frmIntensidadHoraria();
+            frm.Show();
+        }
+
+        private void btnVercargaAcademica_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

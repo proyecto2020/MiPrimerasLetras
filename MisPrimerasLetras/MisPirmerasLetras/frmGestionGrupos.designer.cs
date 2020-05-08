@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionGrupos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbltitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegistrarTodo = new System.Windows.Forms.Button();
@@ -59,6 +59,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGrado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrupos)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -169,35 +171,35 @@
             this.dataGrupos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGrupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrupos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrupos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrupos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
             this.dataGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrupos.EnableHeadersVisualStyles = false;
             this.dataGrupos.GridColor = System.Drawing.Color.PeachPuff;
             this.dataGrupos.Location = new System.Drawing.Point(15, 108);
             this.dataGrupos.Name = "dataGrupos";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PeachPuff;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrupos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrupos.RowHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dataGrupos.RowHeadersVisible = false;
             this.dataGrupos.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrupos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGrupos.RowsDefaultCellStyle = dataGridViewCellStyle48;
             this.dataGrupos.RowTemplate.Height = 24;
             this.dataGrupos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGrupos.Size = new System.Drawing.Size(482, 261);
@@ -332,16 +334,16 @@
             // 
             // txtNameGrado
             // 
-            this.txtNameGrado.Location = new System.Drawing.Point(177, 58);
+            this.txtNameGrado.Location = new System.Drawing.Point(167, 58);
             this.txtNameGrado.Name = "txtNameGrado";
-            this.txtNameGrado.Size = new System.Drawing.Size(168, 22);
+            this.txtNameGrado.Size = new System.Drawing.Size(206, 22);
             this.txtNameGrado.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label1.Location = new System.Drawing.Point(174, 25);
+            this.label1.Location = new System.Drawing.Point(163, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 24);
             this.label1.TabIndex = 2;
@@ -358,9 +360,9 @@
             this.btnGrado.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGrado.Image = ((System.Drawing.Image)(resources.GetObject("btnGrado.Image")));
             this.btnGrado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGrado.Location = new System.Drawing.Point(177, 146);
+            this.btnGrado.Location = new System.Drawing.Point(167, 102);
             this.btnGrado.Name = "btnGrado";
-            this.btnGrado.Size = new System.Drawing.Size(168, 55);
+            this.btnGrado.Size = new System.Drawing.Size(200, 55);
             this.btnGrado.TabIndex = 26;
             this.btnGrado.Text = "Guardar";
             this.btnGrado.UseVisualStyleBackColor = false;
@@ -369,6 +371,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnGrado);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNameGrado);
@@ -378,6 +382,27 @@
             this.panel1.Size = new System.Drawing.Size(565, 269);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(402, 17);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Al crear el grupo debes asignar su intensiad horaria haciendo ";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.linkLabel1.Location = new System.Drawing.Point(419, 204);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(69, 17);
+            this.linkLabel1.TabIndex = 29;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "cllick aqui";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmGestionGrupos
             // 
@@ -441,5 +466,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGrado;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label7;
     }
 }
