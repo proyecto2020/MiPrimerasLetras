@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaAcademica));
-            this.lbltitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbGrupo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,23 +53,15 @@
             this.Materia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtHidden = new System.Windows.Forms.Label();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.btnIrintensidadHorarias = new System.Windows.Forms.Button();
             this.pnSalon.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbltitle
-            // 
-            this.lbltitle.AutoSize = true;
-            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(214, 9);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(1006, 56);
-            this.lbltitle.TabIndex = 2;
-            this.lbltitle.Text = "ADMINISTRACIÓN DE CARGA ACADEMICA";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 213);
+            this.label1.Location = new System.Drawing.Point(121, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 3;
@@ -79,7 +70,7 @@
             // cmbGrupo
             // 
             this.cmbGrupo.FormattingEnabled = true;
-            this.cmbGrupo.Location = new System.Drawing.Point(65, 252);
+            this.cmbGrupo.Location = new System.Drawing.Point(61, 132);
             this.cmbGrupo.Name = "cmbGrupo";
             this.cmbGrupo.Size = new System.Drawing.Size(185, 24);
             this.cmbGrupo.TabIndex = 5;
@@ -88,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 346);
+            this.label3.Location = new System.Drawing.Point(121, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 7;
@@ -97,7 +88,7 @@
             // cmbHoras
             // 
             this.cmbHoras.FormattingEnabled = true;
-            this.cmbHoras.Location = new System.Drawing.Point(65, 404);
+            this.cmbHoras.Location = new System.Drawing.Point(61, 284);
             this.cmbHoras.Name = "cmbHoras";
             this.cmbHoras.Size = new System.Drawing.Size(185, 24);
             this.cmbHoras.TabIndex = 8;
@@ -105,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(374, 213);
+            this.label4.Location = new System.Drawing.Point(370, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 17);
             this.label4.TabIndex = 9;
@@ -114,7 +105,7 @@
             // cmbMateria
             // 
             this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(308, 252);
+            this.cmbMateria.Location = new System.Drawing.Point(304, 132);
             this.cmbMateria.Name = "cmbMateria";
             this.cmbMateria.Size = new System.Drawing.Size(185, 24);
             this.cmbMateria.TabIndex = 10;
@@ -122,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(374, 346);
+            this.label5.Location = new System.Drawing.Point(370, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 17);
             this.label5.TabIndex = 11;
@@ -137,7 +128,7 @@
             "Miercoles",
             "Jueves",
             "Viernes"});
-            this.comboBox4.Location = new System.Drawing.Point(308, 404);
+            this.comboBox4.Location = new System.Drawing.Point(304, 284);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(185, 24);
             this.comboBox4.TabIndex = 12;
@@ -152,7 +143,7 @@
             this.btnAgregarTodo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAgregarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTodo.Image")));
-            this.btnAgregarTodo.Location = new System.Drawing.Point(572, 316);
+            this.btnAgregarTodo.Location = new System.Drawing.Point(546, 212);
             this.btnAgregarTodo.Name = "btnAgregarTodo";
             this.btnAgregarTodo.Size = new System.Drawing.Size(101, 96);
             this.btnAgregarTodo.TabIndex = 0;
@@ -163,7 +154,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(957, 106);
+            this.label6.Location = new System.Drawing.Point(931, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 17);
             this.label6.TabIndex = 13;
@@ -171,7 +162,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1010, 622);
+            this.button2.Location = new System.Drawing.Point(1130, 536);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 58);
             this.button2.TabIndex = 14;
@@ -181,7 +172,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(750, 624);
+            this.button3.Location = new System.Drawing.Point(702, 538);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 56);
             this.button3.TabIndex = 15;
@@ -192,7 +183,7 @@
             // 
             this.pnSalon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnSalon.Controls.Add(this.label7);
-            this.pnSalon.Location = new System.Drawing.Point(65, 485);
+            this.pnSalon.Location = new System.Drawing.Point(61, 365);
             this.pnSalon.Name = "pnSalon";
             this.pnSalon.Size = new System.Drawing.Size(428, 99);
             this.pnSalon.TabIndex = 17;
@@ -216,7 +207,8 @@
             this.Materia});
             this.listViewHorario.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewHorario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.listViewHorario.Location = new System.Drawing.Point(712, 162);
+            this.listViewHorario.HideSelection = false;
+            this.listViewHorario.Location = new System.Drawing.Point(686, 91);
             this.listViewHorario.Name = "listViewHorario";
             this.listViewHorario.Size = new System.Drawing.Size(624, 431);
             this.listViewHorario.TabIndex = 0;
@@ -258,7 +250,7 @@
             // txtHidden
             // 
             this.txtHidden.AutoSize = true;
-            this.txtHidden.Location = new System.Drawing.Point(859, 106);
+            this.txtHidden.Location = new System.Drawing.Point(833, 35);
             this.txtHidden.Name = "txtHidden";
             this.txtHidden.Size = new System.Drawing.Size(0, 17);
             this.txtHidden.TabIndex = 19;
@@ -269,12 +261,34 @@
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList2.Images.SetKeyName(0, "deletev2.png");
             // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(-4, 601);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1352, 109);
+            this.materialDivider2.TabIndex = 33;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // btnIrintensidadHorarias
+            // 
+            this.btnIrintensidadHorarias.Location = new System.Drawing.Point(906, 537);
+            this.btnIrintensidadHorarias.Name = "btnIrintensidadHorarias";
+            this.btnIrintensidadHorarias.Size = new System.Drawing.Size(195, 56);
+            this.btnIrintensidadHorarias.TabIndex = 34;
+            this.btnIrintensidadHorarias.Text = "Configurar Intensidad Horaria";
+            this.btnIrintensidadHorarias.UseVisualStyleBackColor = true;
+            // 
             // frmCargaAcademica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(1348, 690);
+            this.Controls.Add(this.btnIrintensidadHorarias);
+            this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.txtHidden);
             this.Controls.Add(this.listViewHorario);
             this.Controls.Add(this.pnSalon);
@@ -290,7 +304,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbGrupo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbltitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCargaAcademica";
             this.Text = "frmCargaAcademica";
@@ -303,8 +316,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbGrupo;
         private System.Windows.Forms.Label label3;
@@ -328,5 +339,7 @@
         private System.Windows.Forms.Label txtHidden;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ColumnHeader action;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.Button btnIrintensidadHorarias;
     }
 }

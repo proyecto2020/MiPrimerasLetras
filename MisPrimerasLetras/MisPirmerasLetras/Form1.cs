@@ -16,7 +16,7 @@ using Entidades;
 
 namespace MisPirmerasLetras
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialSkin.Controls.MaterialForm
     {
         private LoginControlador.LoginControlador controlador;
 
@@ -27,6 +27,10 @@ namespace MisPirmerasLetras
         {
             InitializeComponent();
             this.controlador = new LoginControlador.LoginControlador();
+            MaterialSkin.MaterialSkinManager SkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            SkinManager.AddFormToManage(this);
+            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            SkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Green300, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,30 +40,7 @@ namespace MisPirmerasLetras
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario = txtUser.Text;
-
-
-            if (usuario == "Usuario" || txtPassword.Text == "Contraseña")
-            {
-                msError("Ingrese usuario y contraseña validos , Error en inicio de sesión");
-            }
-            else
-            {
-                string contrasena = txtPassword.Text;
-                Collection<RespuestaLogin> ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
-
-                if (ingreso.Count > 0)
-                {
-                    this.Hide();
-                    this.FrmDashboard.Show();
-                    
-                }
-                else
-                {
-                    msError("Verificar datos, Error en el inicio de sesion");
-                
-                }
-            }
+            
 
             
         }
@@ -118,12 +99,10 @@ namespace MisPirmerasLetras
             {
                 txtPassword.Text = "Contraseña";
 
-                //Comment J.B 25.03.2020
+
                 txtPassword.UseSystemPasswordChar = false;
-                //End Comment J.B 25.03.2020
-                //Add J.B 25.03.2020
+
                 txtPassword.PasswordChar = char.MinValue;
-                //End Add J.B 25.03.2020
             }
         }
 
@@ -134,10 +113,6 @@ namespace MisPirmerasLetras
             {
                 txtPassword.Text = "";
                 lblMessage.Visible = false;
-                //Comment J.B 25.03.2020
-                //txtPassword.UseSystemPasswordChar = true;
-                //End Comment J.B 25.03.2020
-                //Add J.B 25.03.2020
                 if (checkBox1.Checked)
                 {
                     txtPassword.PasswordChar = char.MinValue;
@@ -146,7 +121,6 @@ namespace MisPirmerasLetras
                 {
                     txtPassword.PasswordChar = '*';
                 }
-                //End Add J.B 25.03.2020
             }
         }
 
@@ -168,6 +142,34 @@ namespace MisPirmerasLetras
             }
             else {
                 txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void btnIngresarNuevo_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUser.Text;
+            msError("");
+
+            if (usuario == "Usuario" || txtPassword.Text == "Contraseña")
+            {
+                msError("Ingrese usuario y contraseña validos");
+            }
+            else
+            {
+                string contrasena = txtPassword.Text;
+                Collection<RespuestaLogin> ingreso = this.controlador.ConsultarLogin(usuario, contrasena);
+
+                if (ingreso.Count > 0)
+                {
+                    this.Hide();
+                    this.FrmDashboard.Show();
+
+                }
+                else
+                {
+                    msError("Verificar datos, Error en el inicio de sesion");
+
+                }
             }
         }
     }

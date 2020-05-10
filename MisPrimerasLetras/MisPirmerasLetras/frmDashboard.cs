@@ -32,6 +32,7 @@ namespace MisPirmerasLetras
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+       
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -174,8 +175,9 @@ MessageBoxButtons.OK,
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
-        {
+        { //size form 1767*921
             DatosUsuario();
+            //label2.ForeColor = Color.FromArgb(183, 206, 30);
         }
 
         private void DatosUsuario()

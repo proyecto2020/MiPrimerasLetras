@@ -101,5 +101,10 @@ namespace MisPirmerasLetras
             }
             else { MessageBox.Show("no se pudieron ingresar los datos"); }
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ using Entidades;
 
 namespace MisPirmerasLetras
 {
-    public partial class frmIntensidadHoraria : Form
+    public partial class frmIntensidadHoraria : MaterialSkin.Controls.MaterialForm
     {
         private int _idGrado;
         private List<object> data;
@@ -34,7 +34,7 @@ namespace MisPirmerasLetras
         int isUpdate = 0;
         private void btnGuardarAM_Click(object sender, EventArgs e)
         {
-
+                
                 
            
                 foreach (DataGridViewRow row in dtMaterias.Rows)

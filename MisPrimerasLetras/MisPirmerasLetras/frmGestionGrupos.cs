@@ -33,57 +33,7 @@ namespace MisPirmerasLetras
 
         private void btnRegistrarTodo_Click(object sender, EventArgs e)
         {
-            int respuesta = 0;
-            string mensaje = "";
-    
-            Grupo grupo = new Grupo();
-            Grado selectedG = cmbGrado.SelectedItem as Grado;
-            string cbmAB = cmbAB.Text;
-            Usuario  profesor = ltbProfesores.SelectedItem  as Usuario;
-
-
- 
-          
-             if(profesor!= null && profesor.IdUsuario >= 0 && selectedG.IdGrado > 0 && idSalon > 0)
-            {
-               
-                grupo.grupo = cmbGrado.Text + cbmAB;
-                if (this.controlador.mtdValidar(grupo, null) == cmbGrado.Text + cbmAB)
-                {
-                    mensaje = "Este grupo ya existe!";
-                }
-                else
-                {
-
-                    grupo.Grado = selectedG.IdGrado;
-                    grupo.Usuario = profesor.IdUsuario;
-                    grupo.fk_salon = idSalon;
-                    System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
-
-
-                    respuesta = this.controlador.RegistroDeGradoGrupoProfesor(grupo);
-
-                    listarSalones();
-                    mensaje = "Guardado con exito su grupo!";
-                    dataGrupos.DataSource = this.controlador.mtdListarGrupo();
-                }
-                
-            }
-            
-            else
-            {
-                if (idSalon.Equals(0))
-                {
-                    mensaje = "Recuerde seleccionar un salón";
-                }
-                else
-                {
-                    mensaje = "error de registro verifique los datos";
-                }
-                
-            }
-
-            this.repuesta(respuesta, mensaje);
+           
             
         }
         private void repuesta(int respuesta, string mensaje )
@@ -134,7 +84,10 @@ namespace MisPirmerasLetras
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
-           
+           // pn1grados.Hide();
+
+            pn2Grupos.Hide();
+
             dataGrupos.DataSource = this.controlador.mtdListarGrupo();
             listarSalones();
            
@@ -184,10 +137,17 @@ namespace MisPirmerasLetras
             int x = 25;
             Button btn;
 
+            // recorrer el tabpage hacia atras para eliminar y  hacer "refresh" a los tabs 
+            for (int ix = tabPage8.Controls.Count - 1; ix >= 0; --ix)
+            {
+                tabPage8.Controls[ix].Dispose();
+            }
+
+
 
             List<Salones> salones = this.controlador.mtdListarSalones(idGrupo);
 
-     
+           
 
             if (salones.Count > 1)
             {
@@ -273,6 +233,34 @@ namespace MisPirmerasLetras
 
         private void btnGrado_Click(object sender, EventArgs e)
         {
+            
+           
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+          
+        }
+
+        private void btnVercargaAcademica_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pctAccionVerGrado_Click(object sender, EventArgs e)
+        {
+            pn1grados.Show();
+            pn2Grupos.Hide();
+        }
+
+        private void ptAccionVerGrupos_Click(object sender, EventArgs e)
+        {
+            pn2Grupos.Show();
+            pn1grados.Hide();
+        }
+
+        private void btnGrado_Click_1(object sender, EventArgs e)
+        {
             string mensaje = "";
             Grado grado = new Grado();
 
@@ -326,18 +314,69 @@ namespace MisPirmerasLetras
             {
                 this.repuesta(respuesta, mensaje);
             }
-           
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmIntensidadHoraria frm = new frmIntensidadHoraria();
             frm.Show();
+
         }
 
-        private void btnVercargaAcademica_Click(object sender, EventArgs e)
+        private void btnRegistrarTodo_Click_1(object sender, EventArgs e)
         {
+            int respuesta = 0;
+            string mensaje = "";
 
+            Grupo grupo = new Grupo();
+            Grado selectedG = cmbGrado.SelectedItem as Grado;
+            string cbmAB = cmbAB.Text;
+            Usuario profesor = ltbProfesores.SelectedItem as Usuario;
+
+
+
+
+            if (profesor != null && profesor.IdUsuario >= 0 && selectedG.IdGrado > 0 && idSalon > 0)
+            {
+
+                grupo.grupo = cmbGrado.Text + cbmAB;
+                if (this.controlador.mtdValidar(grupo, null) == cmbGrado.Text + cbmAB)
+                {
+                    mensaje = "Este grupo ya existe!";
+                }
+                else
+                {
+
+                    grupo.Grado = selectedG.IdGrado;
+                    grupo.Usuario = profesor.IdUsuario;
+                    grupo.fk_salon = idSalon;
+                    System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
+
+
+                    respuesta = this.controlador.RegistroDeGradoGrupoProfesor(grupo);
+
+                   
+                    mensaje = "Guardado con exito su grupo!";
+                    dataGrupos.DataSource = this.controlador.mtdListarGrupo();
+                    listarSalones();
+                }
+
+            }
+
+            else
+            {
+                if (idSalon.Equals(0))
+                {
+                    mensaje = "Recuerde seleccionar un salón";
+                }
+                else
+                {
+                    mensaje = "error de registro verifique los datos";
+                }
+
+            }
+
+            this.repuesta(respuesta, mensaje);
         }
     }
 }

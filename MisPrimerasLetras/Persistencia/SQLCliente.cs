@@ -12,6 +12,7 @@ using System.Text;
 using LinqToDB;
 using LinqToDB.Data;
 using System.Runtime.Remoting.Messaging;
+using System.Diagnostics.Contracts;
 
 namespace Persistencia
 {
@@ -214,8 +215,9 @@ namespace Persistencia
         
         public List<Usuario> mtdListarUsuariosPorPerfil(int perfil)
         {
-            string consulta = "select  id_usuario, nombre, primer_apellido from usuario where fk_perfiles = " + perfil;
+           // string consulta = "select  id_usuario, nombre, primer_apellido from usuario where fk_perfiles = " + perfil;
 
+           string consulta = "select  id_usuario, nombre, primer_apellido FROM usuario u WHERE NOT EXISTS(SELECT NULL FROM grupo g WHERE g.fk_usuario = u.id_usuario ) AND u.fk_perfiles = " + perfil + "";
             tblGeneralRetorno = this.mtdSelect(consulta);
 
             for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
@@ -232,7 +234,7 @@ namespace Persistencia
        
         public List<Grado> mtdListarGrado()
         {
-            string consulta = "select id_grado, grado from Grado";
+             string consulta = "select id_grado, grado from Grado";
 
             tblGeneralRetorno = this.mtdSelect(consulta);
 
@@ -445,8 +447,7 @@ namespace Persistencia
 
         public List<Materia> mtdListarMateria()
         {
-           
-
+          
              string consulta = "select id_materia, materia  from materia";
 
 
@@ -628,11 +629,22 @@ namespace Persistencia
 
 
 
-        public List<Grupo> mtdListarGrupo()
+        public List<Grupo> mtdListarGrupo(int idGrupo = 0)
         {
 
+            string concat = "";
+
+            if (idGrupo > 0)
+            {
+                // buscamos mi grado(TRANSICION) desde mi grupo (TRANSICION B)
+              
+                    concat = "WHERE  grupo.id_grupo = "+idGrupo+"";
+
+                
+            }
+
             //string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo inner join grado ON grado.id_grado = grupo.fk_grado order by grupo.fk_grado desc";
-            string consulta = "select grupo.id_grupo, grupo.grupo FROM grupo  order by grupo.id_grupo desc";
+            string consulta = "select grupo.id_grupo, grupo.grupo, grupo.fk_grado FROM grupo " + concat+"  order by grupo.id_grupo desc";
 
            
             List<Grupo> listaGrupo = new List<Grupo>();
@@ -644,6 +656,7 @@ namespace Persistencia
                 Grupo objGrupo = new Grupo();
                 objGrupo.id_grupo = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
                 objGrupo.grupo = tblGeneralRetorno.Rows[i][1].ToString();
+                objGrupo.Grado = int.Parse(tblGeneralRetorno.Rows[i][2].ToString());
 
 
                 listaGrupo.Add(objGrupo);
@@ -801,19 +814,26 @@ namespace Persistencia
             string consulta = "";
             int respuesta = 0;
             int _idMateria = this.ObtenerIdS(materia);
-            int hora = int.Parse(id_hora);
+            int _idHora = this.IdsHoras(id_hora);
+            List <Grupo> grado = this.mtdListarGrupo(id_grupo); //obtenemos el grado de este grupo 
+
             //validamos la intensidad horara de una materia en el grupo, 
             //validamos que esa hora no este asiganada a una materia en el mismo grupo
             //validar que se puede agregar la misma hora, la misma materia pero diferente dia
+            //validar que o haya otro registro y que no se hagan doble registro cuando el usuario de enter otra vez y cuando cargue el horario que no se guarden los nuevos items en el list view 
             gradoMateria objUsuario = new gradoMateria();
-            if (hora > 0)
+            if (_idHora > 0)
             {
                 //validamos la intenisidad horaria
-                consulta = "SELECT gm.horas from gradoMateria gm where  gm.fk_materia = "+ _idMateria +"AND gm.fk_grado ="+ id_grupo+"";
+                consulta = "SELECT gm.horas from gradoMateria gm where  gm.fk_materia = "+ _idMateria +"AND gm.fk_grado ="+ grado[0].Grado + "";
 
                 tblGeneralRetorno = this.mtdSelect(consulta);
 
-              
+                if (tblGeneralRetorno.Rows.Count.Equals(0))
+                {
+                    return -1;
+                }
+
                 objUsuario.horas = int.Parse(tblGeneralRetorno.Rows[0][0].ToString());
 
                 GradoMaterias.Add(objUsuario);
@@ -821,22 +841,22 @@ namespace Persistencia
             }
 
             //sino optenemos resultados insertamos 
-            if(GradoMaterias.Count.Equals(0) && hora <= objUsuario.horas )
+            if(_idHora <= objUsuario.horas )
             {
-                respuesta = this.mtdInsertarIntensidadHoraria(id_grupo, id_hora, dia, _idMateria);
+                respuesta = this.mtdInsertarIntensidadHoraria(id_grupo, _idHora, dia, _idMateria);
             }
 
             return respuesta;
 
         }
 
-        public int mtdInsertarIntensidadHoraria(int id_grupo, string hora, string  dia, int materia)
+        public int mtdInsertarIntensidadHoraria(int id_grupo, int hora, string  dia, int materia)
         {
             string consulta = "";
 
             if (id_grupo > 0)
             {
-                 consulta = "INSERT INTO horario(fk_grupo, fk_dia_hora, dia, fk_materia) VALUES("+id_grupo+","+ hora + "," +dia+","+materia+")";     
+                 consulta = "INSERT INTO horario(fk_grupo, fk_dia_hora, dia, fk_materia) VALUES("+id_grupo+","+ hora + ",'" +dia+"',"+materia+")";     
             }
 
             int respuesta = this.mtdIDU(consulta);
@@ -901,7 +921,29 @@ namespace Persistencia
             }
         }
 
+        private int IdsHoras(string horas)
+        {
+            int id = 0;
+            switch (horas)
+            {
+                    case "7 A 8":
+                    id = 1;
+                    break;case "8 A 9":
+                    id = 2;
+                    break;case "10 A 11":
+                    id = 3;
+                    break;case "11 A 12":
+                    id = 4;
+                    break;case "12 A 13":
+                    id = 5;
+                    break;case "14 A 15":
+                    id = 6;
+                    break;
 
+            }
+
+            return id;
+        }
         //End Add J.B 25.03.2020
     
     

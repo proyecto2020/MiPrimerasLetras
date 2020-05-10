@@ -14,7 +14,8 @@ namespace MisPirmerasLetras
     public partial class frmCargaAcademica : Form
     {
         private LoginControlador.LoginControlador controlador;
-        private string idSalon =  "";
+        private string _hora =  "";
+        private string _dia =  "";
         private bool bandera = false;
         private int count = 0;
         private int y = 10;
@@ -77,7 +78,7 @@ namespace MisPirmerasLetras
 
             if (listViewHorario.Items.Count == 12)
             {
-                this.mensajeAdvertencia("No puedes Agregar mas materias, gurada los cambios para este grupo!");
+                this.mensajeAdvertencia("No puedes Agregar mas materias, gurada los cambios para este grupo!", false);
             }
             else
             {
@@ -101,6 +102,7 @@ namespace MisPirmerasLetras
                     
 
 
+
                     ListViewItem list1 = new ListViewItem();
                     // ListViewItem list1 = new ListViewItem(cmbGrupo.Text);
                     list1.SubItems.Add(cmbGrupo.Text);
@@ -108,16 +110,19 @@ namespace MisPirmerasLetras
                     list1.SubItems.Add(cmbHoras.Text);
                     list1.SubItems.Add(cmbMateria.Text);
 
-
-
-
-                    //large
-                   // imageList2.ImageSize = new Size(50, 50);
-                    listViewHorario.SmallImageList = imageList2;
-                    for (int j = 0; j < imageList2.Images.Count; j++)
+                    if (validacionLista(cmbHoras.Text, comboBox4.Text))
                     {
-                        list1.ImageIndex = j ;
-                        listViewHorario.Items.Add(list1);
+
+                        //large
+                        // imageList2.ImageSize = new Size(50, 50);
+                        listViewHorario.SmallImageList = imageList2;
+                        for (int j = 0; j < imageList2.Images.Count; j++)
+                        {
+                            list1.ImageIndex = j;
+                            listViewHorario.Items.Add(list1);
+                        }
+
+
                     }
 
                 }
@@ -149,15 +154,23 @@ namespace MisPirmerasLetras
                     MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
 
                     string _materia = listViewHorario.Items[i].SubItems[4].Text; // tomamos la materia 
-                    string _hora = listViewHorario.Items[i].SubItems[3].Text; // tomamos la hora 
-                                                                              
+                     _dia= listViewHorario.Items[i].SubItems[2].Text; // tomamos el dia 
+                     _hora = listViewHorario.Items[i].SubItems[3].Text; // tomamos la hora 
+
 
                 //}
 
-                //if (this.controlador.mtdValidarHorario(_hora, _materia, IdGrupo))
-                //{
-                //    MessageBox.Show("Esta hora ya ha sido ocupada!");
-                //}
+              int repuesta =  this.controlador.mtdValidarHorario(_hora, _dia, _materia, IdGrupo);
+
+                if (repuesta < 0)
+                {
+                    mensajeAdvertencia("Lo sentimos no puedes agregar hora a esta materia sin intensidad horaria, creela por favor", true);
+                }
+                else
+                {
+                    MessageBox.Show("Guardado con exito papu");
+                }
+                
 
             }
 
@@ -170,14 +183,15 @@ namespace MisPirmerasLetras
             {
            
                 _nuevoGrupoSelecionado = cmbGrupo.Text.ToString();
-                string grupoenLista = listViewHorario.Items[1].SubItems[1].Text;
+                string grupoenLista = listViewHorario.Items[0].SubItems[1].Text;
                 if (_nuevoGrupoSelecionado != grupoenLista && listViewHorario.Items.Count > 0)
                 {
-                    this.mensajeAdvertencia("Hey! no puedes seleccionar otro grupo, guarda los cambios!");
+                    this.mensajeAdvertencia("Hey! no puedes seleccionar otro grupo, guarda los cambios!", false);
                     btnAgregarTodo.Enabled = false;
                 }
                 else
                 {
+                    //Buscamos por el Id del grupo el horario que hay 
                     btnAgregarTodo.Enabled = true;
                 }
             }
@@ -189,16 +203,16 @@ namespace MisPirmerasLetras
 
         }
 
-        private void mensajeAdvertencia(string mensaje )
+        private void mensajeAdvertencia(string mensaje, bool statusBoton)
         {
             MessageBox.Show(mensaje, "Advertencia",
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            btnAgregarTodo.Enabled = false;
+            btnAgregarTodo.Enabled = statusBoton;
         }
 
         private void listViewHorario_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Estas seguro que quieres eliminar este registro?.", "Title", MessageBoxButtons.YesNoCancel,
+            DialogResult dr = MessageBox.Show("Estas seguro que quieres eliminar este registro?", "Mensaje", MessageBoxButtons.YesNoCancel,
                 MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
@@ -228,6 +242,29 @@ namespace MisPirmerasLetras
 
         private void listViewHorario_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private bool validacionLista(string NuevaHora, string NuevoDia )
+        {
+            bool retorno = true;
+
+            for (int i = 0; i < listViewHorario.Items.Count; i++)
+            {
+                MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
+
+                _dia = listViewHorario.Items[i].SubItems[2].Text; // tomamos el dia 
+                _hora = listViewHorario.Items[i].SubItems[3].Text; // tomamos la hora 
+
+                if (_dia == NuevoDia && _hora == NuevaHora)
+                {
+
+                    this.mensajeAdvertencia("Esta Hora  ya esta asignada para este dia!",true);
+                    retorno = false;
+                }
+
+            }
+            return retorno;
 
         }
     }

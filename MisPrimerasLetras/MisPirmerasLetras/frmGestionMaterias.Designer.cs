@@ -38,15 +38,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardarARMA = new System.Windows.Forms.Button();
-            this.lbltitle = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel3.SuspendLayout();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(950, 187);
+            this.label6.Location = new System.Drawing.Point(312, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 17);
             this.label6.TabIndex = 29;
@@ -56,7 +60,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label5.Location = new System.Drawing.Point(672, 187);
+            this.label5.Location = new System.Drawing.Point(34, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 24);
             this.label5.TabIndex = 28;
@@ -65,7 +69,7 @@
             // lbMateria
             // 
             this.lbMateria.FormattingEnabled = true;
-            this.lbMateria.Location = new System.Drawing.Point(939, 218);
+            this.lbMateria.Location = new System.Drawing.Point(301, 85);
             this.lbMateria.Name = "lbMateria";
             this.lbMateria.Size = new System.Drawing.Size(253, 242);
             this.lbMateria.TabIndex = 27;
@@ -74,7 +78,7 @@
             // 
             this.lbArea.FormattingEnabled = true;
             this.lbArea.ItemHeight = 16;
-            this.lbArea.Location = new System.Drawing.Point(675, 218);
+            this.lbArea.Location = new System.Drawing.Point(37, 85);
             this.lbArea.Name = "lbArea";
             this.lbArea.Size = new System.Drawing.Size(253, 244);
             this.lbArea.TabIndex = 26;
@@ -87,7 +91,7 @@
             this.btnGuardarAM.FlatAppearance.BorderSize = 0;
             this.btnGuardarAM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAM.Location = new System.Drawing.Point(284, 306);
+            this.btnGuardarAM.Location = new System.Drawing.Point(136, 212);
             this.btnGuardarAM.Name = "btnGuardarAM";
             this.btnGuardarAM.Size = new System.Drawing.Size(205, 67);
             this.btnGuardarAM.TabIndex = 25;
@@ -97,14 +101,14 @@
             // 
             // txtMateria
             // 
-            this.txtMateria.Location = new System.Drawing.Point(284, 218);
+            this.txtMateria.Location = new System.Drawing.Point(249, 120);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(205, 22);
             this.txtMateria.TabIndex = 24;
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(58, 218);
+            this.txtArea.Location = new System.Drawing.Point(23, 120);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(205, 22);
             this.txtArea.TabIndex = 23;
@@ -113,7 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label4.Location = new System.Drawing.Point(305, 183);
+            this.label4.Location = new System.Drawing.Point(270, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 24);
             this.label4.TabIndex = 22;
@@ -123,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(68, 183);
+            this.label3.Location = new System.Drawing.Point(33, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 24);
             this.label3.TabIndex = 21;
@@ -137,7 +141,7 @@
             this.btnGuardarARMA.FlatAppearance.BorderSize = 0;
             this.btnGuardarARMA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarARMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarARMA.Location = new System.Drawing.Point(987, 525);
+            this.btnGuardarARMA.Location = new System.Drawing.Point(283, 392);
             this.btnGuardarARMA.Name = "btnGuardarARMA";
             this.btnGuardarARMA.Size = new System.Drawing.Size(205, 67);
             this.btnGuardarARMA.TabIndex = 30;
@@ -145,50 +149,84 @@
             this.btnGuardarARMA.UseVisualStyleBackColor = false;
             this.btnGuardarARMA.Click += new System.EventHandler(this.btnGuardarARMA_Click);
             // 
-            // lbltitle
+            // materialDivider1
             // 
-            this.lbltitle.AutoSize = true;
-            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(287, 8);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(745, 56);
-            this.lbltitle.TabIndex = 31;
-            this.lbltitle.Text = "ADMINISTRACIÓN DE MATERIAS";
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(12, 61);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(1261, 10);
+            this.materialDivider1.TabIndex = 31;
+            this.materialDivider1.Text = "materialDivider1";
             // 
-            // panel3
+            // materialDivider2
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel3.Controls.Add(this.lbltitle);
-            this.panel3.Location = new System.Drawing.Point(0, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1277, 75);
-            this.panel3.TabIndex = 42;
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(-5, 697);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(1278, 111);
+            this.materialDivider2.TabIndex = 32;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.lbArea);
+            this.panel4.Controls.Add(this.lbMateria);
+            this.panel4.Controls.Add(this.btnGuardarARMA);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Location = new System.Drawing.Point(652, 104);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(582, 574);
+            this.panel4.TabIndex = 45;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtArea);
+            this.panel1.Controls.Add(this.txtMateria);
+            this.panel1.Controls.Add(this.btnGuardarAM);
+            this.panel1.Location = new System.Drawing.Point(89, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(473, 327);
+            this.panel1.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Puedes crear area o materia con los siguientes campos";
             // 
             // frmGestionMaterias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(1275, 810);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnGuardarARMA);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lbMateria);
-            this.Controls.Add(this.lbArea);
-            this.Controls.Add(this.btnGuardarAM);
-            this.Controls.Add(this.txtMateria);
-            this.Controls.Add(this.txtArea);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.materialDivider2);
+            this.Controls.Add(this.materialDivider1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionMaterias";
             this.Text = "frmGestionMaterias";
             this.Load += new System.EventHandler(this.frmGestionMaterias_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -204,7 +242,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardarARMA;
-        private System.Windows.Forms.Label lbltitle;
-        private System.Windows.Forms.Panel panel3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

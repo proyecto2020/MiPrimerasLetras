@@ -45,7 +45,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label7.Location = new System.Drawing.Point(1130, 52);
+            this.label7.Location = new System.Drawing.Point(1139, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(159, 24);
             this.label7.TabIndex = 33;
@@ -53,7 +53,7 @@
             // 
             // txtIntensidadhoraria
             // 
-            this.txtIntensidadhoraria.Location = new System.Drawing.Point(1134, 92);
+            this.txtIntensidadhoraria.Location = new System.Drawing.Point(1143, 115);
             this.txtIntensidadhoraria.Name = "txtIntensidadhoraria";
             this.txtIntensidadhoraria.Size = new System.Drawing.Size(168, 22);
             this.txtIntensidadhoraria.TabIndex = 34;
@@ -70,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 52);
+            this.label1.Location = new System.Drawing.Point(270, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 36;
@@ -111,7 +111,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(721, 52);
+            this.label3.Location = new System.Drawing.Point(721, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 41;
@@ -154,7 +154,6 @@
             this.Controls.Add(this.lbGrados);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtIntensidadhoraria);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIntensidadHoraria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmIntensidadHoraria";
