@@ -135,3 +135,5 @@ C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\Mis
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmConfiguracion.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmIntensidadHoraria.resources
 C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\bin\Debug\MaterialSkin.dll
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmNotas.resources
+C:\wamp64\www\MiPrimerasLetras\MisPrimerasLetras\MisPirmerasLetras\obj\Debug\MisPirmerasLetras.frmSubPeriodos.resources

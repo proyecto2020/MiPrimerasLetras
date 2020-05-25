@@ -28,49 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtIntensidadhoraria = new System.Windows.Forms.TextBox();
-            this.lbGrados = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarAM = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Dtgrados = new System.Windows.Forms.DataGridView();
             this.dtMaterias = new System.Windows.Forms.DataGridView();
+            this.materias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dtgrados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaterias)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label7.Location = new System.Drawing.Point(1139, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 24);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Intensidad horaria";
-            // 
-            // txtIntensidadhoraria
-            // 
-            this.txtIntensidadhoraria.Location = new System.Drawing.Point(1143, 115);
-            this.txtIntensidadhoraria.Name = "txtIntensidadhoraria";
-            this.txtIntensidadhoraria.Size = new System.Drawing.Size(168, 22);
-            this.txtIntensidadhoraria.TabIndex = 34;
-            // 
-            // lbGrados
-            // 
-            this.lbGrados.FormattingEnabled = true;
-            this.lbGrados.ItemHeight = 16;
-            this.lbGrados.Location = new System.Drawing.Point(1143, 488);
-            this.lbGrados.Name = "lbGrados";
-            this.lbGrados.Size = new System.Drawing.Size(114, 164);
-            this.lbGrados.TabIndex = 35;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(270, 75);
+            this.label1.Location = new System.Drawing.Point(327, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 36;
@@ -84,7 +57,7 @@
             this.btnGuardarAM.FlatAppearance.BorderSize = 0;
             this.btnGuardarAM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarAM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAM.Location = new System.Drawing.Point(787, 687);
+            this.btnGuardarAM.Location = new System.Drawing.Point(1001, 711);
             this.btnGuardarAM.Name = "btnGuardarAM";
             this.btnGuardarAM.Size = new System.Drawing.Size(119, 65);
             this.btnGuardarAM.TabIndex = 37;
@@ -100,7 +73,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(619, 687);
+            this.button2.Location = new System.Drawing.Point(817, 711);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 65);
             this.button2.TabIndex = 39;
@@ -111,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label3.Location = new System.Drawing.Point(721, 70);
+            this.label3.Location = new System.Drawing.Point(922, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 41;
@@ -120,7 +93,7 @@
             // Dtgrados
             // 
             this.Dtgrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtgrados.Location = new System.Drawing.Point(54, 113);
+            this.Dtgrados.Location = new System.Drawing.Point(138, 160);
             this.Dtgrados.Name = "Dtgrados";
             this.Dtgrados.RowHeadersWidth = 51;
             this.Dtgrados.RowTemplate.Height = 24;
@@ -131,14 +104,32 @@
             // dtMaterias
             // 
             this.dtMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtMaterias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dtMaterias.Location = new System.Drawing.Point(619, 113);
+            this.dtMaterias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.materias,
+            this.horas});
+            this.dtMaterias.Location = new System.Drawing.Point(817, 160);
             this.dtMaterias.Name = "dtMaterias";
             this.dtMaterias.RowHeadersWidth = 51;
             this.dtMaterias.RowTemplate.Height = 24;
             this.dtMaterias.Size = new System.Drawing.Size(303, 526);
             this.dtMaterias.TabIndex = 45;
+            this.dtMaterias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtMaterias_CellClick);
             this.dtMaterias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtMaterias_CellContentClick);
+            this.dtMaterias.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtMaterias_KeyDown);
+            // 
+            // materias
+            // 
+            this.materias.HeaderText = "Materias";
+            this.materias.MinimumWidth = 6;
+            this.materias.Name = "materias";
+            this.materias.Width = 125;
+            // 
+            // horas
+            // 
+            this.horas.HeaderText = "Horas";
+            this.horas.MinimumWidth = 6;
+            this.horas.Name = "horas";
+            this.horas.Width = 125;
             // 
             // frmIntensidadHoraria
             // 
@@ -151,12 +142,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGuardarAM);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbGrados);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtIntensidadhoraria);
             this.Name = "frmIntensidadHoraria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmIntensidadHoraria";
+            this.Text = "Configuracion Intensidad horaria";
             this.Load += new System.EventHandler(this.frmIntensidadHoraria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dtgrados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtMaterias)).EndInit();
@@ -166,14 +154,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtIntensidadhoraria;
-        private System.Windows.Forms.ListBox lbGrados;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardarAM;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView Dtgrados;
         private System.Windows.Forms.DataGridView dtMaterias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horas;
     }
 }

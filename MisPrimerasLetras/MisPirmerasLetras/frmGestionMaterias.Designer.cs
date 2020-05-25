@@ -141,7 +141,7 @@
             this.btnGuardarARMA.FlatAppearance.BorderSize = 0;
             this.btnGuardarARMA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarARMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarARMA.Location = new System.Drawing.Point(283, 392);
+            this.btnGuardarARMA.Location = new System.Drawing.Point(315, 383);
             this.btnGuardarARMA.Name = "btnGuardarARMA";
             this.btnGuardarARMA.Size = new System.Drawing.Size(205, 67);
             this.btnGuardarARMA.TabIndex = 30;

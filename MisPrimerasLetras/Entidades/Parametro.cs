@@ -7,7 +7,7 @@ namespace Entidades
     using System.Data.Entity.Spatial;
 
     [Table("Parametros")]
-    public partial class Parametro
+    public  class Parametro
     {
         public int id { get; set; }
 

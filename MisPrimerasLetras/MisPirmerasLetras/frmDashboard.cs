@@ -226,5 +226,27 @@ MessageBoxButtons.OK,
         {
             OpenFormRight(new frmCargaAcademica());
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          
+            OpenFormRight(new frmSubPeriodos());
+            OpenFormRight(new frmNotas());
+        }
+
+        private void panelContendor_Paint_3(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

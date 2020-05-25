@@ -33,18 +33,20 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,9 +78,10 @@
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.Color.Moccasin;
+            this.groupBox9.Controls.Add(this.dataGridView1);
+            this.groupBox9.Controls.Add(this.label4);
+            this.groupBox9.Controls.Add(this.richTextBox1);
             this.groupBox9.Controls.Add(this.btnSave);
-            this.groupBox9.Controls.Add(this.lblValor);
-            this.groupBox9.Controls.Add(this.label2);
             this.groupBox9.Controls.Add(this.label1);
             this.groupBox9.Controls.Add(this.txtMatricula);
             this.groupBox9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -86,50 +89,53 @@
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(732, 292);
+            this.groupBox9.Size = new System.Drawing.Size(732, 280);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
+            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(573, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Observaciones";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(531, 52);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(180, 96);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Location = new System.Drawing.Point(220, 226);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSave.Location = new System.Drawing.Point(531, 209);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(310, 33);
+            this.btnSave.Size = new System.Drawing.Size(180, 33);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(507, 74);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(46, 17);
-            this.lblValor.TabIndex = 4;
-            this.lblValor.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Valor matricula actual";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 37);
+            this.label1.Location = new System.Drawing.Point(351, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Valor matricula";
+            this.label1.Text = "Valor ";
             // 
             // txtMatricula
             // 
-            this.txtMatricula.Location = new System.Drawing.Point(33, 69);
+            this.txtMatricula.Location = new System.Drawing.Point(310, 57);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(180, 22);
             this.txtMatricula.TabIndex = 1;
@@ -157,6 +163,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // frmConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,6 +189,7 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,9 +204,10 @@
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

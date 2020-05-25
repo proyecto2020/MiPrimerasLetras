@@ -143,6 +143,7 @@ namespace MisPirmerasLetras
 
         private void btnGuardarMatricula_Click(object sender, EventArgs e)
         {
+           
 
             /* PARAMETIZAR ESTOS VALORES  */
             int total_pagar = 500000;
@@ -163,7 +164,7 @@ namespace MisPirmerasLetras
             alumnos.fecha_nacimiento = dtpFechaNacimiento.Value; ;
             alumnos.acudiente = txtAcudiente.Text;
             alumnos.direccion = txtDireccion.Text;
-            alumnos.telefono = Convert.ToInt32(txtTelefono.Text);
+            alumnos.telefono = txtTelefono.Text;
             alumnos.correo = txtCorreo.Text;
             alumnos.ocupacion = txtOcupacion.Text;
             alumnos.observaciones = rchObservaciones.Text;
@@ -202,6 +203,23 @@ namespace MisPirmerasLetras
                     Respuesta<object> registroMatricula = this.controlador.InsertarMatricula(objMatricula);
                     if (registroMatricula.ResultData.Count > 0)
                     {
+                            DataTable data = SoporteControlador.CacheUsuario.dataTable;
+                            Console.WriteLine(data.Rows[1][1].ToString());
+
+                            // insertamos las notas por default 
+                            nota nota = new nota();
+                            nota.fk_alumno = IdEstudiante;
+                            nota.periodo = data.Rows[1][1].ToString(); // ACCEDEMOS AL PERIODO ACTUAL
+                            nota.valor_nota = 0;
+
+
+
+                            //nota.periodo = Convert.ToString(_periodo.ToString());
+                            //nota.valor_nota = 0;
+
+                            int registro = this.controlador.InsertarNotas(nota);
+
+
                             MessageBox.Show("este Almuno ha sido pre matriculado con exito");
                             txtNombreA.Text = "";
                             txtPrimerA.Text = "";

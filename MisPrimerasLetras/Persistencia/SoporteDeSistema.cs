@@ -17,5 +17,6 @@ namespace Persistencia
             ssl = true;
             initializeSmtClient();
         }
+     
     }
 }

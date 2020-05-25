@@ -68,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(194, 19);
+            this.label1.Location = new System.Drawing.Point(200, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 22);
             this.label1.TabIndex = 0;
@@ -76,6 +76,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Controls.Add(this.labelReport_Pagos);
             this.panel1.Controls.Add(this.groupBox1);
@@ -223,12 +224,13 @@
             // 
             // btnGuardarARMA
             // 
-            this.btnGuardarARMA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGuardarARMA.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGuardarARMA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarARMA.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarARMA.FlatAppearance.BorderSize = 0;
             this.btnGuardarARMA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGuardarARMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarARMA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarARMA.Location = new System.Drawing.Point(308, 661);
             this.btnGuardarARMA.Name = "btnGuardarARMA";
             this.btnGuardarARMA.Size = new System.Drawing.Size(174, 62);
@@ -392,6 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1429, 771);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblHidden1);

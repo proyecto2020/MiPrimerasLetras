@@ -6,7 +6,7 @@ public class Alumnos
     [PrimaryKey, Identity]
     public int id_alumno { set; get; }
     /// <summary>
-    /// NombreMateria.
+    /// materia.
     /// </summary>
     public string nombre { get; set; }
     /// <summary>
@@ -32,7 +32,7 @@ public class Alumnos
     /// <summary>
     /// Telefono.
     /// </summary>
-    public int telefono { get; set; }
+    public string telefono { get; set; }
     /// <summary>
     /// Correo.
     /// </summary>

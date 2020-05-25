@@ -62,12 +62,14 @@
     <Compile Include="Horario.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="Matricula.cs" />
+    <Compile Include="nota.cs" />
     <Compile Include="Notas.cs" />
     <Compile Include="Pagos.cs" />
     <Compile Include="Parametro.cs" />
     <Compile Include="Parametros.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelacionNotasMateriasClass1.cs" />
     <Compile Include="Respuesta.cs" />
     <Compile Include="respuestaLogin.cs" />
     <Compile Include="salones.cs" />

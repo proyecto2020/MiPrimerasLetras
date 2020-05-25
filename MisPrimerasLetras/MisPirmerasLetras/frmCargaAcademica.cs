@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace MisPirmerasLetras
 {
@@ -33,9 +35,9 @@ namespace MisPirmerasLetras
         {
             List<Materia> materias = this.controlador.ConsultarMaterias();
 
-            materias.Insert(0, new Materia() { IdArea = 0, NombreMateria = "Seleccione" });
+            materias.Insert(0, new Materia() { IdArea = 0, materia = "Seleccione" });
             cmbMateria.DataSource = materias;
-            cmbMateria.DisplayMember = "NombreMateria";
+            cmbMateria.DisplayMember = "materia";
             cmbMateria.ValueMember = "IdArea";
         }
 
@@ -78,7 +80,7 @@ namespace MisPirmerasLetras
 
             if (listViewHorario.Items.Count == 12)
             {
-                this.mensajeAdvertencia("No puedes Agregar mas materias, gurada los cambios para este grupo!", false);
+                this.mensajeAdvertencia("No puedes Agregar mas materias, gurarda los cambios para este grupo!", false);
             }
             else
             {
@@ -142,7 +144,8 @@ namespace MisPirmerasLetras
      
 
         private void button2_Click(object sender, EventArgs e)
-        { 
+        {
+            int repuesta = 0;
             // int IdGrupo = cmbGrupo.SelectedText;
              IdGrupo = int.Parse(cmbGrupo.SelectedValue.ToString());
             
@@ -151,7 +154,7 @@ namespace MisPirmerasLetras
             {
                 //for (int j = 0; j < listViewHorario.Items[i].SubItems.Count; j++)
                 //{
-                    MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
+                   // MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
 
                     string _materia = listViewHorario.Items[i].SubItems[4].Text; // tomamos la materia 
                      _dia= listViewHorario.Items[i].SubItems[2].Text; // tomamos el dia 
@@ -160,19 +163,33 @@ namespace MisPirmerasLetras
 
                 //}
 
-              int repuesta =  this.controlador.mtdValidarHorario(_hora, _dia, _materia, IdGrupo);
+               repuesta =  this.controlador.mtdValidarHorario(_hora, _dia, _materia, IdGrupo);
 
-                if (repuesta < 0)
+                if (repuesta == -1)
                 {
-                    mensajeAdvertencia("Lo sentimos no puedes agregar hora a esta materia sin intensidad horaria, creela por favor", true);
+                    mensajeAdvertencia("Lo sentimos no puedes agregar hora a esta  materia "+_materia+" sin intensidad horaria, creela por favor", true);
+                    break;
+                }
+                else if (repuesta == -2)
+                {
+                    mensajeAdvertencia("El horario para este grupo ya existe", true);
+                    break;
+                }
+                else if (repuesta == -3)
+                {
+                    mensajeAdvertencia("Esta sobre pasando la intensidad horaria  para esta materia " + _materia + "", true);
+                    break;
                 }
                 else
                 {
-                    MessageBox.Show("Guardado con exito papu");
+                    MessageBox.Show("Guardado con exito!");
+                    break;
                 }
-                
+
+
 
             }
+
 
 
         }
@@ -183,7 +200,13 @@ namespace MisPirmerasLetras
             {
            
                 _nuevoGrupoSelecionado = cmbGrupo.Text.ToString();
-                string grupoenLista = listViewHorario.Items[0].SubItems[1].Text;
+                string grupoenLista = "";
+
+                if (listViewHorario.Items.Count > 0)
+                {
+                     grupoenLista = listViewHorario.Items[0].SubItems[1].Text;
+                }
+
                 if (_nuevoGrupoSelecionado != grupoenLista && listViewHorario.Items.Count > 0)
                 {
                     this.mensajeAdvertencia("Hey! no puedes seleccionar otro grupo, guarda los cambios!", false);
@@ -191,6 +214,46 @@ namespace MisPirmerasLetras
                 }
                 else
                 {
+                    listViewHorario.Items.Clear();
+                    //horario objHorario = new horario();
+                    IdGrupo = int.Parse(cmbGrupo.SelectedValue.ToString());
+                    var listaHorario = controlador.mtdBuscarHorarioPorGrupo(IdGrupo);
+
+
+                    for (int i = 0; i < listaHorario.Rows.Count; i++)
+                    {
+                        ListViewItem list2 = new ListViewItem();
+                        list2.SubItems.Add(listaHorario.Rows[i][0].ToString());
+                        list2.SubItems.Add(listaHorario.Rows[i][2].ToString());
+                        list2.SubItems.Add(listaHorario.Rows[i][4].ToString() + " A " + listaHorario.Rows[i][3].ToString());
+                        list2.SubItems.Add(listaHorario.Rows[i][1].ToString());
+                       
+                        // list2.SubItems.Add();
+
+
+                        listViewHorario.Items.Add(list2);
+
+                    }
+
+
+                    // foreach (var element in listaHorario)
+                    // {
+
+                    // list2.SubItems.Add(listaHorario[count].ToString());
+                    // list2.SubItems.Add(((ArrayList)element)[count].ToString());
+                    //list2.SubItems.Add(element.ToString());
+                    //list2.SubItems.Add(element.ToString());
+                    //  count++;
+
+
+
+                    //}
+
+                    // ListViewItem list1 = new ListViewItem(cmbGrupo.Text);
+
+
+                    // listViewHorario.Text = nombre + "  " + apellido;
+
                     //Buscamos por el Id del grupo el horario que hay 
                     btnAgregarTodo.Enabled = true;
                 }
@@ -251,7 +314,7 @@ namespace MisPirmerasLetras
 
             for (int i = 0; i < listViewHorario.Items.Count; i++)
             {
-                MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
+               // MessageBox.Show(listViewHorario.Items[i].SubItems[2].Text);
 
                 _dia = listViewHorario.Items[i].SubItems[2].Text; // tomamos el dia 
                 _hora = listViewHorario.Items[i].SubItems[3].Text; // tomamos la hora 

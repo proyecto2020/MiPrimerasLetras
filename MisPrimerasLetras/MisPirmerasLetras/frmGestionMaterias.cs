@@ -83,7 +83,7 @@ namespace MisPirmerasLetras
 
             if (AreaNombre != "" || MateriaNombre != "")
             {
-                ObjMateria.NombreMateria = MateriaNombre;
+                ObjMateria.materia = MateriaNombre;
                 objArea.AreaM = AreaNombre;
 
                 respuesta = this.controlador.RegistroAreaMateria(ObjMateria, objArea);

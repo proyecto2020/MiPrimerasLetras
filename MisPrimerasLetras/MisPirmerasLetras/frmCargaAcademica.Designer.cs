@@ -41,9 +41,10 @@
             this.btnAgregarTodo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnSalon = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.listViewHorario = new System.Windows.Forms.ListView();
             this.action = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -136,11 +137,11 @@
             // 
             // btnAgregarTodo
             // 
-            this.btnAgregarTodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAgregarTodo.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAgregarTodo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarTodo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgregarTodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAgregarTodo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAgregarTodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAgregarTodo.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAgregarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTodo.Image")));
             this.btnAgregarTodo.Location = new System.Drawing.Point(546, 212);
@@ -162,36 +163,48 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.Location = new System.Drawing.Point(1130, 536);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 58);
             this.button2.TabIndex = 14;
             this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btn
             // 
-            this.button3.Location = new System.Drawing.Point(702, 538);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 56);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Ver Horarios";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn.Location = new System.Drawing.Point(702, 538);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(175, 56);
+            this.btn.TabIndex = 15;
+            this.btn.Text = "Ver Horarios";
+            this.btn.UseVisualStyleBackColor = false;
             // 
             // pnSalon
             // 
             this.pnSalon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnSalon.Controls.Add(this.label2);
             this.pnSalon.Controls.Add(this.label7);
             this.pnSalon.Location = new System.Drawing.Point(61, 365);
             this.pnSalon.Name = "pnSalon";
-            this.pnSalon.Size = new System.Drawing.Size(428, 99);
+            this.pnSalon.Size = new System.Drawing.Size(445, 157);
             this.pnSalon.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(89, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(257, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Formulario para la creacion de horarios";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(155, 10);
+            this.label7.Location = new System.Drawing.Point(174, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 17);
             this.label7.TabIndex = 0;
@@ -274,12 +287,13 @@
             // 
             // btnIrintensidadHorarias
             // 
+            this.btnIrintensidadHorarias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnIrintensidadHorarias.Location = new System.Drawing.Point(906, 537);
             this.btnIrintensidadHorarias.Name = "btnIrintensidadHorarias";
             this.btnIrintensidadHorarias.Size = new System.Drawing.Size(195, 56);
             this.btnIrintensidadHorarias.TabIndex = 34;
             this.btnIrintensidadHorarias.Text = "Configurar Intensidad Horaria";
-            this.btnIrintensidadHorarias.UseVisualStyleBackColor = true;
+            this.btnIrintensidadHorarias.UseVisualStyleBackColor = false;
             // 
             // frmCargaAcademica
             // 
@@ -292,7 +306,7 @@
             this.Controls.Add(this.txtHidden);
             this.Controls.Add(this.listViewHorario);
             this.Controls.Add(this.pnSalon);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAgregarTodo);
@@ -327,7 +341,7 @@
         private System.Windows.Forms.Button btnAgregarTodo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel pnSalon;
         private System.Windows.Forms.Label label7;
@@ -341,5 +355,6 @@
         private System.Windows.Forms.ColumnHeader action;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private System.Windows.Forms.Button btnIrintensidadHorarias;
+        private System.Windows.Forms.Label label2;
     }
 }

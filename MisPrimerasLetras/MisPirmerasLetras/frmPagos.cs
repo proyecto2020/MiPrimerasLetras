@@ -78,7 +78,8 @@ namespace MisPirmerasLetras
             total_pagar = resultado[0].total;
             Id_pago = resultado[0].id_pago;
             fecha_limite = resultado[0].fecha_limite;
-            numero_ticket = Convert.ToString(resultado[0].id_pago);
+            lblTicket.Text = Convert.ToString(resultado[0].ticket);
+            numero_ticket = Convert.ToString(resultado[0].ticket);
 
             if (lblFechaPago.Text == "")
             {
@@ -98,7 +99,7 @@ namespace MisPirmerasLetras
             if (resultado[0].paz_y_salvo)
             {
                 btnGuardarARMA.Enabled = false;
-                lblStatus.Text = "El estudiante no tienen deduda";
+                lblStatus.Text = "El estudiante no tienen deuda";
             }
             else
             {

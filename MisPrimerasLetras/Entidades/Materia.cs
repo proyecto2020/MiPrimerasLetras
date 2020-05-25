@@ -2,11 +2,11 @@
 
 public class Materia
 {
-    public int IdMateria { get; set; }
+    public int id_materia { get; set; }
     /// <summary>
-    /// NombreMateria.
+    /// materia.
     /// </summary>
-    public string NombreMateria { get; set; }
+    public string materia { get; set; }
     /// <summary>
     /// FechaCreacion.
     /// </summary>
@@ -24,6 +24,6 @@ public class Materia
 
     public override string ToString()
     {
-        return NombreMateria;
+        return materia;
     }
 }

@@ -16,6 +16,7 @@ namespace MisPirmerasLetras
         private int _idGrado;
         private List<object> data;
         private LoginControlador.LoginControlador controlador;
+       
         public frmIntensidadHoraria()
         {
             InitializeComponent();
@@ -84,42 +85,77 @@ namespace MisPirmerasLetras
             if (Dtgrados.Rows.Count != 0)
                 _idGrado = Convert.ToInt16(Dtgrados.CurrentRow.Cells[0].Value);
 
-            dtMaterias.DataSource = null;
-            this.Controls.Add(dtMaterias);
+           
             //dtMaterias.Rows.Clear();
             dtMaterias.Refresh();
 
             data = this.controlador.mtdListarIntensidadHorariaCliente(_idGrado);
-
+            dtMaterias.EditMode = DataGridViewEditMode.EditOnEnter;
             
             if (data.Count.Equals(0))
             {
+               
 
                 try
                 {
-                    DataGridViewTextBoxColumn Nmateria = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn Thoras = new DataGridViewTextBoxColumn();
+                    dtMaterias.Rows.Clear();
 
-                    Nmateria.HeaderText = "Materia";
-                    Thoras.HeaderText = "Hora";
+                    dtMaterias.DataSource = null;
+                    //   this.Controls.Add(dtMaterias);
 
-                    dtMaterias.Columns.AddRange(Nmateria, Thoras);
 
+
+                    /*  DataGridViewTextBoxColumn Nmateria = new DataGridViewTextBoxColumn();
+                       DataGridViewTextBoxColumn Thoras = new DataGridViewTextBoxColumn();
+
+                      Nmateria.HeaderText = "Materia";
+                      Thoras.HeaderText = "Hora";
+
+                      dtMaterias.Columns.AddRange(Nmateria, Thoras);
+                       */
                     dtMaterias.Rows.Add("Biología", 0);
-                    dtMaterias.Rows.Add("Sociales", 0);
-                    dtMaterias.Rows.Add("Artes Plásticas", 0);
-                    dtMaterias.Rows.Add("Música", 0);
-                    dtMaterias.Rows.Add("Ética", 0);
-                    dtMaterias.Rows.Add("Religión", 0);
-                    dtMaterias.Rows.Add("Educación Física", 0);
-                    dtMaterias.Rows.Add("Danzas", 0);
-                    dtMaterias.Rows.Add("Lengua Castellana", 0);
-                    dtMaterias.Rows.Add("inglés", 0);
-                    dtMaterias.Rows.Add("Matemáticas", 0);
-                    dtMaterias.Rows.Add("Informática", 0);
+                     dtMaterias.Rows.Add("Sociales", 0);
+                     dtMaterias.Rows.Add("Artes Plásticas", 0);
+                     dtMaterias.Rows.Add("Música", 0);
+                     dtMaterias.Rows.Add("Ética", 0);
+                     dtMaterias.Rows.Add("Religión", 0);
+                     dtMaterias.Rows.Add("Educación Física", 0);
+                     dtMaterias.Rows.Add("Danzas", 0);
+                     dtMaterias.Rows.Add("Lengua Castellana", 0);
+                     dtMaterias.Rows.Add("inglés", 0);
+                     dtMaterias.Rows.Add("Matemáticas", 0);
+                     dtMaterias.Rows.Add("Informática", 0);
+                    // dtMaterias.Rows[].ReadOnly = false;
 
 
-                    this.Controls.Add(dtMaterias);
+                     this.Controls.Add(dtMaterias);
+
+                    //DataTable dt = new DataTable();
+                    //dt.Columns.Add("Materias");
+                    //dt.Columns.Add("Horas");
+                    //dt.Rows.Add("Sociales", 0);
+                    //dt.Rows.Add("Artes Plásticas", 0);
+                    //dt.Rows.Add("Música", 0);
+                    //dt.Rows.Add("Ética", 0);
+                    //dt.Rows.Add("Religión", 0);
+                    //dt.Rows.Add("Educación Física", 0);
+                    //dt.Rows.Add("Danzas", 0);
+                    //dt.Rows.Add("Lengua Castellana", 0);
+                    //dt.Rows.Add("inglés", 0);
+                    //dt.Rows.Add("Matemáticas", 0);
+                    //dt.Rows.Add("Informática", 0);
+                    //dtMaterias.AutoGenerateColumns = true;
+                    //dtMaterias.ColumnCount = 2;
+                    //dtMaterias.Columns[0].Name = "Materias";
+                    //dtMaterias.Columns[0].HeaderText = "Materias";
+                    //dtMaterias.Columns[0].DataPropertyName = "Materias";
+                    //dtMaterias.Columns[1].HeaderText = "Horas";
+                    //dtMaterias.Columns[1].Name = "Horas";
+                    //dtMaterias.Columns[1].DataPropertyName = "Horas";
+                    //dtMaterias.Columns[2].Name = "Insurance";
+                    //dtMaterias.Columns[2].HeaderText = "Insurance";
+                    //dtMaterias.Columns[2].DataPropertyName = "Insurance";
+                   // dtMaterias.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
@@ -133,32 +169,38 @@ namespace MisPirmerasLetras
             }
             else
             {
-                dtMaterias.EditMode = DataGridViewEditMode.EditOnEnter;
+                dtMaterias.Columns.Clear();
+                //dtMaterias.Columns.AddRange(null);
                 dtMaterias.DataSource = data;
                 
 
 
             }
 
-           
-
-            //string nombre = Convert.ToString(dataGEstudiantes.CurrentRow.Cells[1].Value);
-            //string apellido = Convert.ToString(dataGEstudiantes.CurrentRow.Cells[2].Value);
-            //lblNombreEs.Text = nombre + "  " + apellido;
-            //lblDeuda.Text = Convert.ToString(resultado[0].total);
-            //lblFechaDeuda.Text = Convert.ToString(resultado[0].fecha_limite);
-            //lblUltimoPago.Text = Convert.ToString(resultado[0].saldo);
-            //lblFechaPago.Text = Convert.ToString(resultado[0].mes);
-            //saldo = resultado[0].saldo;
-            //total_pagar = resultado[0].total;
-            //Id_pago = resultado[0].id_pago;
-            //fecha_limite = resultado[0].fecha_limite;
-            //numero_ticket = Convert.ToString(resultado[0].id_pago);
         }
 
         private void dtMaterias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            // dtMaterias.EditMode = DataGridViewEditMode.EditOnEnter;
+        }
+
+        private void dtMaterias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           // e.Handled = true;
+            //DataGridViewCell cell = dtMaterias.Rows[0].Cells[0];
+            //dtMaterias.CurrentCell = cell;
+            //dtMaterias.BeginEdit(true);
+        }
+
+        private void dtMaterias_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Tab && dtMaterias.CurrentCell.ColumnIndex == 1)
+            //{
+            //    e.Handled = true;
+            //    DataGridViewCell cell = dtMaterias.Rows[0].Cells[0];
+            //    dtMaterias.CurrentCell = cell;
+            //    dtMaterias.BeginEdit(true);
+            //}
         }
     }
 }

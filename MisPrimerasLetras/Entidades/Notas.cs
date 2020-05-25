@@ -1,22 +1,32 @@
-﻿using System;
-
-public class Notas
-
+namespace Entidades
 {
-    /// <summary>
-    /// Nota.
-    /// </summary>
-    public int Nota { get; set; }
-    /// <summary>
-    /// FechaCreacion.
-    /// </summary>
-    public DateTime FechaCreacion { get; set; }
-    /// <summary>
-    /// FechaModificación.
-    /// </summary>
-    public DateTime FechaModificación { get; set; }
-    /// <summary>
-    /// Usuario.
-    /// </summary>
-    public string Usuario { get; set; }
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class Notas : DbContext
+    {
+        public Notas()
+            : base("name=Notas")
+        {
+        }
+
+        public virtual DbSet<nota> notas { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<nota>()
+                .Property(e => e.periodo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nota>()
+                .Property(e => e.usuario_creacion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nota>()
+                .Property(e => e.usuario_modificacion)
+                .IsUnicode(false);
+        }
+    }
 }

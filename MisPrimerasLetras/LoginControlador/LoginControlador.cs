@@ -87,7 +87,7 @@ namespace LoginControlador
         public int RegistroAreaMateria(Materia materia = null, Area area = null)
         {
 
-            if (materia.NombreMateria == "" && area.AreaM == "") { return -1; }
+            if (materia.materia == "" && area.AreaM == "") { return -1; }
 
 
             var respuesta = this.cliente.mtdMateriaArea(materia, area);
@@ -124,6 +124,12 @@ namespace LoginControlador
         public int InsertarPago(Pagos pagos)
         {
             var resultado = this.cliente.InsertarPago(pagos);
+            return resultado;
+        }
+
+        public int InsertarNotas(nota objNota, int materia, int nota)
+        {
+            var resultado = this.cliente.InsertarNotas(objNota, materia, nota);
             return resultado;
         }
 
@@ -170,12 +176,12 @@ namespace LoginControlador
            var respuesta = this.cliente.mtdValidacionHorario(id_hora, dia, materia, id_grupo);
             return respuesta;
         }
-        public List<Alumnos> mtdListarAlumnos(string campo)
+        public List<Alumnos> mtdListarAlumnos(string campo, int grupo = 0)
         {
             List<Alumnos> query = new List<Alumnos>();
             if (campo.Equals(""))
             {
-                query = this.cliente.mtdListarAlumnos();
+                query = this.cliente.mtdListarAlumnos(grupo);
             }
             else
             {
@@ -217,6 +223,15 @@ namespace LoginControlador
             return ListaPagos;
         }
 
+        List<RelacionNotasMateriasClass> ListarNotas = new List<RelacionNotasMateriasClass>();
+        public List<RelacionNotasMateriasClass> listarNotas(int idAlumno, string periodo)
+        {
+
+            ListarNotas = this.cliente.mtdListarNotas(idAlumno, periodo);
+
+            return ListarNotas;
+        }
+
         public int mtdInsertarPago(Pagos objPagos, decimal saldoDeuda, int id_pago)
         {
             decimal saldo = saldoDeuda - objPagos.abono;
@@ -235,6 +250,15 @@ namespace LoginControlador
             ListaGradoMateria = this.cliente.mtdListarIntensidadHoraria(id_grado);
 
             return ListaGradoMateria;
+        }
+
+
+        DataTable horarios = new DataTable();
+        public DataTable mtdBuscarHorarioPorGrupo(int IdGrupo)
+        {
+            horarios = this.cliente.mtdListarHorariosPorGrupo(IdGrupo);
+
+            return horarios;
         }
 
     }

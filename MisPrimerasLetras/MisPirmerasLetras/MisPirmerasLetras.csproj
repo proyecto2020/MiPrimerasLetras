@@ -112,11 +112,23 @@
     <Compile Include="frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotas.Designer.cs">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPagos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPagos.Designer.cs">
       <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubPeriodos.Designer.cs">
+      <DependentUpon>frmSubPeriodos.cs</DependentUpon>
     </Compile>
     <Compile Include="Libreria\Codigos.cs" />
     <Compile Include="Libreria\EventosTextBox.cs" />
@@ -159,8 +171,14 @@
     <EmbeddedResource Include="frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNotas.resx">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPagos.resx">
       <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubPeriodos.resx">
+      <DependentUpon>frmSubPeriodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

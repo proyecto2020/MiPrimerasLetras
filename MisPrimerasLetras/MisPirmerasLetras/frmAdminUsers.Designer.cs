@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminUsers));
-            this.lbltitle = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,17 +55,6 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbltitle
-            // 
-            this.lbltitle.AutoSize = true;
-            this.lbltitle.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(239, 11);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(253, 56);
-            this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "USUARIOS";
-            this.lbltitle.Click += new System.EventHandler(this.lbltitle_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -90,7 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.tbxName);
@@ -325,14 +312,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(839, 788);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbltitle);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -344,13 +329,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataEstudiantes)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Panel panel1;

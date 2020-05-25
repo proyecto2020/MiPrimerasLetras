@@ -19,5 +19,6 @@
         public Grado fk_grado { get; set; }
 
         public int horas { get; set; }
+        public int restantes { get; set; }
     }
 
