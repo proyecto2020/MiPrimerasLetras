@@ -164,7 +164,7 @@ namespace MisPirmerasLetras
             }
             
         }
-        private void llenarDatosDeNotas()
+        public void llenarDatosDeNotas()
         {
 
             _idEstudante = Convert.ToInt16(dataGEstudiantes.CurrentRow.Cells[0].Value);

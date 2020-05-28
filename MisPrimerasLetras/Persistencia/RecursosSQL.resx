@@ -121,6 +121,14 @@
     <value>select * from perfiles</value>
     <comment>consulta todos los perfiles</comment>
   </data>
+  <data name="ConsultaPorGrupo" xml:space="preserve">
+    <value>PR_estudiantes_grupo</value>
+    <comment>consultamos los estudiantes y como parametro el grupo</comment>
+  </data>
+  <data name="ConsultaPorMateria" xml:space="preserve">
+    <value>PR_estudiantes_materia</value>
+    <comment>Listados de estudiantes por materia</comment>
+  </data>
   <data name="consultarLogin" xml:space="preserve">
     <value>PR_consultar_usuario_login</value>
     <comment>validaCredenciales</comment>

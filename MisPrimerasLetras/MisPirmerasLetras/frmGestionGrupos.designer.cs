@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionGrupos));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.cmbGrado = new System.Windows.Forms.ComboBox();
@@ -114,7 +114,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label4.Location = new System.Drawing.Point(528, 4);
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Location = new System.Drawing.Point(564, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 24);
             this.label4.TabIndex = 42;
@@ -123,20 +124,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(964, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 24);
+            this.label5.Size = new System.Drawing.Size(163, 23);
             this.label5.TabIndex = 45;
             this.label5.Text = "Crear de Grupos";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(179, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 24);
+            this.label6.Size = new System.Drawing.Size(165, 23);
             this.label6.TabIndex = 46;
             this.label6.Text = "Crear de Grados";
             // 
@@ -155,6 +156,7 @@
             // 
             this.pn1grados.Controls.Add(this.panel2);
             this.pn1grados.Controls.Add(this.panel1);
+            this.pn1grados.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.pn1grados.Location = new System.Drawing.Point(24, 76);
             this.pn1grados.Name = "pn1grados";
             this.pn1grados.Size = new System.Drawing.Size(617, 634);
@@ -184,35 +186,35 @@
             this.dataGrupos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGrupos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrupos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrupos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrupos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrupos.EnableHeadersVisualStyles = false;
             this.dataGrupos.GridColor = System.Drawing.Color.PeachPuff;
             this.dataGrupos.Location = new System.Drawing.Point(64, 43);
             this.dataGrupos.Name = "dataGrupos";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PeachPuff;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrupos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrupos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGrupos.RowHeadersVisible = false;
             this.dataGrupos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrupos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGrupos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrupos.RowTemplate.Height = 24;
             this.dataGrupos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGrupos.Size = new System.Drawing.Size(482, 261);
@@ -220,13 +222,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnGrado);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNameGrado);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(14, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(565, 269);
@@ -238,7 +241,7 @@
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.linkLabel1.Location = new System.Drawing.Point(450, 204);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(80, 17);
             this.linkLabel1.TabIndex = 29;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "cllick aqui";
@@ -249,7 +252,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(42, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(402, 17);
+            this.label7.Size = new System.Drawing.Size(427, 17);
             this.label7.TabIndex = 28;
             this.label7.Text = "Al crear el grupo debes asignar su intensiad horaria haciendo ";
             // 
@@ -261,6 +264,7 @@
             this.btnGrado.FlatAppearance.BorderSize = 0;
             this.btnGrado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrado.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrado.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGrado.Image = ((System.Drawing.Image)(resources.GetObject("btnGrado.Image")));
             this.btnGrado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -286,7 +290,7 @@
             // 
             this.txtNameGrado.Location = new System.Drawing.Point(167, 58);
             this.txtNameGrado.Name = "txtNameGrado";
-            this.txtNameGrado.Size = new System.Drawing.Size(206, 22);
+            this.txtNameGrado.Size = new System.Drawing.Size(206, 23);
             this.txtNameGrado.TabIndex = 4;
             // 
             // pn2Grupos
@@ -301,7 +305,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.cmbGrado);
@@ -310,6 +314,8 @@
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.ltbProfesores);
             this.panel4.Controls.Add(this.label8);
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel4.Location = new System.Drawing.Point(13, 30);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(391, 604);
@@ -323,6 +329,8 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(24, 495);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 56);
@@ -348,6 +356,7 @@
             this.btnRegistrarTodo.FlatAppearance.BorderSize = 0;
             this.btnRegistrarTodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnRegistrarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarTodo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarTodo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnRegistrarTodo.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarTodo.Image")));
             this.btnRegistrarTodo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -443,7 +452,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1679, 810);
             this.Controls.Add(this.pn2Grupos);
             this.Controls.Add(this.pn1grados);

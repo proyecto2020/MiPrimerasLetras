@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -49,18 +53,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblNombreEs = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGEstudiantes = new System.Windows.Forms.DataGridView();
             this.lblHidden2 = new System.Windows.Forms.Label();
             this.lblHidden1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxAlumno_Buscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGEstudiantes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -310,20 +314,6 @@
             this.panel2.Size = new System.Drawing.Size(765, 664);
             this.panel2.TabIndex = 2;
             // 
-            // dataGEstudiantes
-            // 
-            this.dataGEstudiantes.AllowUserToAddRows = false;
-            this.dataGEstudiantes.AllowUserToDeleteRows = false;
-            this.dataGEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGEstudiantes.Location = new System.Drawing.Point(35, 33);
-            this.dataGEstudiantes.Name = "dataGEstudiantes";
-            this.dataGEstudiantes.ReadOnly = true;
-            this.dataGEstudiantes.RowHeadersWidth = 51;
-            this.dataGEstudiantes.RowTemplate.Height = 24;
-            this.dataGEstudiantes.Size = new System.Drawing.Size(698, 613);
-            this.dataGEstudiantes.TabIndex = 29;
-            this.dataGEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGEstudiantes_CellContentClick);
-            // 
             // lblHidden2
             // 
             this.lblHidden2.AutoSize = true;
@@ -390,6 +380,58 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Alumnos";
             // 
+            // dataGEstudiantes
+            // 
+            this.dataGEstudiantes.AllowUserToAddRows = false;
+            this.dataGEstudiantes.AllowUserToDeleteRows = false;
+            this.dataGEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGEstudiantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGEstudiantes.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.dataGEstudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGEstudiantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGEstudiantes.ColumnHeadersHeight = 39;
+            this.dataGEstudiantes.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGEstudiantes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGEstudiantes.EnableHeadersVisualStyles = false;
+            this.dataGEstudiantes.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGEstudiantes.Location = new System.Drawing.Point(33, 26);
+            this.dataGEstudiantes.Name = "dataGEstudiantes";
+            this.dataGEstudiantes.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGEstudiantes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGEstudiantes.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGEstudiantes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGEstudiantes.RowTemplate.Height = 24;
+            this.dataGEstudiantes.Size = new System.Drawing.Size(698, 613);
+            this.dataGEstudiantes.TabIndex = 30;
+            this.dataGEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGEstudiantes_CellContentClick_1);
+            // 
             // frmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,9 +452,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,7 +472,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardarARMA;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGEstudiantes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblFechaPago;
         private System.Windows.Forms.Label lblTxFechaPago;
@@ -448,5 +489,6 @@
         private System.Windows.Forms.TextBox textBoxAlumno_Buscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGEstudiantes;
     }
 }

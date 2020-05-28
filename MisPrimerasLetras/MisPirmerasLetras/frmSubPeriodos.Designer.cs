@@ -43,6 +43,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Location = new System.Drawing.Point(704, 151);
             this.button3.Name = "button3";
@@ -60,6 +61,7 @@
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Location = new System.Drawing.Point(383, 151);
             this.button2.Name = "button2";
@@ -75,6 +77,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(40, 151);
             this.button1.Name = "button1";
@@ -97,6 +100,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.panel2.Location = new System.Drawing.Point(372, 141);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(244, 409);
@@ -106,6 +110,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.panel3.Location = new System.Drawing.Point(695, 141);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(244, 409);
@@ -117,6 +122,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 2;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(1027, 151);
             this.button4.Name = "button4";
@@ -130,6 +136,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.panel4.Location = new System.Drawing.Point(1017, 141);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(244, 409);

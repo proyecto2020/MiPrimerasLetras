@@ -70,6 +70,24 @@ namespace Persistencia {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PR_estudiantes_grupo.
+        /// </summary>
+        internal static string ConsultaPorGrupo {
+            get {
+                return ResourceManager.GetString("ConsultaPorGrupo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PR_estudiantes_materia.
+        /// </summary>
+        internal static string ConsultaPorMateria {
+            get {
+                return ResourceManager.GetString("ConsultaPorMateria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PR_consultar_usuario_login.
         /// </summary>
         internal static string consultarLogin {

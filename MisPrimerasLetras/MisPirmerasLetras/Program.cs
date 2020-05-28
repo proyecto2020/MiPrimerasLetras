@@ -16,7 +16,7 @@ namespace MisPirmerasLetras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNotas());
+            Application.Run(new Form1());
         }
     }
 }

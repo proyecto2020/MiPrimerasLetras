@@ -76,10 +76,11 @@
             // lblNombreE
             // 
             this.lblNombreE.AutoSize = true;
+            this.lblNombreE.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreE.Location = new System.Drawing.Point(73, 65);
             this.lblNombreE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreE.Name = "lblNombreE";
-            this.lblNombreE.Size = new System.Drawing.Size(58, 17);
+            this.lblNombreE.Size = new System.Drawing.Size(63, 17);
             this.lblNombreE.TabIndex = 1;
             this.lblNombreE.Text = "Nombre";
             this.lblNombreE.Click += new System.EventHandler(this.label1_Click);
@@ -87,10 +88,11 @@
             // lblPrimerA
             // 
             this.lblPrimerA.AutoSize = true;
+            this.lblPrimerA.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimerA.Location = new System.Drawing.Point(278, 65);
             this.lblPrimerA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrimerA.Name = "lblPrimerA";
-            this.lblPrimerA.Size = new System.Drawing.Size(103, 17);
+            this.lblPrimerA.Size = new System.Drawing.Size(113, 17);
             this.lblPrimerA.TabIndex = 2;
             this.lblPrimerA.Text = "Primer Apellido";
             this.lblPrimerA.Click += new System.EventHandler(this.label2_Click);
@@ -107,11 +109,12 @@
             // lblSegundoA
             // 
             this.lblSegundoA.AutoSize = true;
+            this.lblSegundoA.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSegundoA.Location = new System.Drawing.Point(444, 65);
             this.lblSegundoA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSegundoA.Name = "lblSegundoA";
             this.lblSegundoA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSegundoA.Size = new System.Drawing.Size(119, 17);
+            this.lblSegundoA.Size = new System.Drawing.Size(129, 17);
             this.lblSegundoA.TabIndex = 4;
             this.lblSegundoA.Text = "Segundo Apellido";
             this.lblSegundoA.Click += new System.EventHandler(this.label3_Click);
@@ -137,21 +140,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(636, 65);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(119, 17);
+            this.label4.Size = new System.Drawing.Size(132, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fecha nacimiento";
             // 
             // lblAcudiente
             // 
             this.lblAcudiente.AutoSize = true;
+            this.lblAcudiente.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcudiente.Location = new System.Drawing.Point(73, 173);
             this.lblAcudiente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAcudiente.Name = "lblAcudiente";
-            this.lblAcudiente.Size = new System.Drawing.Size(71, 17);
+            this.lblAcudiente.Size = new System.Drawing.Size(78, 17);
             this.lblAcudiente.TabIndex = 8;
             this.lblAcudiente.Text = "Acudiente";
             this.lblAcudiente.Click += new System.EventHandler(this.label5_Click);
@@ -168,10 +173,11 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.Location = new System.Drawing.Point(278, 173);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(67, 17);
+            this.lblDireccion.Size = new System.Drawing.Size(74, 17);
             this.lblDireccion.TabIndex = 10;
             this.lblDireccion.Text = "Direccion";
             // 
@@ -187,10 +193,11 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(455, 173);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(64, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(66, 17);
             this.lblTelefono.TabIndex = 12;
             this.lblTelefono.Text = "Telefono";
             this.lblTelefono.Click += new System.EventHandler(this.label7_Click);
@@ -198,10 +205,11 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.Location = new System.Drawing.Point(701, 173);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(51, 17);
+            this.lblCorreo.Size = new System.Drawing.Size(54, 17);
             this.lblCorreo.TabIndex = 13;
             this.lblCorreo.Text = "Correo";
             // 
@@ -226,10 +234,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(484, 263);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(483, 280);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 17);
+            this.label9.Size = new System.Drawing.Size(109, 17);
             this.label9.TabIndex = 16;
             this.label9.Text = "Observaciones";
             // 
@@ -246,17 +255,18 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(274, 263);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(257, 280);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 17);
+            this.label11.Size = new System.Drawing.Size(50, 17);
             this.label11.TabIndex = 22;
             this.label11.Text = "Grupo";
             // 
             // cmbGrupo
             // 
             this.cmbGrupo.FormattingEnabled = true;
-            this.cmbGrupo.Location = new System.Drawing.Point(241, 311);
+            this.cmbGrupo.Location = new System.Drawing.Point(259, 311);
             this.cmbGrupo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGrupo.Name = "cmbGrupo";
             this.cmbGrupo.Size = new System.Drawing.Size(160, 24);
@@ -266,10 +276,11 @@
             // lblOcupacion
             // 
             this.lblOcupacion.AutoSize = true;
-            this.lblOcupacion.Location = new System.Drawing.Point(52, 263);
+            this.lblOcupacion.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupacion.Location = new System.Drawing.Point(52, 280);
             this.lblOcupacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOcupacion.Name = "lblOcupacion";
-            this.lblOcupacion.Size = new System.Drawing.Size(76, 17);
+            this.lblOcupacion.Size = new System.Drawing.Size(85, 17);
             this.lblOcupacion.TabIndex = 23;
             this.lblOcupacion.Text = "Ocupacion";
             this.lblOcupacion.Click += new System.EventHandler(this.label10_Click);
@@ -279,7 +290,7 @@
             this.txtOcupacion.Location = new System.Drawing.Point(55, 313);
             this.txtOcupacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtOcupacion.Name = "txtOcupacion";
-            this.txtOcupacion.Size = new System.Drawing.Size(132, 22);
+            this.txtOcupacion.Size = new System.Drawing.Size(132, 23);
             this.txtOcupacion.TabIndex = 24;
             this.txtOcupacion.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
@@ -335,9 +346,10 @@
             // lblFechaLimitePago
             // 
             this.lblFechaLimitePago.AutoSize = true;
+            this.lblFechaLimitePago.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaLimitePago.Location = new System.Drawing.Point(93, 19);
             this.lblFechaLimitePago.Name = "lblFechaLimitePago";
-            this.lblFechaLimitePago.Size = new System.Drawing.Size(144, 17);
+            this.lblFechaLimitePago.Size = new System.Drawing.Size(157, 17);
             this.lblFechaLimitePago.TabIndex = 34;
             this.lblFechaLimitePago.Text = "Fecha Limite de pago";
             // 
@@ -395,7 +407,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Controls.Add(this.lblError);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.label9);
@@ -405,6 +417,7 @@
             this.panel4.Controls.Add(this.txtOcupacion);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.cmbGrupo);
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(22, 45);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1188, 616);
@@ -414,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1222, 810);
             this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.panel2);

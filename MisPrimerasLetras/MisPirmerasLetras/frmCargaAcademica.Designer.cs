@@ -41,7 +41,6 @@
             this.btnAgregarTodo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnSalon = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,9 +61,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(121, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Grupo";
             // 
@@ -80,6 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(121, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
@@ -97,9 +98,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(370, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Materia";
             // 
@@ -114,9 +116,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(370, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 17);
+            this.label5.Size = new System.Drawing.Size(30, 17);
             this.label5.TabIndex = 11;
             this.label5.Text = "Día";
             // 
@@ -155,32 +158,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(931, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 17);
+            this.label6.Size = new System.Drawing.Size(173, 23);
             this.label6.TabIndex = 13;
             this.label6.Text = "Resultado Horario";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(1130, 536);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1058, 538);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 58);
             this.button2.TabIndex = 14;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn
-            // 
-            this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn.Location = new System.Drawing.Point(702, 538);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(175, 56);
-            this.btn.TabIndex = 15;
-            this.btn.Text = "Ver Horarios";
-            this.btn.UseVisualStyleBackColor = false;
             // 
             // pnSalon
             // 
@@ -195,18 +190,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(89, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 17);
+            this.label2.Size = new System.Drawing.Size(281, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Formulario para la creacion de horarios";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(174, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 17);
+            this.label7.Size = new System.Drawing.Size(91, 19);
             this.label7.TabIndex = 0;
             this.label7.Text = "Información";
             // 
@@ -218,7 +215,7 @@
             this.Dia,
             this.Hora,
             this.Materia});
-            this.listViewHorario.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewHorario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewHorario.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listViewHorario.HideSelection = false;
             this.listViewHorario.Location = new System.Drawing.Point(686, 91);
@@ -288,7 +285,8 @@
             // btnIrintensidadHorarias
             // 
             this.btnIrintensidadHorarias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnIrintensidadHorarias.Location = new System.Drawing.Point(906, 537);
+            this.btnIrintensidadHorarias.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrintensidadHorarias.Location = new System.Drawing.Point(747, 538);
             this.btnIrintensidadHorarias.Name = "btnIrintensidadHorarias";
             this.btnIrintensidadHorarias.Size = new System.Drawing.Size(195, 56);
             this.btnIrintensidadHorarias.TabIndex = 34;
@@ -299,14 +297,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1348, 690);
             this.Controls.Add(this.btnIrintensidadHorarias);
             this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.txtHidden);
             this.Controls.Add(this.listViewHorario);
             this.Controls.Add(this.pnSalon);
-            this.Controls.Add(this.btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAgregarTodo);
@@ -341,7 +338,6 @@
         private System.Windows.Forms.Button btnAgregarTodo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel pnSalon;
         private System.Windows.Forms.Label label7;

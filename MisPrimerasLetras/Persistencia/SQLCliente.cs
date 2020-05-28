@@ -58,9 +58,11 @@ namespace Persistencia
         List<Salones> salones = new List<Salones>();
         List<Usuario> Usuario = new List<Usuario>();
         List<Grado> Grado = new List<Grado>();
+        List<Grupo> lstGrupo = new List<Grupo>();
         List<Area> area = new List<Area>();
         List<Materia> materia = new List<Materia>();
         List<horario> horario = new List<horario>();
+        List<Alumnos> lstAlumno = new List<Alumnos>();
 
         /* END */
         /***********************************/
@@ -413,6 +415,44 @@ namespace Persistencia
             return area;
         }
 
+        public List<Alumnos> mtdListarAlumnos(int materia = 0, int  grupo = 0)
+        {
+            string consulta = "";
+            int variable = 0;
+            DataTable tblAlumno = new DataTable();
+
+            if (grupo > 0)
+            {
+                consulta = RecursosSQL.ConsultaPorGrupo;
+                variable = grupo;
+                
+                
+            }else if (materia != 0)
+            {
+                consulta = RecursosSQL.ConsultaPorMateria;
+                variable = materia;
+
+            }
+
+            SqlCommand cmd = new SqlCommand(consulta, conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Param1", variable);
+
+            SqlDataAdapter rdr = new SqlDataAdapter(cmd);
+
+            rdr.Fill(tblAlumno);
+
+            for (int i = 0; i < tblAlumno.Rows.Count; i++)
+            {
+                Alumnos objAlumno = new Alumnos();
+                objAlumno.nombre = tblAlumno.Rows[i][0].ToString();
+                objAlumno.primer_apellido = tblAlumno.Rows[i][1].ToString();
+
+                lstAlumno.Add(objAlumno);
+            }
+            return lstAlumno;
+        }
+
 
 
         public List<object> mtdListarIntensidadHoraria(int id_grado)
@@ -644,7 +684,7 @@ namespace Persistencia
                 connection.Open();
                 if (materia == 0)
                 {
-                    int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1008, 1010, 1011 };
+                    int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011 };
                     for (int i = 0; i <= 11; i++)
                     {
                         SqlCommand myCommand = new SqlCommand(storedProcedure, connection);

@@ -108,7 +108,11 @@ namespace LoginControlador
             var resultado = this.cliente.mtdListarArea();
             return resultado;
         }
-
+        public List<Alumnos> ConsultarAlumnos(int materia = 0, int grupo = 0)
+        {
+            var resultado = this.cliente.mtdListarAlumnos(materia, grupo);
+            return resultado;
+        }
         public List<Materia> ConsultarMaterias()
         {
             var resultado = this.cliente.mtdListarMateria();
@@ -176,7 +180,7 @@ namespace LoginControlador
            var respuesta = this.cliente.mtdValidacionHorario(id_hora, dia, materia, id_grupo);
             return respuesta;
         }
-        public List<Alumnos> mtdListarAlumnos(string campo, int grupo = 0)
+        public List<Alumnos> mtdListarAlumnos(string campo = "", int grupo = 0)
         {
             List<Alumnos> query = new List<Alumnos>();
             if (campo.Equals(""))

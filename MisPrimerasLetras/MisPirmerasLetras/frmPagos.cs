@@ -192,7 +192,7 @@ namespace MisPirmerasLetras
                         Ticket Ticket1 = new Ticket();
                         Ticket1.AbreCajon();  //abre el cajon
                         Ticket1.TextoCentro("Jardin infantil, Mis primeras Letras"); // imprime en el centro 
-                        Ticket1.TextoIzquierda("Direccion: Cll x # x - xxx");
+                        Ticket1.TextoIzquierda("Direccion: Cll 54 # 72B - 07");
                         Ticket1.TextoIzquierda("Bogotá, Cundinamarca");
                         Ticket1.TextoIzquierda("Tel 658912146");
                         Ticket1.LineasGuion();
@@ -226,6 +226,12 @@ namespace MisPirmerasLetras
         {
             List<Alumnos> alumnos = this.controlador.mtdListarAlumnos(textBoxAlumno_Buscar.Text);
             dataGEstudiantes.DataSource = alumnos;
+        }
+
+        private void dataGEstudiantes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGEstudiantes.Rows.Count != 0)
+                llenarDatosDePago();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -95,7 +95,7 @@ namespace MisPirmerasLetras
            string rol = SoporteControlador.CacheUsuario.Perfil;
             if (rol == "administrador")
             {
-
+                pictureBox5.Visible = false;
                 OpenFormRight(new frmAdminUsers());
             }
             else
@@ -136,7 +136,7 @@ namespace MisPirmerasLetras
             string rol = SoporteControlador.CacheUsuario.Perfil;
             if (rol == "secretaria")
             {
-
+                pictureBox5.Visible = false;
                 OpenFormRight(new frmMatricula());
             }
             else
@@ -160,12 +160,14 @@ MessageBoxButtons.OK,
         private void button3_Click(object sender, EventArgs e)
         {
             pnlSubMenu.Visible = false;
+            pictureBox5.Visible = false;
             OpenFormRight(new frmGestionGrupos());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             pnlSubMenu.Visible = false;
+            pictureBox5.Visible = false;
             OpenFormRight(new frmGestionMaterias());
         }
 
@@ -205,7 +207,7 @@ MessageBoxButtons.OK,
             string rol = SoporteControlador.CacheUsuario.Perfil;
             if (rol == "secretaria")
             {
-
+                pictureBox5.Visible = false;
                 OpenFormRight(new frmPagos());
             }
             else
@@ -224,12 +226,22 @@ MessageBoxButtons.OK,
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            pictureBox5.Visible = false;
             OpenFormRight(new frmCargaAcademica());
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            string rol = SoporteControlador.CacheUsuario.Perfil;
+            if (rol == "administrador")
+            {
 
+                panel1.Visible = true;
+            }
+            else
+            {
+                ShowMensaje();
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -239,14 +251,37 @@ MessageBoxButtons.OK,
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
-            OpenFormRight(new frmSubPeriodos());
+            pictureBox5.Visible = false;
             OpenFormRight(new frmNotas());
+            OpenFormRight(new frmSubPeriodos());
         }
 
         private void panelContendor_Paint_3(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = false;
+            OpenFormRight(new frmReporteGrupo());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = false;
+            OpenFormRight(new frmReportes());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Visible = false;
+            OpenFormRight(new frmReporteHorario());
         }
     }
 }
