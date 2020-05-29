@@ -60,7 +60,7 @@ namespace Persistencia
         List<Grado> Grado = new List<Grado>();
         List<Grupo> lstGrupo = new List<Grupo>();
         List<Area> area = new List<Area>();
-        List<Materia> materia = new List<Materia>();
+        List<Materia> lstmateria = new List<Materia>();
         List<horario> horario = new List<horario>();
         List<Alumnos> lstAlumno = new List<Alumnos>();
 
@@ -496,9 +496,9 @@ namespace Persistencia
                 objMateria.id_materia = int.Parse(tblGeneralRetorno.Rows[i][0].ToString());
                 objMateria.materia = tblGeneralRetorno.Rows[i][1].ToString();
 
-                materia.Add(objMateria);
+                lstmateria.Add(objMateria);
             }
-            return materia;
+            return lstmateria;
         }
 
 
@@ -510,19 +510,7 @@ namespace Persistencia
 
             tblGeneralRetorno = this.mtdSelect(consulta);
 
-            // for (int i = 0; i < tblGeneralRetorno.Rows.Count; i++)
-            // {
-            // horario Objhorario = new horario();
-            // string grupo = tblGeneralRetorno.Rows[i][0].ToString();
-            //string materia = tblGeneralRetorno.Rows[i][1].ToString();
-            //string dia = tblGeneralRetorno.Rows[i][2].ToString();
-            //string horaInicial = tblGeneralRetorno.Rows[i][3].ToString();
-            //string horaFinal = tblGeneralRetorno.Rows[i][4].ToString();
-
-
-            //var newObject = new { Grupo = grupo, Materia = materia, Dia = dia, HoraInicial = horaInicial, HoraFinal = horaFinal  };
-            //  ObjetoHorario.Add(newObject);
-            //}
+      
 
             return tblGeneralRetorno;
         }
@@ -684,16 +672,20 @@ namespace Persistencia
                 connection.Open();
                 if (materia == 0)
                 {
-                    int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011 };
+                    //string  idsMaterias = RecursosSQL.IdMaterias;
+                    lstmateria =  this.mtdListarMateria();
+                    //int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011 };
+                    //Convert.ToInt32(idsMaterias);
+
                     for (int i = 0; i <= 11; i++)
                     {
                         SqlCommand myCommand = new SqlCommand(storedProcedure, connection);
                         myCommand.CommandType = CommandType.StoredProcedure;
 
-                        Console.WriteLine("Value of i: {0}", i);
+                     
 
                         myCommand.Parameters.AddWithValue("@fk_alumno", tblNotas.fk_alumno);
-                        myCommand.Parameters.AddWithValue("@fk_materia", myNum[i]);
+                        myCommand.Parameters.AddWithValue("@fk_materia", lstmateria[i].id_materia);
                         myCommand.Parameters.AddWithValue("@valor_nota", tblNotas.valor_nota);
                         myCommand.Parameters.AddWithValue("@periodo", tblNotas.periodo);
                         myCommand.Parameters.AddWithValue("@usuario_creacion", "FLASSO");
@@ -725,17 +717,6 @@ namespace Persistencia
                 }
                
                 return IdCreado;
-
-                //myCommand.Parameters.AddWithValue("@fk_alumno", tblPagos.fk_alumno);
-                //myCommand.Parameters.AddWithValue("@total", tblPagos.total);
-                //myCommand.Parameters.AddWithValue("@saldo", tblPagos.saldo);
-                //myCommand.Parameters.AddWithValue("@abono", tblPagos.abono);
-                //myCommand.Parameters.AddWithValue("@mes", tblPagos.mes);
-                //myCommand.Parameters.AddWithValue("@usuario_modificacion", "PEPE");
-                //myCommand.Parameters.AddWithValue("@fecha_limite", tblPagos.fecha_limite);
-
-                //myCommand.ExecuteNonQuery();
-
 
             }
 

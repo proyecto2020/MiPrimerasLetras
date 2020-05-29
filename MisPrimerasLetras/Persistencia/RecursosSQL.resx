@@ -143,6 +143,10 @@ u.correo
 u.fk_perfiles = p.id_perfil</value>
     <comment>cosulta todos los usuario</comment>
   </data>
+  <data name="IdMaterias" xml:space="preserve">
+    <value>int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011 };</value>
+    <comment>obtener ids</comment>
+  </data>
   <data name="insertar grado" xml:space="preserve">
     <value>PR_insertar_grado</value>
     <comment>insertar grado</comment>

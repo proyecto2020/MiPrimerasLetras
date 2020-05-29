@@ -205,17 +205,10 @@ MessageBoxButtons.OK,
         {
 
             string rol = SoporteControlador.CacheUsuario.Perfil;
-            if (rol == "secretaria")
-            {
+            
                 pictureBox5.Visible = false;
                 OpenFormRight(new frmPagos());
-            }
-            else
-            {
-
-                ShowMensaje();
-            }
-           
+          
         }
 
         private void buttonConfiguracion_Click(object sender, EventArgs e)

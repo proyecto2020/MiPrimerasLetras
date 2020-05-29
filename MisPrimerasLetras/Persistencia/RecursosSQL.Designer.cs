@@ -112,6 +112,15 @@ namespace Persistencia {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to int[] myNum = { 1, 2, 3, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011 };.
+        /// </summary>
+        internal static string IdMaterias {
+            get {
+                return ResourceManager.GetString("IdMaterias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PR_insertar_grado.
         /// </summary>
         internal static string insertar_grado {
